@@ -30,8 +30,12 @@ jobs:
 
       - name: Install
         run: |
-          # setup-uv provides uv on GitHub runners; Flare runners skip marketplace actions, so fall back to pip.
-          command -v uv >/dev/null 2>&1 || python3 -m pip install --quiet uv
+          # setup-uv provides uv on GitHub runners. Flare runners skip marketplace actions and ship
+          # python3 without pip, so fall back to uv's standalone installer (no pip needed).
+          if ! command -v uv >/dev/null 2>&1; then
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+          fi
           uv venv --python 3.12 .venv
           uv pip install -e ".[dev]"
 
@@ -94,8 +98,12 @@ jobs:
           python-version: "3.12"
       - name: Install
         run: |
-          # setup-uv provides uv on GitHub runners; Flare runners skip marketplace actions, so fall back to pip.
-          command -v uv >/dev/null 2>&1 || python3 -m pip install --quiet uv
+          # setup-uv provides uv on GitHub runners. Flare runners skip marketplace actions and ship
+          # python3 without pip, so fall back to uv's standalone installer (no pip needed).
+          if ! command -v uv >/dev/null 2>&1; then
+            curl -LsSf https://astral.sh/uv/install.sh | sh
+            export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$PATH"
+          fi
           uv venv --python 3.12 .venv
           uv pip install -e ".[dev]"
       - name: Regenerate baseline from main
