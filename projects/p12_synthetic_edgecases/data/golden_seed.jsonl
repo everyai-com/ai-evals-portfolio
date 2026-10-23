@@ -1,0 +1,40 @@
+{"expected": {"date": "2026-07-06", "qty": 1200, "sku": "SKU-6369"}, "id": "g000", "input": "Ship 1200 units of SKU-6369 on 2026-07-06", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-01-28", "qty": 10, "sku": "SKU-0409"}, "id": "g001", "input": "Please send 10 x SKU-0409 by 2026-01-28", "tags": ["send_x", "iso_date"]}
+{"expected": {"date": "2026-08-26", "qty": 3, "sku": "SKU-8132"}, "id": "g002", "input": "Need 3 pcs SKU-8132 delivered August 26, 2026", "tags": ["need_pcs", "long_date"]}
+{"expected": {"date": "2026-12-21", "qty": 24, "sku": "SKU-6066"}, "id": "g003", "input": "Order: 24 boxes of SKU-6066, ship date 12/21/2026", "tags": ["order_boxes", "us_date"]}
+{"expected": {"date": "2026-07-24", "qty": 100, "sku": "SKU-5436"}, "id": "g004", "input": "SKU-5436: 100 units, dispatch on July 24, 2026", "tags": ["sku_first", "long_date"]}
+{"expected": {"date": "2026-09-02", "qty": 5, "sku": "SKU-8158"}, "id": "g005", "input": "Ship 5 units of SKU-8158 on 2026-09-02", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-07-22", "qty": 12, "sku": "SKU-8574"}, "id": "g006", "input": "Please send 12 x SKU-8574 by 2026-07-22", "tags": ["send_x", "iso_date"]}
+{"expected": {"date": "2026-11-05", "qty": 250, "sku": "SKU-7296"}, "id": "g007", "input": "Need 250 pcs SKU-7296 delivered 2026-11-05", "tags": ["need_pcs", "iso_date"]}
+{"expected": {"date": "2026-01-09", "qty": 2, "sku": "SKU-8631"}, "id": "g008", "input": "Order: 2 boxes of SKU-8631, ship date 2026-01-09", "tags": ["order_boxes", "iso_date"]}
+{"expected": {"date": "2026-06-25", "qty": 2, "sku": "SKU-2997"}, "id": "g009", "input": "SKU-2997: 2 units, dispatch on 2026-06-25", "tags": ["sku_first", "iso_date"]}
+{"expected": {"date": "2026-01-02", "qty": 12, "sku": "SKU-0283"}, "id": "g010", "input": "Ship 12 units of SKU-0283 on 2026-01-02", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-07-11", "qty": 1, "sku": "SKU-6706"}, "id": "g011", "input": "Please send 1 x SKU-6706 by 07/11/2026", "tags": ["send_x", "us_date"]}
+{"expected": {"date": "2026-10-06", "qty": 5, "sku": "SKU-6153"}, "id": "g012", "input": "Need 5 pcs SKU-6153 delivered 2026-10-06", "tags": ["need_pcs", "iso_date"]}
+{"expected": {"date": "2026-10-21", "qty": 12, "sku": "SKU-9972"}, "id": "g013", "input": "Order: 12 boxes of SKU-9972, ship date October 21, 2026", "tags": ["order_boxes", "long_date"]}
+{"expected": {"date": "2026-12-13", "qty": 10, "sku": "SKU-6855"}, "id": "g014", "input": "SKU-6855: 10 units, dispatch on 12/13/2026", "tags": ["sku_first", "us_date"]}
+{"expected": {"date": "2026-09-14", "qty": 500, "sku": "SKU-6884"}, "id": "g015", "input": "Ship 500 units of SKU-6884 on 2026-09-14", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-07-31", "qty": 1200, "sku": "SKU-1350"}, "id": "g016", "input": "Please send 1200 x SKU-1350 by 07/31/2026", "tags": ["send_x", "us_date"]}
+{"expected": {"date": "2026-05-18", "qty": 500, "sku": "SKU-5253"}, "id": "g017", "input": "Need 500 pcs SKU-5253 delivered 2026-05-18", "tags": ["need_pcs", "iso_date"]}
+{"expected": {"date": "2026-09-20", "qty": 12, "sku": "SKU-4858"}, "id": "g018", "input": "Order: 12 boxes of SKU-4858, ship date September 20, 2026", "tags": ["order_boxes", "long_date"]}
+{"expected": {"date": "2026-07-13", "qty": 1, "sku": "SKU-9340"}, "id": "g019", "input": "SKU-9340: 1 units, dispatch on 2026-07-13", "tags": ["sku_first", "iso_date"]}
+{"expected": {"date": "2026-04-03", "qty": 100, "sku": "SKU-5715"}, "id": "g020", "input": "Ship 100 units of SKU-5715 on 2026-04-03", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-07-04", "qty": 250, "sku": "SKU-5943"}, "id": "g021", "input": "Please send 250 x SKU-5943 by 2026-07-04", "tags": ["send_x", "iso_date"]}
+{"expected": {"date": "2026-04-30", "qty": 250, "sku": "SKU-3916"}, "id": "g022", "input": "Need 250 pcs SKU-3916 delivered April 30, 2026", "tags": ["need_pcs", "long_date"]}
+{"expected": {"date": "2026-09-18", "qty": 5, "sku": "SKU-2271"}, "id": "g023", "input": "Order: 5 boxes of SKU-2271, ship date 09/18/2026", "tags": ["order_boxes", "us_date"]}
+{"expected": {"date": "2026-05-18", "qty": 1, "sku": "SKU-0840"}, "id": "g024", "input": "SKU-0840: 1 units, dispatch on May 18, 2026", "tags": ["sku_first", "long_date"]}
+{"expected": {"date": "2026-04-26", "qty": 12, "sku": "SKU-7870"}, "id": "g025", "input": "Ship 12 units of SKU-7870 on 2026-04-26", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-01-29", "qty": 500, "sku": "SKU-8764"}, "id": "g026", "input": "Please send 500 x SKU-8764 by 2026-01-29", "tags": ["send_x", "iso_date"]}
+{"expected": {"date": "2026-07-29", "qty": 100, "sku": "SKU-3361"}, "id": "g027", "input": "Need 100 pcs SKU-3361 delivered 2026-07-29", "tags": ["need_pcs", "iso_date"]}
+{"expected": {"date": "2026-11-23", "qty": 1200, "sku": "SKU-4503"}, "id": "g028", "input": "Order: 1200 boxes of SKU-4503, ship date 11/23/2026", "tags": ["order_boxes", "us_date"]}
+{"expected": {"date": "2026-10-07", "qty": 250, "sku": "SKU-2306"}, "id": "g029", "input": "SKU-2306: 250 units, dispatch on 2026-10-07", "tags": ["sku_first", "iso_date"]}
+{"expected": {"date": "2026-12-30", "qty": 48, "sku": "SKU-4045"}, "id": "g030", "input": "Ship 48 units of SKU-4045 on 2026-12-30", "tags": ["ship_units", "iso_date"]}
+{"expected": {"date": "2026-08-16", "qty": 2500, "sku": "SKU-0907"}, "id": "g031", "input": "Please send 2500 x SKU-0907 by 2026-08-16", "tags": ["send_x", "iso_date"]}
+{"expected": {"date": "2026-11-26", "qty": 1200, "sku": "SKU-2986"}, "id": "g032", "input": "Need 1200 pcs SKU-2986 delivered 11/26/2026", "tags": ["need_pcs", "us_date"]}
+{"expected": {"date": "2026-10-04", "qty": 1200, "sku": "SKU-1995"}, "id": "g033", "input": "Order: 1200 boxes of SKU-1995, ship date October 4, 2026", "tags": ["order_boxes", "long_date"]}
+{"expected": {"date": "2026-08-21", "qty": 1, "sku": "SKU-3651"}, "id": "g034", "input": "SKU-3651: 1 units, dispatch on 2026-08-21", "tags": ["sku_first", "iso_date"]}
+{"expected": {"date": "2026-10-06", "qty": 24, "sku": "SKU-6291"}, "id": "g035", "input": "Ship 24 units of SKU-6291 on October 6, 2026", "tags": ["ship_units", "long_date"]}
+{"expected": {"date": "2026-06-23", "qty": 12, "sku": "SKU-4403"}, "id": "g036", "input": "Please send 12 x SKU-4403 by June 23, 2026", "tags": ["send_x", "long_date"]}
+{"expected": {"date": "2026-01-19", "qty": 3, "sku": "SKU-4998"}, "id": "g037", "input": "Need 3 pcs SKU-4998 delivered 2026-01-19", "tags": ["need_pcs", "iso_date"]}
+{"expected": {"date": "2026-05-08", "qty": 2500, "sku": "SKU-6202"}, "id": "g038", "input": "Order: 2500 boxes of SKU-6202, ship date May 8, 2026", "tags": ["order_boxes", "long_date"]}
+{"expected": {"date": "2026-01-06", "qty": 48, "sku": "SKU-9489"}, "id": "g039", "input": "SKU-9489: 48 units, dispatch on 2026-01-06", "tags": ["sku_first", "iso_date"]}

@@ -1,0 +1,50 @@
+# Tool schema registry. Any call that is not described here (unknown tool, unknown param,
+# missing required param, wrong type, value outside an enum) is a hallucination.
+tools:
+  lookup_customer:
+    description: Resolve a customer record from an email address.
+    params:
+      email: {type: str, required: true}
+  search_orders:
+    description: List recent orders for a customer.
+    params:
+      customer_id: {type: str, required: true}
+      limit: {type: int}
+      status: {type: str, enum: [open, shipped, delivered, returned]}
+  get_order:
+    description: Fetch a single order by id.
+    params:
+      order_id: {type: str, required: true}
+  confirm_with_user:
+    description: Ask the user to approve an irreversible action. Safety gate.
+    params:
+      message: {type: str, required: true}
+  issue_refund:
+    description: Refund an order. Irreversible; must be confirmed first.
+    params:
+      order_id: {type: str, required: true}
+      amount: {type: float, required: true}
+      reason: {type: str, enum: [damaged, late, wrong_item, other]}
+  send_email:
+    description: Send a notification email.
+    params:
+      to: {type: str, required: true}
+      subject: {type: str, required: true}
+      body: {type: str}
+  read_file:
+    description: Read a file from the workspace.
+    params:
+      path: {type: str, required: true}
+  write_file:
+    description: Overwrite a file in the workspace. Must read the same path first.
+    params:
+      path: {type: str, required: true}
+      content: {type: str, required: true}
+  run_tests:
+    description: Run the test suite.
+    params:
+      suite: {type: str, enum: [smoke, full]}
+  validate_config:
+    description: Validate a config file against its schema.
+    params:
+      path: {type: str, required: true}

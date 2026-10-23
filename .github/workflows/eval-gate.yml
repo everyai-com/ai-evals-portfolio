@@ -1,0 +1,110 @@
+# CI regression gate: run the parameterised eval on every PR and block the merge when task
+# success drops > max_drop (and the drop is statistically significant) or latency/cost spike.
+name: eval-gate
+
+on:
+  pull_request:
+    paths-ignore: ["**.md"]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+env:
+  PROJECT: projects/p04_ci_regression_gate
+  CACHE_DIR: .eval-cache
+
+jobs:
+  gate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python with uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+
+      - name: Install
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install -e ".[dev]"
+
+      - name: Restore eval cache
+        uses: actions/cache@v4
+        with:
+          path: .eval-cache
+          key: eval-cache-${{ hashFiles('projects/p04_ci_regression_gate/data/**') }}-${{ github.sha }}
+          restore-keys: |
+            eval-cache-${{ hashFiles('projects/p04_ci_regression_gate/data/**') }}-
+            eval-cache-
+
+      - name: Run eval on the PR variant
+        env:
+          # In a real repo the SUT *is* the PR's code; here the demo agent's behaviour is chosen by
+          # EVAL_VARIANT so the gate can be exercised both ways (set a repo variable to e.g. pr_regressed).
+          EVAL_VARIANT: ${{ vars.EVAL_VARIANT || 'pr_good' }}
+        run: |
+          .venv/bin/python -m projects.p04_ci_regression_gate.cli run \
+            --config $PROJECT/data/eval_config.yaml --out results.json --cache-dir $CACHE_DIR
+
+      - name: Gate against the committed baseline
+        id: gate
+        run: |
+          .venv/bin/python -m projects.p04_ci_regression_gate.cli gate \
+            --results results.json --baseline $PROJECT/baseline/main.json \
+            --config $PROJECT/data/eval_config.yaml --comment gate_comment.md \
+            --state gate_state.json --json gate_decision.json
+
+      - name: Post / update the PR comment
+        if: always() && steps.gate.outcome != 'skipped'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          .venv/bin/python -m projects.p04_ci_regression_gate.post_comment \
+            --repo ${{ github.repository }} --pr ${{ github.event.pull_request.number }} \
+            --body-file gate_comment.md
+
+      - name: Upload results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-gate-results
+          path: |
+            results.json
+            gate_comment.md
+            gate_decision.json
+            gate_state.json
+
+  update-baseline:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: |
+          uv venv --python 3.12 .venv
+          uv pip install -e ".[dev]"
+      - name: Regenerate baseline from main
+        run: |
+          .venv/bin/python -m projects.p04_ci_regression_gate.cli baseline \
+            --config $PROJECT/data/eval_config.yaml --out $PROJECT/baseline/main.json
+      - name: Commit refreshed baseline
+        run: |
+          git config user.name "eval-gate[bot]"
+          git config user.email "eval-gate@users.noreply.github.com"
+          git add $PROJECT/baseline/main.json
+          git diff --cached --quiet || git commit -m "chore(eval-gate): refresh baseline for ${{ github.sha }}"
+          git push
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-baseline
+          path: projects/p04_ci_regression_gate/baseline/main.json

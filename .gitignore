@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.env
+runs/
+*.lock.tmp
+# CLI scratch outputs (defaults write to cwd)
+.eval-cache/
+state/
+pairs/
+adapters/
+out/
+results.json
+gate_state.json
+gate_comment.md
+eval-report.json
+dashboard.html
+repro/

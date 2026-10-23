@@ -1,0 +1,25 @@
+# Parameterised eval config for the CI regression gate.
+name: demo-agent-eval
+datasets:
+  - path: tasks.jsonl          # relative to this file
+model: mock-system-one         # model under test (MockLLM price table entry)
+params:
+  temperature: 0.0
+  max_tokens: 64
+seeds: [0, 1]                  # each example is run once per seed; disagreement => flaky
+metrics: [task_success, latency_p95, cost_per_task]
+cost:
+  max_cost_usd: 1.00           # abort (exit 2) if projected spend exceeds this
+  est_per_call_usd: 0.0002     # used for the pre-run projection of cache misses
+gate:
+  max_drop: 2.0                # task-success drop in percentage points
+  max_p95_increase_pct: 25     # latency p95 increase
+  max_cost_increase_pct: 30    # cost-per-task increase
+  hysteresis:                  # consecutive breaching runs needed to block / recovering runs to clear
+    task_success: 1
+    latency_p95: 2
+    cost_per_task: 2
+  flake_threshold: 0.0         # std of per-item success across seeds above this => flaky
+  top_n_failures: 10
+  n_boot: 5000
+  alpha: 0.05

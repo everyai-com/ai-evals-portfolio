@@ -1,0 +1,75 @@
+name: "Eval regression gate"
+description: "Run a parameterised eval against a committed baseline and block when task success drops or latency/cost spike."
+inputs:
+  config:
+    description: "Path to eval_config.yaml"
+    required: true
+  baseline:
+    description: "Path to the committed baseline results JSON"
+    required: true
+  max-drop:
+    description: "Maximum allowed task-success drop in percentage points"
+    required: false
+    default: "2"
+  token:
+    description: "GitHub token used to post the PR comment (omit to skip posting)"
+    required: false
+    default: ""
+  variant:
+    description: "Demo SUT variant (main, pr_good, pr_minor, pr_regressed, pr_slow, pr_flaky)"
+    required: false
+    default: "pr_good"
+  python:
+    description: "Python interpreter to use"
+    required: false
+    default: "python"
+  cache-dir:
+    description: "Eval cache directory (restore it with actions/cache)"
+    required: false
+    default: ".eval-cache"
+outputs:
+  blocked:
+    description: "true when the gate blocked the merge"
+    value: ${{ steps.gate.outputs.blocked }}
+  task_success:
+    description: "PR task success rate (0-1)"
+    value: ${{ steps.gate.outputs.task_success }}
+  task_success_delta_pts:
+    description: "Delta vs baseline in percentage points"
+    value: ${{ steps.gate.outputs.task_success_delta_pts }}
+  comment_path:
+    description: "Path to the rendered markdown comment"
+    value: ${{ steps.gate.outputs.comment_path }}
+runs:
+  using: "composite"
+  steps:
+    - name: Run eval
+      shell: bash
+      run: |
+        ${{ inputs.python }} -m projects.p04_ci_regression_gate.cli run \
+          --config "${{ inputs.config }}" --variant "${{ inputs.variant }}" \
+          --out results.json --cache-dir "${{ inputs.cache-dir }}"
+    - name: Gate
+      id: gate
+      shell: bash
+      run: |
+        set +e
+        ${{ inputs.python }} -m projects.p04_ci_regression_gate.cli gate \
+          --results results.json --baseline "${{ inputs.baseline }}" --config "${{ inputs.config }}" \
+          --max-drop "${{ inputs.max-drop }}" --comment gate_comment.md --state gate_state.json
+        echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+    - name: Post comment
+      if: inputs.token != '' && github.event_name == 'pull_request'
+      shell: bash
+      env:
+        GITHUB_TOKEN: ${{ inputs.token }}
+      run: |
+        ${{ inputs.python }} -m projects.p04_ci_regression_gate.post_comment \
+          --repo "${{ github.repository }}" --pr "${{ github.event.pull_request.number }}" \
+          --body-file gate_comment.md
+    - name: Fail when blocked
+      shell: bash
+      run: |
+        if [ "${{ steps.gate.outputs.blocked }}" = "true" ]; then
+          echo "::error::eval gate blocked this PR (see gate_comment.md)"; exit 1
+        fi

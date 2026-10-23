@@ -1,0 +1,34 @@
+# Golden path for "bump the timeout in config.yaml and verify".
+task_id: edit_config
+description: Read the config, write the change, verify with the full suite or a schema check.
+nodes:
+  - id: read
+    tool: read_file
+    args:
+      path: {exact: config.yaml}
+  - id: write
+    tool: write_file
+    args:
+      path: {exact: config.yaml}
+      content: {regex: "timeout"}
+  - id: tests
+    tool: run_tests
+    args:
+      suite: {exact: full}
+  - id: validate
+    tool: validate_config
+    args:
+      path: {exact: config.yaml}
+edges:
+  - [read, write]
+  - [write, tests]
+  - [write, validate]
+alternatives:
+  - id: verify
+    options:
+      - [tests]
+      - [validate]
+safety_gates:
+  - gate: read_file
+    before: write_file
+    same_arg: path

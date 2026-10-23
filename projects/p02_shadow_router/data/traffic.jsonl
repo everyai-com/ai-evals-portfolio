@@ -1,0 +1,200 @@
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00000", "tenant": "t0", "ts": 1792540800.0}
+{"expected": "Paris", "kind": "capital", "prompt": "What is the capital of France?", "request_id": "req-00001", "tenant": "t0", "ts": 1792541232.0}
+{"expected": "26000 metres", "kind": "convert", "prompt": "Convert 26 kilometres to metres.", "request_id": "req-00002", "tenant": "t2", "ts": 1792541664.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00003", "tenant": "t2", "ts": 1792542096.0}
+{"expected": "179", "kind": "sum", "prompt": "What is the sum of 67 and 112? Reply with the number only.", "request_id": "req-00004", "tenant": "t0", "ts": 1792542528.0}
+{"expected": "Rome", "kind": "capital", "prompt": "What is the capital of Italy?", "request_id": "req-00005", "tenant": "t1", "ts": 1792542960.0}
+{"expected": "Rome", "kind": "capital", "prompt": "What is the capital of Italy?", "request_id": "req-00006", "tenant": "t2", "ts": 1792543392.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00007", "tenant": "t0", "ts": 1792543824.0}
+{"expected": "113", "kind": "sum", "prompt": "What is the sum of 103 and 10? Reply with the number only.", "request_id": "req-00008", "tenant": "t0", "ts": 1792544256.0}
+{"expected": "52", "kind": "sum", "prompt": "What is the sum of 48 and 4? Reply with the number only.", "request_id": "req-00009", "tenant": "t0", "ts": 1792544688.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00010", "tenant": "t1", "ts": 1792545120.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00011", "tenant": "t2", "ts": 1792545552.0}
+{"kind": "summary", "prompt": "Summarize our policy about delivery radius.", "request_id": "req-00012", "tenant": "t2", "ts": 1792545984.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00013", "tenant": "t2", "ts": 1792546416.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00014", "tenant": "t2", "ts": 1792546848.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00015", "tenant": "t1", "ts": 1792547280.0}
+{"expected": "131", "kind": "sum", "prompt": "What is the sum of 86 and 45? Reply with the number only.", "request_id": "req-00016", "tenant": "t0", "ts": 1792547712.0}
+{"expected": "192", "kind": "sum", "prompt": "What is the sum of 86 and 106? Reply with the number only.", "request_id": "req-00017", "tenant": "t0", "ts": 1792548144.0}
+{"expected": "193", "kind": "sum", "prompt": "What is the sum of 112 and 81? Reply with the number only.", "request_id": "req-00018", "tenant": "t1", "ts": 1792548576.0}
+{"expected": "157", "kind": "sum", "prompt": "What is the sum of 86 and 71? Reply with the number only.", "request_id": "req-00019", "tenant": "t1", "ts": 1792549008.0}
+{"expected": "81", "kind": "sum", "prompt": "What is the sum of 41 and 40? Reply with the number only.", "request_id": "req-00020", "tenant": "t2", "ts": 1792549440.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00021", "tenant": "t1", "ts": 1792549872.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00022", "tenant": "t2", "ts": 1792550304.0}
+{"expected": "13000 metres", "kind": "convert", "prompt": "Convert 13 kilometres to metres.", "request_id": "req-00023", "tenant": "t0", "ts": 1792550736.0}
+{"expected": "4000 metres", "kind": "convert", "prompt": "Convert 4 kilometres to metres.", "request_id": "req-00024", "tenant": "t0", "ts": 1792551168.0}
+{"expected": "87", "kind": "sum", "prompt": "What is the sum of 69 and 18? Reply with the number only.", "request_id": "req-00025", "tenant": "t2", "ts": 1792551600.0}
+{"expected": "18000 metres", "kind": "convert", "prompt": "Convert 18 kilometres to metres.", "request_id": "req-00026", "tenant": "t2", "ts": 1792552032.0}
+{"expected": "Nairobi", "kind": "capital", "prompt": "What is the capital of Kenya?", "request_id": "req-00027", "tenant": "t1", "ts": 1792552464.0}
+{"expected": "Oslo", "kind": "capital", "prompt": "What is the capital of Norway?", "request_id": "req-00028", "tenant": "t2", "ts": 1792552896.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00029", "tenant": "t2", "ts": 1792553328.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00030", "tenant": "t2", "ts": 1792553760.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00031", "tenant": "t0", "ts": 1792554192.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00032", "tenant": "t1", "ts": 1792554624.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00033", "tenant": "t1", "ts": 1792555056.0}
+{"kind": "summary", "prompt": "Summarize our policy about allergen labels.", "request_id": "req-00034", "tenant": "t0", "ts": 1792555488.0}
+{"expected": "173", "kind": "sum", "prompt": "What is the sum of 60 and 113? Reply with the number only.", "request_id": "req-00035", "tenant": "t1", "ts": 1792555920.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00036", "tenant": "t2", "ts": 1792556352.0}
+{"expected": "191", "kind": "sum", "prompt": "What is the sum of 100 and 91? Reply with the number only.", "request_id": "req-00037", "tenant": "t1", "ts": 1792556784.0}
+{"expected": "88", "kind": "sum", "prompt": "What is the sum of 60 and 28? Reply with the number only.", "request_id": "req-00038", "tenant": "t2", "ts": 1792557216.0}
+{"expected": "122", "kind": "sum", "prompt": "What is the sum of 34 and 88? Reply with the number only.", "request_id": "req-00039", "tenant": "t2", "ts": 1792557648.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00040", "tenant": "t0", "ts": 1792558080.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00041", "tenant": "t2", "ts": 1792558512.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00042", "tenant": "t2", "ts": 1792558944.0}
+{"expected": "1000 metres", "kind": "convert", "prompt": "Convert 1 kilometres to metres.", "request_id": "req-00043", "tenant": "t0", "ts": 1792559376.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00044", "tenant": "t1", "ts": 1792559808.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00045", "tenant": "t1", "ts": 1792560240.0}
+{"expected": "35000 metres", "kind": "convert", "prompt": "Convert 35 kilometres to metres.", "request_id": "req-00046", "tenant": "t0", "ts": 1792560672.0}
+{"expected": "Oslo", "kind": "capital", "prompt": "What is the capital of Norway?", "request_id": "req-00047", "tenant": "t2", "ts": 1792561104.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00048", "tenant": "t2", "ts": 1792561536.0}
+{"expected": "111", "kind": "sum", "prompt": "What is the sum of 32 and 79? Reply with the number only.", "request_id": "req-00049", "tenant": "t1", "ts": 1792561968.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00050", "tenant": "t0", "ts": 1792562400.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00051", "tenant": "t1", "ts": 1792562832.0}
+{"expected": "Accra", "kind": "capital", "prompt": "What is the capital of Ghana?", "request_id": "req-00052", "tenant": "t2", "ts": 1792563264.0}
+{"expected": "Paris", "kind": "capital", "prompt": "What is the capital of France?", "request_id": "req-00053", "tenant": "t2", "ts": 1792563696.0}
+{"expected": "218", "kind": "sum", "prompt": "What is the sum of 107 and 111? Reply with the number only.", "request_id": "req-00054", "tenant": "t0", "ts": 1792564128.0}
+{"expected": "3000 metres", "kind": "convert", "prompt": "Convert 3 kilometres to metres.", "request_id": "req-00055", "tenant": "t1", "ts": 1792564560.0}
+{"expected": "35", "kind": "sum", "prompt": "What is the sum of 8 and 27? Reply with the number only.", "request_id": "req-00056", "tenant": "t1", "ts": 1792564992.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00057", "tenant": "t1", "ts": 1792565424.0}
+{"expected": "Nairobi", "kind": "capital", "prompt": "What is the capital of Kenya?", "request_id": "req-00058", "tenant": "t0", "ts": 1792565856.0}
+{"expected": "9000 metres", "kind": "convert", "prompt": "Convert 9 kilometres to metres.", "request_id": "req-00059", "tenant": "t0", "ts": 1792566288.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00060", "tenant": "t0", "ts": 1792566720.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00061", "tenant": "t1", "ts": 1792567152.0}
+{"expected": "3000 metres", "kind": "convert", "prompt": "Convert 3 kilometres to metres.", "request_id": "req-00062", "tenant": "t1", "ts": 1792567584.0}
+{"expected": "Oslo", "kind": "capital", "prompt": "What is the capital of Norway?", "request_id": "req-00063", "tenant": "t1", "ts": 1792568016.0}
+{"expected": "33000 metres", "kind": "convert", "prompt": "Convert 33 kilometres to metres.", "request_id": "req-00064", "tenant": "t1", "ts": 1792568448.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00065", "tenant": "t1", "ts": 1792568880.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00066", "tenant": "t1", "ts": 1792569312.0}
+{"expected": "37000 metres", "kind": "convert", "prompt": "Convert 37 kilometres to metres.", "request_id": "req-00067", "tenant": "t0", "ts": 1792569744.0}
+{"expected": "114", "kind": "sum", "prompt": "What is the sum of 5 and 109? Reply with the number only.", "request_id": "req-00068", "tenant": "t2", "ts": 1792570176.0}
+{"expected": "2000 metres", "kind": "convert", "prompt": "Convert 2 kilometres to metres.", "request_id": "req-00069", "tenant": "t2", "ts": 1792570608.0}
+{"expected": "17000 metres", "kind": "convert", "prompt": "Convert 17 kilometres to metres.", "request_id": "req-00070", "tenant": "t0", "ts": 1792571040.0}
+{"expected": "16", "kind": "sum", "prompt": "What is the sum of 2 and 14? Reply with the number only.", "request_id": "req-00071", "tenant": "t0", "ts": 1792571472.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00072", "tenant": "t0", "ts": 1792571904.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00073", "tenant": "t2", "ts": 1792572336.0}
+{"expected": "Paris", "kind": "capital", "prompt": "What is the capital of France?", "request_id": "req-00074", "tenant": "t2", "ts": 1792572768.0}
+{"expected": "Oslo", "kind": "capital", "prompt": "What is the capital of Norway?", "request_id": "req-00075", "tenant": "t1", "ts": 1792573200.0}
+{"expected": "97", "kind": "sum", "prompt": "What is the sum of 38 and 59? Reply with the number only.", "request_id": "req-00076", "tenant": "t1", "ts": 1792573632.0}
+{"expected": "39000 metres", "kind": "convert", "prompt": "Convert 39 kilometres to metres.", "request_id": "req-00077", "tenant": "t0", "ts": 1792574064.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00078", "tenant": "t1", "ts": 1792574496.0}
+{"expected": "34000 metres", "kind": "convert", "prompt": "Convert 34 kilometres to metres.", "request_id": "req-00079", "tenant": "t0", "ts": 1792574928.0}
+{"expected": "130", "kind": "sum", "prompt": "What is the sum of 61 and 69? Reply with the number only.", "request_id": "req-00080", "tenant": "t2", "ts": 1792575360.0}
+{"expected": "30", "kind": "sum", "prompt": "What is the sum of 8 and 22? Reply with the number only.", "request_id": "req-00081", "tenant": "t0", "ts": 1792575792.0}
+{"expected": "35000 metres", "kind": "convert", "prompt": "Convert 35 kilometres to metres.", "request_id": "req-00082", "tenant": "t0", "ts": 1792576224.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00083", "tenant": "t1", "ts": 1792576656.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00084", "tenant": "t1", "ts": 1792577088.0}
+{"expected": "Rome", "kind": "capital", "prompt": "What is the capital of Italy?", "request_id": "req-00085", "tenant": "t1", "ts": 1792577520.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00086", "tenant": "t0", "ts": 1792577952.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00087", "tenant": "t2", "ts": 1792578384.0}
+{"kind": "summary", "prompt": "Summarize our policy about delivery radius.", "request_id": "req-00088", "tenant": "t1", "ts": 1792578816.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00089", "tenant": "t2", "ts": 1792579248.0}
+{"expected": "114", "kind": "sum", "prompt": "What is the sum of 24 and 90? Reply with the number only.", "request_id": "req-00090", "tenant": "t1", "ts": 1792579680.0}
+{"expected": "Cairo", "kind": "capital", "prompt": "What is the capital of Egypt?", "request_id": "req-00091", "tenant": "t2", "ts": 1792580112.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Decent toppings but the sauce was bland\"", "request_id": "req-00092", "tenant": "t0", "ts": 1792580544.0}
+{"expected": "29000 metres", "kind": "convert", "prompt": "Convert 29 kilometres to metres.", "request_id": "req-00093", "tenant": "t2", "ts": 1792580976.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00094", "tenant": "t0", "ts": 1792581408.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00095", "tenant": "t2", "ts": 1792581840.0}
+{"expected": "Ottawa", "kind": "capital", "prompt": "What is the capital of Canada?", "request_id": "req-00096", "tenant": "t1", "ts": 1792582272.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00097", "tenant": "t2", "ts": 1792582704.0}
+{"expected": "Cairo", "kind": "capital", "prompt": "What is the capital of Egypt?", "request_id": "req-00098", "tenant": "t1", "ts": 1792583136.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00099", "tenant": "t0", "ts": 1792583568.0}
+{"expected": "119", "kind": "sum", "prompt": "What is the sum of 111 and 8? Reply with the number only.", "request_id": "req-00100", "tenant": "t2", "ts": 1792584000.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00101", "tenant": "t0", "ts": 1792584432.0}
+{"expected": "16000 metres", "kind": "convert", "prompt": "Convert 16 kilometres to metres.", "request_id": "req-00102", "tenant": "t0", "ts": 1792584864.0}
+{"kind": "summary", "prompt": "Summarize our policy about allergen labels.", "request_id": "req-00103", "tenant": "t0", "ts": 1792585296.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00104", "tenant": "t0", "ts": 1792585728.0}
+{"expected": "Tokyo", "kind": "capital", "prompt": "What is the capital of Japan?", "request_id": "req-00105", "tenant": "t0", "ts": 1792586160.0}
+{"expected": "3000 metres", "kind": "convert", "prompt": "Convert 3 kilometres to metres.", "request_id": "req-00106", "tenant": "t2", "ts": 1792586592.0}
+{"expected": "81", "kind": "sum", "prompt": "What is the sum of 76 and 5? Reply with the number only.", "request_id": "req-00107", "tenant": "t0", "ts": 1792587024.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Decent toppings but the sauce was bland\"", "request_id": "req-00108", "tenant": "t0", "ts": 1792587456.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00109", "tenant": "t1", "ts": 1792587888.0}
+{"expected": "176", "kind": "sum", "prompt": "What is the sum of 82 and 94? Reply with the number only.", "request_id": "req-00110", "tenant": "t0", "ts": 1792588320.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00111", "tenant": "t0", "ts": 1792588752.0}
+{"expected": "8000 metres", "kind": "convert", "prompt": "Convert 8 kilometres to metres.", "request_id": "req-00112", "tenant": "t2", "ts": 1792589184.0}
+{"kind": "summary", "prompt": "Summarize our policy about allergen labels.", "request_id": "req-00113", "tenant": "t1", "ts": 1792589616.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00114", "tenant": "t0", "ts": 1792590048.0}
+{"expected": "196", "kind": "sum", "prompt": "What is the sum of 96 and 100? Reply with the number only.", "request_id": "req-00115", "tenant": "t2", "ts": 1792590480.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00116", "tenant": "t1", "ts": 1792590912.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00117", "tenant": "t0", "ts": 1792591344.0}
+{"expected": "4000 metres", "kind": "convert", "prompt": "Convert 4 kilometres to metres.", "request_id": "req-00118", "tenant": "t1", "ts": 1792591776.0}
+{"expected": "202", "kind": "sum", "prompt": "What is the sum of 83 and 119? Reply with the number only.", "request_id": "req-00119", "tenant": "t1", "ts": 1792592208.0}
+{"expected": "94", "kind": "sum", "prompt": "What is the sum of 93 and 1? Reply with the number only.", "request_id": "req-00120", "tenant": "t1", "ts": 1792592640.0}
+{"expected": "38000 metres", "kind": "convert", "prompt": "Convert 38 kilometres to metres.", "request_id": "req-00121", "tenant": "t0", "ts": 1792593072.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00122", "tenant": "t2", "ts": 1792593504.0}
+{"expected": "28000 metres", "kind": "convert", "prompt": "Convert 28 kilometres to metres.", "request_id": "req-00123", "tenant": "t0", "ts": 1792593936.0}
+{"expected": "28000 metres", "kind": "convert", "prompt": "Convert 28 kilometres to metres.", "request_id": "req-00124", "tenant": "t0", "ts": 1792594368.0}
+{"expected": "133", "kind": "sum", "prompt": "What is the sum of 83 and 50? Reply with the number only.", "request_id": "req-00125", "tenant": "t1", "ts": 1792594800.0}
+{"expected": "Cairo", "kind": "capital", "prompt": "What is the capital of Egypt?", "request_id": "req-00126", "tenant": "t2", "ts": 1792595232.0}
+{"expected": "Oslo", "kind": "capital", "prompt": "What is the capital of Norway?", "request_id": "req-00127", "tenant": "t1", "ts": 1792595664.0}
+{"expected": "30000 metres", "kind": "convert", "prompt": "Convert 30 kilometres to metres.", "request_id": "req-00128", "tenant": "t0", "ts": 1792596096.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00129", "tenant": "t0", "ts": 1792596528.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00130", "tenant": "t0", "ts": 1792596960.0}
+{"expected": "138", "kind": "sum", "prompt": "What is the sum of 101 and 37? Reply with the number only.", "request_id": "req-00131", "tenant": "t2", "ts": 1792597392.0}
+{"kind": "summary", "prompt": "Summarize our policy about allergen labels.", "request_id": "req-00132", "tenant": "t1", "ts": 1792597824.0}
+{"expected": "20000 metres", "kind": "convert", "prompt": "Convert 20 kilometres to metres.", "request_id": "req-00133", "tenant": "t2", "ts": 1792598256.0}
+{"expected": "133", "kind": "sum", "prompt": "What is the sum of 30 and 103? Reply with the number only.", "request_id": "req-00134", "tenant": "t0", "ts": 1792598688.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00135", "tenant": "t0", "ts": 1792599120.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00136", "tenant": "t2", "ts": 1792599552.0}
+{"expected": "122", "kind": "sum", "prompt": "What is the sum of 12 and 110? Reply with the number only.", "request_id": "req-00137", "tenant": "t0", "ts": 1792599984.0}
+{"expected": "53", "kind": "sum", "prompt": "What is the sum of 2 and 51? Reply with the number only.", "request_id": "req-00138", "tenant": "t1", "ts": 1792600416.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Decent toppings but the sauce was bland\"", "request_id": "req-00139", "tenant": "t2", "ts": 1792600848.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00140", "tenant": "t0", "ts": 1792601280.0}
+{"expected": "27000 metres", "kind": "convert", "prompt": "Convert 27 kilometres to metres.", "request_id": "req-00141", "tenant": "t1", "ts": 1792601712.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00142", "tenant": "t1", "ts": 1792602144.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00143", "tenant": "t1", "ts": 1792602576.0}
+{"expected": "23000 metres", "kind": "convert", "prompt": "Convert 23 kilometres to metres.", "request_id": "req-00144", "tenant": "t2", "ts": 1792603008.0}
+{"expected": "21000 metres", "kind": "convert", "prompt": "Convert 21 kilometres to metres.", "request_id": "req-00145", "tenant": "t1", "ts": 1792603440.0}
+{"expected": "215", "kind": "sum", "prompt": "What is the sum of 119 and 96? Reply with the number only.", "request_id": "req-00146", "tenant": "t0", "ts": 1792603872.0}
+{"expected": "177", "kind": "sum", "prompt": "What is the sum of 87 and 90? Reply with the number only.", "request_id": "req-00147", "tenant": "t2", "ts": 1792604304.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Decent toppings but the sauce was bland\"", "request_id": "req-00148", "tenant": "t2", "ts": 1792604736.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00149", "tenant": "t0", "ts": 1792605168.0}
+{"expected": "Nairobi", "kind": "capital", "prompt": "What is the capital of Kenya?", "request_id": "req-00150", "tenant": "t2", "ts": 1792605600.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00151", "tenant": "t0", "ts": 1792606032.0}
+{"expected": "19000 metres", "kind": "convert", "prompt": "Convert 19 kilometres to metres.", "request_id": "req-00152", "tenant": "t2", "ts": 1792606464.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00153", "tenant": "t0", "ts": 1792606896.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00154", "tenant": "t2", "ts": 1792607328.0}
+{"expected": "159", "kind": "sum", "prompt": "What is the sum of 81 and 78? Reply with the number only.", "request_id": "req-00155", "tenant": "t0", "ts": 1792607760.0}
+{"kind": "summary", "prompt": "Summarize our policy about delivery radius.", "request_id": "req-00156", "tenant": "t0", "ts": 1792608192.0}
+{"expected": "70", "kind": "sum", "prompt": "What is the sum of 67 and 3? Reply with the number only.", "request_id": "req-00157", "tenant": "t1", "ts": 1792608624.0}
+{"expected": "7000 metres", "kind": "convert", "prompt": "Convert 7 kilometres to metres.", "request_id": "req-00158", "tenant": "t0", "ts": 1792609056.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00159", "tenant": "t2", "ts": 1792609488.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00160", "tenant": "t1", "ts": 1792609920.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"The pizza arrived hot and the crust was perfect\"", "request_id": "req-00161", "tenant": "t1", "ts": 1792610352.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00162", "tenant": "t2", "ts": 1792610784.0}
+{"expected": "Ottawa", "kind": "capital", "prompt": "What is the capital of Canada?", "request_id": "req-00163", "tenant": "t1", "ts": 1792611216.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Forty minutes late and cold, never again\"", "request_id": "req-00164", "tenant": "t1", "ts": 1792611648.0}
+{"kind": "summary", "prompt": "Summarize our policy about delivery radius.", "request_id": "req-00165", "tenant": "t2", "ts": 1792612080.0}
+{"expected": "Accra", "kind": "capital", "prompt": "What is the capital of Ghana?", "request_id": "req-00166", "tenant": "t1", "ts": 1792612512.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Best delivery experience I've had all year\"", "request_id": "req-00167", "tenant": "t2", "ts": 1792612944.0}
+{"expected": "37", "kind": "sum", "prompt": "What is the sum of 17 and 20? Reply with the number only.", "request_id": "req-00168", "tenant": "t2", "ts": 1792613376.0}
+{"kind": "summary", "prompt": "Summarize our policy about delivery radius.", "request_id": "req-00169", "tenant": "t1", "ts": 1792613808.0}
+{"expected": "Rome", "kind": "capital", "prompt": "What is the capital of Italy?", "request_id": "req-00170", "tenant": "t2", "ts": 1792614240.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00171", "tenant": "t1", "ts": 1792614672.0}
+{"expected": "Nairobi", "kind": "capital", "prompt": "What is the capital of Kenya?", "request_id": "req-00172", "tenant": "t0", "ts": 1792615104.0}
+{"expected": "Tokyo", "kind": "capital", "prompt": "What is the capital of Japan?", "request_id": "req-00173", "tenant": "t1", "ts": 1792615536.0}
+{"expected": "Cairo", "kind": "capital", "prompt": "What is the capital of Egypt?", "request_id": "req-00174", "tenant": "t2", "ts": 1792615968.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00175", "tenant": "t1", "ts": 1792616400.0}
+{"expected": "128", "kind": "sum", "prompt": "What is the sum of 100 and 28? Reply with the number only.", "request_id": "req-00176", "tenant": "t1", "ts": 1792616832.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00177", "tenant": "t0", "ts": 1792617264.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00178", "tenant": "t0", "ts": 1792617696.0}
+{"expected": "142", "kind": "sum", "prompt": "What is the sum of 42 and 100? Reply with the number only.", "request_id": "req-00179", "tenant": "t1", "ts": 1792618128.0}
+{"expected": "Lima", "kind": "capital", "prompt": "What is the capital of Peru?", "request_id": "req-00180", "tenant": "t0", "ts": 1792618560.0}
+{"kind": "summary", "prompt": "Summarize our policy about loyalty points.", "request_id": "req-00181", "tenant": "t0", "ts": 1792618992.0}
+{"expected": "1000 metres", "kind": "convert", "prompt": "Convert 1 kilometres to metres.", "request_id": "req-00182", "tenant": "t2", "ts": 1792619424.0}
+{"expected": "62", "kind": "sum", "prompt": "What is the sum of 6 and 56? Reply with the number only.", "request_id": "req-00183", "tenant": "t2", "ts": 1792619856.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00184", "tenant": "t1", "ts": 1792620288.0}
+{"expected": "33000 metres", "kind": "convert", "prompt": "Convert 33 kilometres to metres.", "request_id": "req-00185", "tenant": "t2", "ts": 1792620720.0}
+{"kind": "summary", "prompt": "Summarize our policy about order tracking.", "request_id": "req-00186", "tenant": "t1", "ts": 1792621152.0}
+{"expected": "Rome", "kind": "capital", "prompt": "What is the capital of Italy?", "request_id": "req-00187", "tenant": "t1", "ts": 1792621584.0}
+{"expected": "Santiago", "kind": "capital", "prompt": "What is the capital of Chile?", "request_id": "req-00188", "tenant": "t2", "ts": 1792622016.0}
+{"expected": "161", "kind": "sum", "prompt": "What is the sum of 51 and 110? Reply with the number only.", "request_id": "req-00189", "tenant": "t0", "ts": 1792622448.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00190", "tenant": "t0", "ts": 1792622880.0}
+{"expected": "Accra", "kind": "capital", "prompt": "What is the capital of Ghana?", "request_id": "req-00191", "tenant": "t0", "ts": 1792623312.0}
+{"kind": "summary", "prompt": "Summarize our policy about refund policy.", "request_id": "req-00192", "tenant": "t0", "ts": 1792623744.0}
+{"expected": "20000 metres", "kind": "convert", "prompt": "Convert 20 kilometres to metres.", "request_id": "req-00193", "tenant": "t0", "ts": 1792624176.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00194", "tenant": "t2", "ts": 1792624608.0}
+{"expected": "positive", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"Loved the new stuffed crust, will reorder\"", "request_id": "req-00195", "tenant": "t2", "ts": 1792625040.0}
+{"expected": "negative", "kind": "sentiment", "prompt": "Classify the sentiment of this review as positive or negative: \"App crashed twice before I could order\"", "request_id": "req-00196", "tenant": "t2", "ts": 1792625472.0}
+{"expected": "11000 metres", "kind": "convert", "prompt": "Convert 11 kilometres to metres.", "request_id": "req-00197", "tenant": "t2", "ts": 1792625904.0}
+{"expected": "14000 metres", "kind": "convert", "prompt": "Convert 14 kilometres to metres.", "request_id": "req-00198", "tenant": "t1", "ts": 1792626336.0}
+{"expected": "75", "kind": "sum", "prompt": "What is the sum of 12 and 63? Reply with the number only.", "request_id": "req-00199", "tenant": "t2", "ts": 1792626768.0}

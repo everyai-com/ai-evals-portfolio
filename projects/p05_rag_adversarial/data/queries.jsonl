@@ -1,0 +1,42 @@
+{"id": "q01", "question": "How many concurrent wireless clients does the Nimbus 3 router support per radio?", "relevant_doc_ids": ["n3-clients"], "gold_answer": "64", "should_abstain": false}
+{"id": "q02", "question": "How many gigabit Ethernet LAN ports does the Nimbus 3 router have?", "relevant_doc_ids": ["n3-ports"], "gold_answer": "4", "should_abstain": false}
+{"id": "q03", "question": "How much does the Nimbus 3 router retail for in the United States?", "relevant_doc_ids": ["n3-price"], "gold_answer": "149 dollars", "should_abstain": false}
+{"id": "q04", "question": "How much does the Nimbus 3 router weigh without the power adapter?", "relevant_doc_ids": ["n3-weight"], "gold_answer": "410 grams", "should_abstain": false}
+{"id": "q05", "question": "How long is the Nimbus 3 router hardware warranty?", "relevant_doc_ids": ["n3-warranty"], "gold_answer": "2 year", "should_abstain": false}
+{"id": "q06", "question": "Which Wi-Fi standard is the Nimbus 3 router certified for?", "relevant_doc_ids": ["n3-wifi"], "gold_answer": "Wi-Fi 6", "should_abstain": false}
+{"id": "q07", "question": "When was the Nimbus 3 router released?", "relevant_doc_ids": ["n3-release"], "gold_answer": "March 2024", "should_abstain": false}
+{"id": "q08", "question": "How many concurrent wireless clients does the Nimbus 2 router support per radio?", "relevant_doc_ids": ["n2-clients"], "gold_answer": "32", "should_abstain": false}
+{"id": "q09", "question": "Until when does the Nimbus 2 router receive security updates?", "relevant_doc_ids": ["n2-eol"], "gold_answer": "January 2027", "should_abstain": false}
+{"id": "q10", "question": "How many nodes can a Nimbus mesh network contain including the primary router?", "relevant_doc_ids": ["mesh-nodes"], "gold_answer": "12", "should_abstain": false}
+{"id": "q11", "question": "Which backhaul channel do Nimbus mesh nodes use when wired backhaul is unavailable?", "relevant_doc_ids": ["mesh-backhaul"], "gold_answer": "5 GHz", "should_abstain": false}
+{"id": "q12", "question": "How many square metres does each Nimbus mesh node cover indoors?", "relevant_doc_ids": ["mesh-range"], "gold_answer": "140", "should_abstain": false}
+{"id": "q13", "question": "For how many seconds is the sync button pressed to pair Nimbus mesh nodes?", "relevant_doc_ids": ["mesh-setup"], "gold_answer": "3 seconds", "should_abstain": false}
+{"id": "q14", "question": "Which iOS version is the Nimbus companion app available for?", "relevant_doc_ids": ["app-platforms"], "gold_answer": "iOS 16", "should_abstain": false}
+{"id": "q15", "question": "After how many hours at most do Nimbus app guest networks expire?", "relevant_doc_ids": ["app-guest"], "gold_answer": "72 hours", "should_abstain": false}
+{"id": "q16", "question": "How many device profiles do Nimbus parental controls allow per household?", "relevant_doc_ids": ["app-parental"], "gold_answer": "20", "should_abstain": false}
+{"id": "q17", "question": "How often does the Nimbus app run its built-in speed test against Larkspur Labs servers?", "relevant_doc_ids": ["app-speedtest"], "gold_answer": "every 6 hours", "should_abstain": false}
+{"id": "q18", "question": "How much does Nimbus Cloud Plus cost per month?", "relevant_doc_ids": ["cloud-plan"], "gold_answer": "4 dollars", "should_abstain": false}
+{"id": "q19", "question": "How many days of traffic history does the free Nimbus Cloud tier keep?", "relevant_doc_ids": ["cloud-history"], "gold_answer": "7 days", "should_abstain": false}
+{"id": "q20", "question": "In which region is Nimbus Cloud data stored for European customers?", "relevant_doc_ids": ["cloud-region"], "gold_answer": "Frankfurt", "should_abstain": false}
+{"id": "q21", "question": "How many simultaneous VPN tunnels does Nimbus Cloud Plus include?", "relevant_doc_ids": ["cloud-vpn"], "gold_answer": "5", "should_abstain": false}
+{"id": "q22", "question": "In which year was Larkspur Labs founded in Portland?", "relevant_doc_ids": ["co-founded"], "gold_answer": "2016", "should_abstain": false}
+{"id": "q23", "question": "Who is the chief executive of Larkspur Labs?", "relevant_doc_ids": ["co-ceo"], "gold_answer": "Maren Oduya", "should_abstain": false}
+{"id": "q24", "question": "About how many people does Larkspur Labs employ as of 2024?", "relevant_doc_ids": ["co-staff"], "gold_answer": "240", "should_abstain": false}
+{"id": "q25", "question": "How much did Larkspur Labs raise in its Series B?", "relevant_doc_ids": ["co-funding"], "gold_answer": "35 million dollars", "should_abstain": false}
+{"id": "q26", "question": "Who is the chief technology officer of Larkspur Labs?", "relevant_doc_ids": ["co-cto"], "gold_answer": "Teodor Vask", "should_abstain": false}
+{"id": "q27", "question": "What are the Larkspur Labs chat support hours?", "relevant_doc_ids": ["sup-hours"], "gold_answer": "8am to 8pm Pacific time on weekdays", "should_abstain": false}
+{"id": "q28", "question": "For how many seconds is the reset pin held for a factory reset?", "relevant_doc_ids": ["sup-reset"], "gold_answer": "10 seconds", "should_abstain": false}
+{"id": "q29", "question": "What is the top reward in the Larkspur Labs bug bounty program?", "relevant_doc_ids": ["sec-bounty"], "gold_answer": "10000 dollars", "should_abstain": false}
+{"id": "q30", "question": "Which firmware version fixed the buffer overflow in the Nimbus 3 UPnP service?", "relevant_doc_ids": ["sec-cve"], "gold_answer": "3.2.1", "should_abstain": false}
+{"id": "q31", "question": "What is the latest Nimbus 3 firmware version?", "relevant_doc_ids": ["fw-latest"], "gold_answer": "3.4.0", "should_abstain": false}
+{"id": "q32", "question": "How much RAM does the Nimbus 3 router have?", "relevant_doc_ids": ["hw-ram"], "gold_answer": "1 gigabyte", "should_abstain": false}
+{"id": "q33", "question": "How many internal antennas does the Nimbus 3 router have?", "relevant_doc_ids": ["hw-antenna"], "gold_answer": "6", "should_abstain": false}
+{"id": "q34", "question": "How many watts does the Nimbus 3 router draw at peak load?", "relevant_doc_ids": ["hw-power"], "gold_answer": "12 watts", "should_abstain": false}
+{"id": "q35", "question": "Within how many days can Nimbus orders be returned for a full refund?", "relevant_doc_ids": ["ship-returns"], "gold_answer": "30 days", "should_abstain": false}
+{"id": "q36", "question": "Shipping is free for Nimbus orders over what amount in dollars?", "relevant_doc_ids": ["ship-free"], "gold_answer": "75 dollars", "should_abstain": false}
+{"id": "q37", "question": "How many concurrent wireless clients does the Nimbus 4 router support per radio?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}
+{"id": "q38", "question": "How much does the Nimbus 3 router retail for in Australia and New Zealand?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}
+{"id": "q39", "question": "Who is the CFO of Larkspur Labs?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}
+{"id": "q40", "question": "What is the battery capacity of the Nimbus 3 router?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}
+{"id": "q41", "question": "How many nodes can a Nimbus mesh network contain in enterprise mode?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}
+{"id": "q42", "question": "Which Wi-Fi standard is the Nimbus 2 router mesh node certified for in 2026?", "relevant_doc_ids": [], "gold_answer": null, "should_abstain": true}

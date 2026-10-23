@@ -1,0 +1,14 @@
+# Recommendation thresholds for the shadow report (see report.recommend).
+# `reject` rules are checked first; `promote` needs min_pairs AND every promote rule; else `hold`.
+min_pairs: 30
+promote:
+  min_agreement_lo: 0.90        # Wilson lower bound of judge agreement
+  max_error_rate: 0.02          # shadow exceptions + timeouts / shadowed requests
+  max_shadow_worse_rate: 0.05   # pairs where the shadow lost a success the primary had
+  max_cost_ratio: 1.0           # shadow mean cost / primary mean cost
+  max_p95_latency_ratio: 1.5
+reject:
+  max_agreement_hi: 0.80        # even the upper CI bound is below this
+  min_error_rate: 0.10
+  min_shadow_worse_rate: 0.15
+  min_cost_ratio: 10.0          # shadow costs >= 10x primary -> not worth it regardless

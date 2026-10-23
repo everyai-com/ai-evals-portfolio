@@ -1,0 +1,1424 @@
+[
+  {
+    "manager": "truncate",
+    "noise_tokens": 2000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 2269,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 1.0,
+    "false_retention": 0.8664609960334951,
+    "mean_rendered_tokens": 2269.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      }
+    ]
+  },
+  {
+    "manager": "summarize",
+    "noise_tokens": 2000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 2269,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 1.0,
+    "false_retention": 0.8664609960334951,
+    "mean_rendered_tokens": 2269.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      }
+    ]
+  },
+  {
+    "manager": "retrieval",
+    "noise_tokens": 2000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 2269,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 1.0,
+    "false_retention": 0.8664609960334951,
+    "mean_rendered_tokens": 2269.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2269,
+        "noise_tokens": 1966
+      }
+    ]
+  },
+  {
+    "manager": "truncate",
+    "noise_tokens": 8000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 8210,
+    "recall": 0.6666666666666666,
+    "latest_correct": 0.6666666666666666,
+    "latest_given_found": 1.0,
+    "update_correct": 0.6,
+    "recall_by_position": {
+      "early": 0.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 0.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.4805115712545676,
+    "false_retention": 0.9396704689480355,
+    "mean_rendered_tokens": 3945.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      }
+    ]
+  },
+  {
+    "manager": "summarize",
+    "noise_tokens": 8000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 8210,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.4791717417783191,
+    "false_retention": 0.9245043213014745,
+    "mean_rendered_tokens": 3934.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3934,
+        "noise_tokens": 3637
+      }
+    ]
+  },
+  {
+    "manager": "retrieval",
+    "noise_tokens": 8000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 8210,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.48103938286642306,
+    "false_retention": 0.9373756273243591,
+    "mean_rendered_tokens": 3949.3333333333335,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3953,
+        "noise_tokens": 3692
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3952,
+        "noise_tokens": 3692
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3956,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3953,
+        "noise_tokens": 3692
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3956,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3952,
+        "noise_tokens": 3692
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3945,
+        "noise_tokens": 3707
+      }
+    ]
+  },
+  {
+    "manager": "truncate",
+    "noise_tokens": 32000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 32215,
+    "recall": 0.3333333333333333,
+    "latest_correct": 0.3333333333333333,
+    "latest_given_found": 1.0,
+    "update_correct": 0.2,
+    "recall_by_position": {
+      "early": 0.0,
+      "middle": 0.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 0.0,
+      "middle": 0.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.12323451808163899,
+    "false_retention": 0.9700251889168766,
+    "mean_rendered_tokens": 3970.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": null,
+        "found": false,
+        "latest_correct": false,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      }
+    ]
+  },
+  {
+    "manager": "summarize",
+    "noise_tokens": 32000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 32215,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.07611361167158157,
+    "false_retention": 0.9192495921696575,
+    "mean_rendered_tokens": 2452.0,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 2452,
+        "noise_tokens": 2254
+      }
+    ]
+  },
+  {
+    "manager": "retrieval",
+    "noise_tokens": 32000,
+    "budget": 4000,
+    "n_facts": 12,
+    "total_tokens": 32215,
+    "recall": 1.0,
+    "latest_correct": 1.0,
+    "latest_given_found": 1.0,
+    "update_correct": 1.0,
+    "recall_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "latest_by_position": {
+      "early": 1.0,
+      "middle": 1.0,
+      "late": 1.0
+    },
+    "compression_ratio": 0.1187671374618449,
+    "false_retention": 0.9646933689295157,
+    "mean_rendered_tokens": 3826.0833333333335,
+    "probes": [
+      {
+        "key": "user_id",
+        "position": "early",
+        "expected": "use_6433",
+        "answer": "use_6433",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3780,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "budget",
+        "position": "middle",
+        "expected": "bud_2719",
+        "answer": "bud_2719",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3779,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "deadline",
+        "position": "late",
+        "expected": "dea_1006",
+        "answer": "dea_1006",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "region",
+        "position": "early",
+        "expected": "reg_6717",
+        "answer": "reg_6717",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3779,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "project",
+        "position": "middle",
+        "expected": "pro_9124",
+        "answer": "pro_9124",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3780,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "tier",
+        "position": "late",
+        "expected": "tie_6624",
+        "answer": "tie_6624",
+        "found": true,
+        "latest_correct": true,
+        "has_update": false,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "currency",
+        "position": "early",
+        "expected": "cur_7291",
+        "answer": "cur_7291",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3780,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "owner",
+        "position": "middle",
+        "expected": "own_4430",
+        "answer": "own_4430",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3779,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "sprint",
+        "position": "late",
+        "expected": "spr_2227",
+        "answer": "spr_2227",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3970,
+        "noise_tokens": 3851
+      },
+      {
+        "key": "locale",
+        "position": "early",
+        "expected": "loc_1533",
+        "answer": "loc_1533",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3779,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "timezone",
+        "position": "middle",
+        "expected": "tim_1085",
+        "answer": "tim_1085",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3780,
+        "noise_tokens": 3638
+      },
+      {
+        "key": "priority",
+        "position": "late",
+        "expected": "pri_3679",
+        "answer": "pri_3679",
+        "found": true,
+        "latest_correct": true,
+        "has_update": true,
+        "rendered_tokens": 3767,
+        "noise_tokens": 3638
+      }
+    ]
+  }
+]

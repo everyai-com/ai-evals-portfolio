@@ -1,0 +1,8 @@
+{"id": "qa-01", "input": "What is the capital of France?", "expected": "Paris", "context": ["Paris is the capital and largest city of France."], "tags": ["geo"]}
+{"id": "qa-02", "input": "How many legs does a spider have?", "expected": "8", "context": ["Spiders have eight legs and two body segments."], "tags": ["science"]}
+{"id": "qa-03", "input": "What colour is the sky on a clear day?", "expected": "blue", "context": ["On a clear day the sky appears blue because of Rayleigh scattering."], "tags": ["science"]}
+{"id": "qa-04", "input": "Who wrote Hamlet?", "expected": "William Shakespeare", "context": ["Hamlet is a tragedy written by William Shakespeare around 1600."], "tags": ["lit"]}
+{"id": "qa-05", "input": "What is the boiling point of water at sea level?", "expected": "100 degrees Celsius", "context": ["Water boils at 100 degrees Celsius at sea level."], "tags": ["science"], "asserts": [{"type": "icontains", "value": "100"}, {"type": "javascript", "value": "output.length > 0"}]}
+{"id": "qa-06", "input": "Which planet is known as the Red Planet?", "expected": "Mars", "context": ["Mars is often called the Red Planet because of iron oxide on its surface."], "tags": ["science"]}
+{"id": "qa-07", "input": "What is the largest ocean on Earth?", "expected": "Pacific Ocean", "context": ["The Pacific Ocean is the largest and deepest ocean on Earth."], "tags": ["geo"]}
+{"id": "qa-08", "input": "What gas do plants absorb during photosynthesis?", "expected": "carbon dioxide", "context": ["Plants absorb carbon dioxide and release oxygen during photosynthesis."], "tags": ["science"], "asserts": [{"type": "regex", "value": "carbon\\s+dioxide"}, {"type": "llm-rubric", "value": "mentions carbon dioxide"}]}

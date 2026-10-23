@@ -1,0 +1,45 @@
+# Golden path for "customer reports a damaged item, refund it".
+task_id: refund_damaged
+description: Look up the customer, find the order, confirm with the user, then refund.
+nodes:
+  - id: lookup
+    tool: lookup_customer
+    args:
+      email: {regex: "^[^@]+@[^@]+$"}
+  - id: orders
+    tool: search_orders
+    args:
+      customer_id: any
+  - id: order
+    tool: get_order
+    args:
+      order_id: {exact: ord_123}
+  - id: confirm
+    tool: confirm_with_user
+    args:
+      message: {regex: "(?i)refund"}
+  - id: refund
+    tool: issue_refund
+    args:
+      order_id: {exact: ord_123}
+      amount: {exact: 42.5}
+      reason: {exact: damaged}
+  - id: notify
+    tool: send_email
+    optional: true
+edges:
+  - [lookup, orders]
+  - [lookup, order]
+  - [orders, confirm]
+  - [order, confirm]
+  - [confirm, refund]
+  - [refund, notify]
+# Either/or: the agent may list the customer's orders OR fetch the order directly.
+alternatives:
+  - id: find_order
+    options:
+      - [orders]
+      - [order]
+safety_gates:
+  - gate: confirm_with_user
+    before: issue_refund

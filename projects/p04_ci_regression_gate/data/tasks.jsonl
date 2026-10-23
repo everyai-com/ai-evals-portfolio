@@ -1,0 +1,300 @@
+{"expected": "40", "id": "t000", "input": "What is 26 + 14? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "59", "id": "t001", "input": "What is 76 - 17? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1440", "id": "t002", "input": "What is 32 * 45? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "moorhsum", "id": "t003", "input": "Reverse the word 'mushroom'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DOUGH", "id": "t004", "input": "Uppercase the word 'dough'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t005", "input": "How many letters are in 'basil'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1209", "id": "t006", "input": "What is 815 + 394? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "92", "id": "t007", "input": "What is 856 - 764? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "946", "id": "t008", "input": "What is 86 * 11? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "yrevilednopuoc", "id": "t009", "input": "Reverse the word 'coupondelivery'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "MOZZARELLAPIZZA", "id": "t010", "input": "Uppercase the word 'mozzarellapizza'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "4", "id": "t011", "input": "How many letters are in 'oven'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "44", "id": "t012", "input": "What is 13 + 31? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-26", "id": "t013", "input": "What is 23 - 49? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "646", "id": "t014", "input": "What is 19 * 34? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "evilo", "id": "t015", "input": "Reverse the word 'olive'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DOUGH", "id": "t016", "input": "Uppercase the word 'dough'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "12", "id": "t017", "input": "How many letters are in 'receiptdough'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "35", "id": "t018", "input": "What is 19 + 16? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-8", "id": "t019", "input": "What is 36 - 44? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "486", "id": "t020", "input": "What is 27 * 18? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "lisab", "id": "t021", "input": "Reverse the word 'basil'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PEPPER", "id": "t022", "input": "Uppercase the word 'pepper'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t023", "input": "How many letters are in 'sauce'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "33", "id": "t024", "input": "What is 20 + 13? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "9", "id": "t025", "input": "What is 12 - 3? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "100", "id": "t026", "input": "What is 5 * 20? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "ecuasecuas", "id": "t027", "input": "Reverse the word 'saucesauce'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "ANCHOVYTOPPING", "id": "t028", "input": "Uppercase the word 'anchovytopping'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "11", "id": "t029", "input": "How many letters are in 'pepperolive'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "58", "id": "t030", "input": "What is 23 + 35? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-338", "id": "t031", "input": "What is 231 - 569? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1170", "id": "t032", "input": "What is 18 * 65? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "yvohcnatpiecer", "id": "t033", "input": "Reverse the word 'receiptanchovy'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "TOPPINGSAUCE", "id": "t034", "input": "Uppercase the word 'toppingsauce'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "8", "id": "t035", "input": "How many letters are in 'mushroom'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1138", "id": "t036", "input": "What is 510 + 628? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-1", "id": "t037", "input": "What is 21 - 22? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "250", "id": "t038", "input": "What is 10 * 25? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "moorhsum", "id": "t039", "input": "Reverse the word 'mushroom'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "RECEIPT", "id": "t040", "input": "Uppercase the word 'receipt'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t041", "input": "How many letters are in 'pizza'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "43", "id": "t042", "input": "What is 23 + 20? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "13", "id": "t043", "input": "What is 25 - 12? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "546", "id": "t044", "input": "What is 39 * 14? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "hguod", "id": "t045", "input": "Reverse the word 'dough'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "CRUST", "id": "t046", "input": "Uppercase the word 'crust'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "4", "id": "t047", "input": "How many letters are in 'oven'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "81", "id": "t048", "input": "What is 33 + 48? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-743", "id": "t049", "input": "What is 119 - 862? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1927", "id": "t050", "input": "What is 41 * 47? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "moorhsumnopuoc", "id": "t051", "input": "Reverse the word 'couponmushroom'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "MOZZARELLA", "id": "t052", "input": "Uppercase the word 'mozzarella'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t053", "input": "How many letters are in 'olive'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1692", "id": "t054", "input": "What is 891 + 801? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "34", "id": "t055", "input": "What is 48 - 14? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "726", "id": "t056", "input": "What is 33 * 22? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "hguod", "id": "t057", "input": "Reverse the word 'dough'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PIZZA", "id": "t058", "input": "Uppercase the word 'pizza'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t059", "input": "How many letters are in 'coupon'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "18", "id": "t060", "input": "What is 2 + 16? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-7", "id": "t061", "input": "What is 1 - 8? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "364", "id": "t062", "input": "What is 26 * 14? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nevo", "id": "t063", "input": "Reverse the word 'oven'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "TOPPINGPEPPER", "id": "t064", "input": "Uppercase the word 'toppingpepper'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "5", "id": "t065", "input": "How many letters are in 'olive'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "86", "id": "t066", "input": "What is 48 + 38? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "49", "id": "t067", "input": "What is 259 - 210? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1659", "id": "t068", "input": "What is 21 * 79? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "lisab", "id": "t069", "input": "Reverse the word 'basil'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "SAUCE", "id": "t070", "input": "Uppercase the word 'sauce'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t071", "input": "How many letters are in 'sauce'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "865", "id": "t072", "input": "What is 452 + 413? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "10", "id": "t073", "input": "What is 41 - 31? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "608", "id": "t074", "input": "What is 32 * 19? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "cilrag", "id": "t075", "input": "Reverse the word 'garlic'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "RECEIPT", "id": "t076", "input": "Uppercase the word 'receipt'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "15", "id": "t077", "input": "How many letters are in 'olivemozzarella'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "50", "id": "t078", "input": "What is 47 + 3? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "18", "id": "t079", "input": "What is 39 - 21? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "6", "id": "t080", "input": "What is 6 * 1? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nevo", "id": "t081", "input": "Reverse the word 'oven'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "OVEN", "id": "t082", "input": "Uppercase the word 'oven'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "13", "id": "t083", "input": "How many letters are in 'mushroomdough'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "46", "id": "t084", "input": "What is 39 + 7? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "17", "id": "t085", "input": "What is 20 - 3? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "484", "id": "t086", "input": "What is 22 * 22? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "yreviled", "id": "t087", "input": "Reverse the word 'delivery'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "MUSHROOM", "id": "t088", "input": "Uppercase the word 'mushroom'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t089", "input": "How many letters are in 'mushroom'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "46", "id": "t090", "input": "What is 14 + 32? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "12", "id": "t091", "input": "What is 44 - 32? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "629", "id": "t092", "input": "What is 17 * 37? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "lisabreppep", "id": "t093", "input": "Reverse the word 'pepperbasil'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "ANCHOVY", "id": "t094", "input": "Uppercase the word 'anchovy'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t095", "input": "How many letters are in 'coupon'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "95", "id": "t096", "input": "What is 47 + 48? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-12", "id": "t097", "input": "What is 37 - 49? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "966", "id": "t098", "input": "What is 69 * 14? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "gnippothguod", "id": "t099", "input": "Reverse the word 'doughtopping'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "MOZZARELLA", "id": "t100", "input": "Uppercase the word 'mozzarella'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t101", "input": "How many letters are in 'dough'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1359", "id": "t102", "input": "What is 578 + 781? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "10", "id": "t103", "input": "What is 26 - 16? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "10", "id": "t104", "input": "What is 5 * 2? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nopuoctpiecer", "id": "t105", "input": "Reverse the word 'receiptcoupon'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "SAUCE", "id": "t106", "input": "Uppercase the word 'sauce'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t107", "input": "How many letters are in 'mushroom'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "682", "id": "t108", "input": "What is 320 + 362? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "13", "id": "t109", "input": "What is 672 - 659? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1276", "id": "t110", "input": "What is 29 * 44? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nopuocmoorhsum", "id": "t111", "input": "Reverse the word 'mushroomcoupon'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "DELIVERY", "id": "t112", "input": "Uppercase the word 'delivery'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "17", "id": "t113", "input": "How many letters are in 'toppingmozzarella'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "1433", "id": "t114", "input": "What is 708 + 725? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-77", "id": "t115", "input": "What is 318 - 395? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "288", "id": "t116", "input": "What is 12 * 24? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t117", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "SAUCE", "id": "t118", "input": "Uppercase the word 'sauce'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "11", "id": "t119", "input": "How many letters are in 'receiptoven'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "1079", "id": "t120", "input": "What is 211 + 868? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "24", "id": "t121", "input": "What is 49 - 25? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "1558", "id": "t122", "input": "What is 41 * 38? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "azzip", "id": "t123", "input": "Reverse the word 'pizza'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DELIVERY", "id": "t124", "input": "Uppercase the word 'delivery'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t125", "input": "How many letters are in 'garlic'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "18", "id": "t126", "input": "What is 5 + 13? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-37", "id": "t127", "input": "What is 10 - 47? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "600", "id": "t128", "input": "What is 24 * 25? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t129", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "TOPPING", "id": "t130", "input": "Uppercase the word 'topping'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t131", "input": "How many letters are in 'delivery'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "71", "id": "t132", "input": "What is 38 + 33? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "40", "id": "t133", "input": "What is 44 - 4? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "95", "id": "t134", "input": "What is 5 * 19? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "hguod", "id": "t135", "input": "Reverse the word 'dough'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "MUSHROOM", "id": "t136", "input": "Uppercase the word 'mushroom'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t137", "input": "How many letters are in 'pizza'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "69", "id": "t138", "input": "What is 21 + 48? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-10", "id": "t139", "input": "What is 5 - 15? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "1326", "id": "t140", "input": "What is 39 * 34? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "reppep", "id": "t141", "input": "Reverse the word 'pepper'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "MOZZARELLAPEPPER", "id": "t142", "input": "Uppercase the word 'mozzarellapepper'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "10", "id": "t143", "input": "How many letters are in 'mozzarella'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1465", "id": "t144", "input": "What is 541 + 924? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-27", "id": "t145", "input": "What is 407 - 434? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "370", "id": "t146", "input": "What is 37 * 10? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t147", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PIZZA", "id": "t148", "input": "Uppercase the word 'pizza'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t149", "input": "How many letters are in 'mushroom'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "65", "id": "t150", "input": "What is 16 + 49? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-4", "id": "t151", "input": "What is 21 - 25? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "1125", "id": "t152", "input": "What is 25 * 45? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "cilrag", "id": "t153", "input": "Reverse the word 'garlic'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "OLIVE", "id": "t154", "input": "Uppercase the word 'olive'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t155", "input": "How many letters are in 'basilsauce'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "49", "id": "t156", "input": "What is 44 + 5? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "41", "id": "t157", "input": "What is 45 - 4? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "21", "id": "t158", "input": "What is 1 * 21? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "lisab", "id": "t159", "input": "Reverse the word 'basil'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "RECEIPTBASIL", "id": "t160", "input": "Uppercase the word 'receiptbasil'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "7", "id": "t161", "input": "How many letters are in 'anchovy'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "73", "id": "t162", "input": "What is 29 + 44? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "22", "id": "t163", "input": "What is 24 - 2? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "896", "id": "t164", "input": "What is 32 * 28? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "ecuas", "id": "t165", "input": "Reverse the word 'sauce'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "COUPON", "id": "t166", "input": "Uppercase the word 'coupon'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t167", "input": "How many letters are in 'basil'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "672", "id": "t168", "input": "What is 350 + 322? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-19", "id": "t169", "input": "What is 20 - 39? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "836", "id": "t170", "input": "What is 22 * 38? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t171", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "MUSHROOMGARLIC", "id": "t172", "input": "Uppercase the word 'mushroomgarlic'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "5", "id": "t173", "input": "How many letters are in 'crust'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "58", "id": "t174", "input": "What is 28 + 30? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "719", "id": "t175", "input": "What is 898 - 179? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1015", "id": "t176", "input": "What is 35 * 29? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t177", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "TOPPING", "id": "t178", "input": "Uppercase the word 'topping'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t179", "input": "How many letters are in 'pepper'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "798", "id": "t180", "input": "What is 286 + 512? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "478", "id": "t181", "input": "What is 642 - 164? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "390", "id": "t182", "input": "What is 10 * 39? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "gnippot", "id": "t183", "input": "Reverse the word 'topping'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "GARLIC", "id": "t184", "input": "Uppercase the word 'garlic'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t185", "input": "How many letters are in 'crustdough'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "80", "id": "t186", "input": "What is 48 + 32? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "11", "id": "t187", "input": "What is 15 - 4? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "2880", "id": "t188", "input": "What is 64 * 45? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "ecuas", "id": "t189", "input": "Reverse the word 'sauce'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "ANCHOVYPEPPER", "id": "t190", "input": "Uppercase the word 'anchovypepper'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "7", "id": "t191", "input": "How many letters are in 'receipt'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "484", "id": "t192", "input": "What is 172 + 312? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-24", "id": "t193", "input": "What is 21 - 45? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "180", "id": "t194", "input": "What is 15 * 12? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "lisab", "id": "t195", "input": "Reverse the word 'basil'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "RECEIPT", "id": "t196", "input": "Uppercase the word 'receipt'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t197", "input": "How many letters are in 'garlicoven'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "757", "id": "t198", "input": "What is 178 + 579? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-462", "id": "t199", "input": "What is 512 - 974? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "2295", "id": "t200", "input": "What is 51 * 45? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "hguodtpiecer", "id": "t201", "input": "Reverse the word 'receiptdough'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "OVEN", "id": "t202", "input": "Uppercase the word 'oven'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t203", "input": "How many letters are in 'doughbasil'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "59", "id": "t204", "input": "What is 18 + 41? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "101", "id": "t205", "input": "What is 426 - 325? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "70", "id": "t206", "input": "What is 10 * 7? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tsurc", "id": "t207", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "SAUCE", "id": "t208", "input": "Uppercase the word 'sauce'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t209", "input": "How many letters are in 'mozzarella'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "42", "id": "t210", "input": "What is 8 + 34? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-3", "id": "t211", "input": "What is 35 - 38? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "900", "id": "t212", "input": "What is 20 * 45? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nevo", "id": "t213", "input": "Reverse the word 'oven'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "CRUST", "id": "t214", "input": "Uppercase the word 'crust'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "15", "id": "t215", "input": "How many letters are in 'olivemozzarella'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "56", "id": "t216", "input": "What is 46 + 10? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "44", "id": "t217", "input": "What is 49 - 5? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "5586", "id": "t218", "input": "What is 57 * 98? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "eviloreppep", "id": "t219", "input": "Reverse the word 'pepperolive'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "MUSHROOMRECEIPT", "id": "t220", "input": "Uppercase the word 'mushroomreceipt'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "7", "id": "t221", "input": "How many letters are in 'receipt'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "63", "id": "t222", "input": "What is 36 + 27? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "6", "id": "t223", "input": "What is 29 - 23? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "252", "id": "t224", "input": "What is 42 * 6? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "yvohcna", "id": "t225", "input": "Reverse the word 'anchovy'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "OVEN", "id": "t226", "input": "Uppercase the word 'oven'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "11", "id": "t227", "input": "How many letters are in 'couponbasil'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "992", "id": "t228", "input": "What is 776 + 216? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "27", "id": "t229", "input": "What is 29 - 2? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "1353", "id": "t230", "input": "What is 33 * 41? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "nevo", "id": "t231", "input": "Reverse the word 'oven'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PEPPER", "id": "t232", "input": "Uppercase the word 'pepper'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "7", "id": "t233", "input": "How many letters are in 'receipt'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "76", "id": "t234", "input": "What is 40 + 36? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "6", "id": "t235", "input": "What is 29 - 23? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "3834", "id": "t236", "input": "What is 54 * 71? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "tsurc", "id": "t237", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "GARLIC", "id": "t238", "input": "Uppercase the word 'garlic'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t239", "input": "How many letters are in 'basil'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "70", "id": "t240", "input": "What is 27 + 43? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-12", "id": "t241", "input": "What is 24 - 36? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "5767", "id": "t242", "input": "What is 73 * 79? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "evilo", "id": "t243", "input": "Reverse the word 'olive'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PEPPER", "id": "t244", "input": "Uppercase the word 'pepper'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "7", "id": "t245", "input": "How many letters are in 'receipt'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "61", "id": "t246", "input": "What is 42 + 19? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-242", "id": "t247", "input": "What is 634 - 876? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "9", "id": "t248", "input": "What is 3 * 3? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "gnippotcilrag", "id": "t249", "input": "Reverse the word 'garlictopping'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "CRUST", "id": "t250", "input": "Uppercase the word 'crust'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "17", "id": "t251", "input": "How many letters are in 'receiptmozzarella'? Answer with just the number.", "tags": ["count", "hard"]}
+{"expected": "14", "id": "t252", "input": "What is 6 + 8? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "475", "id": "t253", "input": "What is 814 - 339? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "12", "id": "t254", "input": "What is 4 * 3? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "hguodcilrag", "id": "t255", "input": "Reverse the word 'garlicdough'. Answer with just the word.", "tags": ["reverse", "hard"]}
+{"expected": "SAUCE", "id": "t256", "input": "Uppercase the word 'sauce'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t257", "input": "How many letters are in 'delivery'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1016", "id": "t258", "input": "What is 294 + 722? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-15", "id": "t259", "input": "What is 18 - 33? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "806", "id": "t260", "input": "What is 26 * 31? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "gnippot", "id": "t261", "input": "Reverse the word 'topping'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "PIZZA", "id": "t262", "input": "Uppercase the word 'pizza'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "10", "id": "t263", "input": "How many letters are in 'mozzarella'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "42", "id": "t264", "input": "What is 25 + 17? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-16", "id": "t265", "input": "What is 11 - 27? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "930", "id": "t266", "input": "What is 31 * 30? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "allerazzom", "id": "t267", "input": "Reverse the word 'mozzarella'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "RECEIPT", "id": "t268", "input": "Uppercase the word 'receipt'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t269", "input": "How many letters are in 'garlic'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1027", "id": "t270", "input": "What is 842 + 185? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "38", "id": "t271", "input": "What is 43 - 5? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "1612", "id": "t272", "input": "What is 52 * 31? Answer with just the number.", "tags": ["mul", "hard"]}
+{"expected": "tsurc", "id": "t273", "input": "Reverse the word 'crust'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DELIVERY", "id": "t274", "input": "Uppercase the word 'delivery'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "8", "id": "t275", "input": "How many letters are in 'mushroom'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "85", "id": "t276", "input": "What is 44 + 41? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-4", "id": "t277", "input": "What is 9 - 13? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "726", "id": "t278", "input": "What is 33 * 22? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "tpiecer", "id": "t279", "input": "Reverse the word 'receipt'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "COUPONANCHOVY", "id": "t280", "input": "Uppercase the word 'couponanchovy'. Answer with just the word.", "tags": ["upper", "hard"]}
+{"expected": "5", "id": "t281", "input": "How many letters are in 'basil'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "488", "id": "t282", "input": "What is 474 + 14? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "-26", "id": "t283", "input": "What is 12 - 38? Answer with just the number.", "tags": ["sub", "easy"]}
+{"expected": "176", "id": "t284", "input": "What is 11 * 16? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "gnippot", "id": "t285", "input": "Reverse the word 'topping'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DELIVERY", "id": "t286", "input": "Uppercase the word 'delivery'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t287", "input": "How many letters are in 'basil'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "1609", "id": "t288", "input": "What is 829 + 780? Answer with just the number.", "tags": ["add", "hard"]}
+{"expected": "78", "id": "t289", "input": "What is 152 - 74? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "22", "id": "t290", "input": "What is 22 * 1? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "cilrag", "id": "t291", "input": "Reverse the word 'garlic'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "GARLIC", "id": "t292", "input": "Uppercase the word 'garlic'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "6", "id": "t293", "input": "How many letters are in 'pepper'? Answer with just the number.", "tags": ["count", "easy"]}
+{"expected": "55", "id": "t294", "input": "What is 19 + 36? Answer with just the number.", "tags": ["add", "easy"]}
+{"expected": "-161", "id": "t295", "input": "What is 120 - 281? Answer with just the number.", "tags": ["sub", "hard"]}
+{"expected": "1008", "id": "t296", "input": "What is 36 * 28? Answer with just the number.", "tags": ["mul", "easy"]}
+{"expected": "moorhsum", "id": "t297", "input": "Reverse the word 'mushroom'. Answer with just the word.", "tags": ["reverse", "easy"]}
+{"expected": "DELIVERY", "id": "t298", "input": "Uppercase the word 'delivery'. Answer with just the word.", "tags": ["upper", "easy"]}
+{"expected": "5", "id": "t299", "input": "How many letters are in 'dough'? Answer with just the number.", "tags": ["count", "easy"]}

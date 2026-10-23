@@ -1,0 +1,60 @@
+{"id": "n3-clients", "text": "The Nimbus 3 router supports a maximum of 64 concurrent wireless clients per radio.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "64"}}
+{"id": "n3-ports", "text": "The Nimbus 3 router has 4 gigabit Ethernet LAN ports and 1 WAN port.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "4"}}
+{"id": "n3-price", "text": "The Nimbus 3 router retails for 149 dollars in the United States.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "149"}}
+{"id": "n3-weight", "text": "The Nimbus 3 router weighs 410 grams without the power adapter.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "410"}}
+{"id": "n3-warranty", "text": "The Nimbus 3 router ships with a 2 year limited hardware warranty.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "2"}}
+{"id": "n3-wifi", "text": "The Nimbus 3 router is certified for Wi-Fi 6 and operates on the 2.4 GHz and 5 GHz bands.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "Wi-Fi 6"}}
+{"id": "n3-release", "text": "The Nimbus 3 router was released in March 2024.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "March 2024"}}
+{"id": "n3-color", "text": "The Nimbus 3 router is available in graphite and ivory finishes.", "metadata": {"topic": "nimbus3", "date": "2024-03-02", "fact_value": "graphite and ivory"}}
+{"id": "n2-clients", "text": "The older Nimbus 2 router supports up to 32 concurrent wireless clients per radio.", "metadata": {"topic": "nimbus2", "date": "2022-05-10", "fact_value": "32"}}
+{"id": "n2-ports", "text": "The Nimbus 2 router has 2 gigabit Ethernet LAN ports and 1 WAN port.", "metadata": {"topic": "nimbus2", "date": "2022-05-10", "fact_value": "2"}}
+{"id": "n2-price", "text": "The Nimbus 2 router retails for 99 dollars.", "metadata": {"topic": "nimbus2", "date": "2022-05-10", "fact_value": "99"}}
+{"id": "n2-eol", "text": "The Nimbus 2 router reached end of sale in January 2025 and receives security updates until January 2027.", "metadata": {"topic": "nimbus2", "date": "2025-01-15", "fact_value": "January 2027"}}
+{"id": "n2-wifi", "text": "The Nimbus 2 router is certified for Wi-Fi 5 only.", "metadata": {"topic": "nimbus2", "date": "2022-05-10", "fact_value": "Wi-Fi 5"}}
+{"id": "mesh-nodes", "text": "A Nimbus mesh network can contain at most 12 nodes including the primary router.", "metadata": {"topic": "mesh", "date": "2024-04-01", "fact_value": "12"}}
+{"id": "mesh-backhaul", "text": "Nimbus mesh nodes use a dedicated 5 GHz backhaul channel when wired backhaul is unavailable.", "metadata": {"topic": "mesh", "date": "2024-04-01", "fact_value": "5 GHz"}}
+{"id": "mesh-range", "text": "Each Nimbus mesh node covers roughly 140 square metres of indoor space.", "metadata": {"topic": "mesh", "date": "2024-04-01", "fact_value": "140"}}
+{"id": "mesh-price", "text": "A Nimbus mesh node add-on costs 89 dollars.", "metadata": {"topic": "mesh", "date": "2024-04-01", "fact_value": "89"}}
+{"id": "mesh-setup", "text": "Nimbus mesh nodes are paired by pressing the sync button for 3 seconds.", "metadata": {"topic": "mesh", "date": "2024-04-01", "fact_value": "3"}}
+{"id": "app-platforms", "text": "The Nimbus companion app is available for iOS 16 or later and Android 12 or later.", "metadata": {"topic": "app", "date": "2024-06-20", "fact_value": "iOS 16"}}
+{"id": "app-guest", "text": "The Nimbus app can create guest networks that expire after a configurable period of up to 72 hours.", "metadata": {"topic": "app", "date": "2024-06-20", "fact_value": "72"}}
+{"id": "app-parental", "text": "Nimbus parental controls allow up to 20 device profiles per household.", "metadata": {"topic": "app", "date": "2024-06-20", "fact_value": "20"}}
+{"id": "app-speedtest", "text": "The Nimbus app runs a built-in speed test against Larkspur Labs servers every 6 hours.", "metadata": {"topic": "app", "date": "2024-06-20", "fact_value": "6"}}
+{"id": "app-languages", "text": "The Nimbus app is localised into 9 languages including Spanish, German and Japanese.", "metadata": {"topic": "app", "date": "2024-06-20", "fact_value": "9"}}
+{"id": "cloud-plan", "text": "Nimbus Cloud Plus costs 4 dollars per month and adds 30 days of traffic history.", "metadata": {"topic": "cloud", "date": "2024-07-11", "fact_value": "4"}}
+{"id": "cloud-history", "text": "The free Nimbus Cloud tier keeps 7 days of traffic history.", "metadata": {"topic": "cloud", "date": "2024-07-11", "fact_value": "7"}}
+{"id": "cloud-region", "text": "Nimbus Cloud data is stored in the Frankfurt region for European customers.", "metadata": {"topic": "cloud", "date": "2024-07-11", "fact_value": "Frankfurt"}}
+{"id": "cloud-backup", "text": "Nimbus Cloud backs up router configuration automatically every 24 hours.", "metadata": {"topic": "cloud", "date": "2024-07-11", "fact_value": "24"}}
+{"id": "cloud-vpn", "text": "Nimbus Cloud Plus includes a WireGuard based remote access VPN with up to 5 simultaneous tunnels.", "metadata": {"topic": "cloud", "date": "2024-07-11", "fact_value": "5"}}
+{"id": "co-founded", "text": "Larkspur Labs was founded in 2016 in Portland, Oregon.", "metadata": {"topic": "company", "date": "2023-01-01", "fact_value": "2016"}}
+{"id": "co-hq", "text": "Larkspur Labs is headquartered in Portland, Oregon with a second office in Dublin.", "metadata": {"topic": "company", "date": "2023-01-01", "fact_value": "Portland"}}
+{"id": "co-ceo", "text": "The chief executive of Larkspur Labs is Maren Oduya.", "metadata": {"topic": "company", "date": "2023-01-01", "fact_value": "Maren Oduya"}}
+{"id": "co-staff", "text": "Larkspur Labs employs about 240 people as of 2024.", "metadata": {"topic": "company", "date": "2024-02-01", "fact_value": "240"}}
+{"id": "co-funding", "text": "Larkspur Labs raised a 35 million dollar Series B in 2023.", "metadata": {"topic": "company", "date": "2023-09-05", "fact_value": "35"}}
+{"id": "co-cto", "text": "The chief technology officer of Larkspur Labs is Teodor Vask.", "metadata": {"topic": "company", "date": "2023-01-01", "fact_value": "Teodor Vask"}}
+{"id": "co-ticker", "text": "Larkspur Labs is privately held and has no stock ticker.", "metadata": {"topic": "company", "date": "2023-01-01", "fact_value": "privately held"}}
+{"id": "sup-hours", "text": "Larkspur Labs support is available by chat from 8am to 8pm Pacific time on weekdays.", "metadata": {"topic": "support", "date": "2024-05-05", "fact_value": "8am to 8pm"}}
+{"id": "sup-phone", "text": "Phone support is included only with Nimbus Cloud Plus subscriptions.", "metadata": {"topic": "support", "date": "2024-05-05", "fact_value": "Nimbus Cloud Plus"}}
+{"id": "sup-rma", "text": "Warranty replacements are shipped within 5 business days of an approved RMA.", "metadata": {"topic": "support", "date": "2024-05-05", "fact_value": "5"}}
+{"id": "sup-reset", "text": "A factory reset is performed by holding the reset pin for 10 seconds until the status light blinks amber.", "metadata": {"topic": "support", "date": "2024-05-05", "fact_value": "10"}}
+{"id": "sup-firmware", "text": "Nimbus routers check for firmware updates nightly at 3am local time.", "metadata": {"topic": "support", "date": "2024-05-05", "fact_value": "3am"}}
+{"id": "sec-wpa", "text": "Nimbus 3 routers support WPA3 Personal and WPA2 mixed mode.", "metadata": {"topic": "security", "date": "2024-03-02", "fact_value": "WPA3"}}
+{"id": "sec-bounty", "text": "Larkspur Labs runs a bug bounty program with a top reward of 10000 dollars.", "metadata": {"topic": "security", "date": "2024-08-15", "fact_value": "10000"}}
+{"id": "sec-cve", "text": "Firmware 3.2.1 fixed a buffer overflow in the Nimbus 3 UPnP service.", "metadata": {"topic": "security", "date": "2024-09-01", "fact_value": "3.2.1"}}
+{"id": "sec-dns", "text": "Nimbus routers use encrypted DNS over HTTPS by default.", "metadata": {"topic": "security", "date": "2024-03-02", "fact_value": "DNS over HTTPS"}}
+{"id": "sec-logs", "text": "Nimbus security logs are retained on the router for 14 days.", "metadata": {"topic": "security", "date": "2024-03-02", "fact_value": "14"}}
+{"id": "fw-latest", "text": "The latest Nimbus 3 firmware is version 3.4.0, released in October 2024.", "metadata": {"topic": "firmware", "date": "2024-10-10", "fact_value": "3.4.0"}}
+{"id": "fw-size", "text": "Nimbus 3 firmware images are about 48 megabytes.", "metadata": {"topic": "firmware", "date": "2024-10-10", "fact_value": "48"}}
+{"id": "fw-rollback", "text": "Nimbus 3 keeps the previous firmware image so a rollback takes under 2 minutes.", "metadata": {"topic": "firmware", "date": "2024-10-10", "fact_value": "2"}}
+{"id": "fw-beta", "text": "Beta firmware is distributed through the Nimbus Early Access channel in the app.", "metadata": {"topic": "firmware", "date": "2024-10-10", "fact_value": "Early Access"}}
+{"id": "hw-cpu", "text": "The Nimbus 3 router uses a quad core ARM processor clocked at 1.8 GHz.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "1.8"}}
+{"id": "hw-ram", "text": "The Nimbus 3 router has 1 gigabyte of RAM.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "1"}}
+{"id": "hw-flash", "text": "The Nimbus 3 router has 256 megabytes of flash storage.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "256"}}
+{"id": "hw-power", "text": "The Nimbus 3 router draws 12 watts at peak load.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "12"}}
+{"id": "hw-usb", "text": "The Nimbus 3 router has a single USB 3.0 port for network storage.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "USB 3.0"}}
+{"id": "hw-antenna", "text": "The Nimbus 3 router has 6 internal antennas.", "metadata": {"topic": "hardware", "date": "2024-03-02", "fact_value": "6"}}
+{"id": "ship-regions", "text": "Nimbus products ship to the United States, Canada, the United Kingdom and the European Union.", "metadata": {"topic": "shipping", "date": "2024-01-20", "fact_value": "United States, Canada, the United Kingdom and the European Union"}}
+{"id": "ship-time", "text": "Standard shipping for Nimbus orders takes 3 to 5 business days.", "metadata": {"topic": "shipping", "date": "2024-01-20", "fact_value": "3 to 5"}}
+{"id": "ship-returns", "text": "Nimbus orders can be returned within 30 days for a full refund.", "metadata": {"topic": "shipping", "date": "2024-01-20", "fact_value": "30"}}
+{"id": "ship-free", "text": "Shipping is free for Nimbus orders over 75 dollars.", "metadata": {"topic": "shipping", "date": "2024-01-20", "fact_value": "75"}}
+{"id": "ship-carrier", "text": "Larkspur Labs ships Nimbus orders with UPS in North America.", "metadata": {"topic": "shipping", "date": "2024-01-20", "fact_value": "UPS"}}

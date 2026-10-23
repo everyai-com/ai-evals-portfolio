@@ -1,0 +1,33 @@
+# Unified eval harness config. Dataset paths are relative to this file.
+sut: faq_bot                       # see sut.py: faq_bot | echo_expected
+datasets:
+  - name: qa_small
+    path: qa_small.jsonl
+  - name: rag_small
+    path: rag_small.jsonl
+frameworks: [promptfoo, deepeval, ragas, native]
+options:
+  promptfoo:
+    # asserts applied when an example has no `asserts` of its own ({{expected}} is substituted)
+    default_asserts:
+      - {type: icontains, value: "{{expected}}"}
+      - {type: llm-rubric, value: "The output states the expected answer: {{expected}}"}
+    judge_model: mock
+  deepeval:
+    rubric_threshold: 0.5           # GEval-style correctness score needed to pass
+    relevancy_threshold: 0.3
+  ragas:
+    faithfulness_threshold: 0.6
+    relevancy_threshold: 0.3
+    support_overlap: 0.5
+  native:
+    pass_threshold: 0.5             # token F1 needed to pass
+# framework-specific metric name -> unified vocabulary
+metric_map:
+  promptfoo: {pass_rate: pass_rate, rubric_score: correctness}
+  deepeval: {geval_correctness: correctness, answer_relevancy: relevancy, pass_rate: pass_rate}
+  ragas: {faithfulness: faithfulness, answer_relevancy: relevancy, context_precision: context_precision, pass_rate: pass_rate}
+  native: {token_f1: correctness, faithfulness: faithfulness, pass_rate: pass_rate}
+unified_metrics: [correctness, faithfulness, relevancy, pass_rate]
+output:
+  jsonl: results.jsonl              # evalkit pytest-plugin-compatible rows (relative to --out)

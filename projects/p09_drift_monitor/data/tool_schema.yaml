@@ -1,0 +1,9 @@
+# Required arguments per tool, used by RuleScorer to flag invalid tool calls.
+lookup_order:
+  required: [order_id]
+search_menu:
+  required: [query]
+issue_refund:
+  required: [order_id, amount]
+get_store_hours:
+  required: [store_id]

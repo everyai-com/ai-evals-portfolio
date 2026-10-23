@@ -1,0 +1,9064 @@
+{
+ "aggregates": {
+  "by_tag": {
+   "add": {
+    "n": 100,
+    "success": 0.86
+   },
+   "count": {
+    "n": 100,
+    "success": 0.88
+   },
+   "easy": {
+    "n": 440,
+    "success": 0.8772727272727273
+   },
+   "hard": {
+    "n": 160,
+    "success": 0.9625
+   },
+   "mul": {
+    "n": 100,
+    "success": 0.96
+   },
+   "reverse": {
+    "n": 100,
+    "success": 0.86
+   },
+   "sub": {
+    "n": 100,
+    "success": 0.92
+   },
+   "upper": {
+    "n": 100,
+    "success": 0.92
+   }
+  },
+  "cost_per_task": 1.5158333333333334e-05,
+  "cost_total_usd": 0.0045475,
+  "latency_p50_ms": 115.47690081076001,
+  "latency_p95_ms": 168.8310656649684,
+  "n_calls": 600,
+  "n_items": 300,
+  "task_success": 0.9
+ },
+ "cache": {
+  "dir": null,
+  "hit_rate": 0.0,
+  "hits": 0,
+  "misses": 600
+ },
+ "examples": [
+  {
+   "actual": "40",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "40",
+   "id": "t000",
+   "input": "What is 26 + 14? Answer with just the number.",
+   "latency_ms": 110.93584932315376,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "40",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "40",
+   "id": "t000",
+   "input": "What is 26 + 14? Answer with just the number.",
+   "latency_ms": 99.09224847456056,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "59",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "59",
+   "id": "t001",
+   "input": "What is 76 - 17? Answer with just the number.",
+   "latency_ms": 155.13683169455976,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "59",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "59",
+   "id": "t001",
+   "input": "What is 76 - 17? Answer with just the number.",
+   "latency_ms": 157.04486411408936,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1440",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1440",
+   "id": "t002",
+   "input": "What is 32 * 45? Answer with just the number.",
+   "latency_ms": 92.84815704535558,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1440",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1440",
+   "id": "t002",
+   "input": "What is 32 * 45? Answer with just the number.",
+   "latency_ms": 85.56871943146457,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "mushroomx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t003",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 94.84823916523347,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "mushroomx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t003",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 140.14421753810763,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DOUGH",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "DOUGH",
+   "id": "t004",
+   "input": "Uppercase the word 'dough'. Answer with just the word.",
+   "latency_ms": 90.043620321947,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DOUGH",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "DOUGH",
+   "id": "t004",
+   "input": "Uppercase the word 'dough'. Answer with just the word.",
+   "latency_ms": 105.77460240733501,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t005",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 105.3201103774832,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t005",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 128.19107011351954,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1209",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1209",
+   "id": "t006",
+   "input": "What is 815 + 394? Answer with just the number.",
+   "latency_ms": 139.5323943744149,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1209",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1209",
+   "id": "t006",
+   "input": "What is 815 + 394? Answer with just the number.",
+   "latency_ms": 140.9380507631263,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "92",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "92",
+   "id": "t007",
+   "input": "What is 856 - 764? Answer with just the number.",
+   "latency_ms": 162.15726094755985,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "92",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "92",
+   "id": "t007",
+   "input": "What is 856 - 764? Answer with just the number.",
+   "latency_ms": 177.09839100416144,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "946",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "946",
+   "id": "t008",
+   "input": "What is 86 * 11? Answer with just the number.",
+   "latency_ms": 153.8711603895498,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "946",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "946",
+   "id": "t008",
+   "input": "What is 86 * 11? Answer with just the number.",
+   "latency_ms": 211.7115219898913,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "yrevilednopuoc",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "yrevilednopuoc",
+   "id": "t009",
+   "input": "Reverse the word 'coupondelivery'. Answer with just the word.",
+   "latency_ms": 161.266047462249,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "yrevilednopuoc",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "yrevilednopuoc",
+   "id": "t009",
+   "input": "Reverse the word 'coupondelivery'. Answer with just the word.",
+   "latency_ms": 172.13661032353642,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MOZZARELLAPIZZA",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MOZZARELLAPIZZA",
+   "id": "t010",
+   "input": "Uppercase the word 'mozzarellapizza'. Answer with just the word.",
+   "latency_ms": 164.39988405773653,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MOZZARELLAPIZZA",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MOZZARELLAPIZZA",
+   "id": "t010",
+   "input": "Uppercase the word 'mozzarellapizza'. Answer with just the word.",
+   "latency_ms": 168.47672119602626,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "4",
+   "cached": false,
+   "cost_usd": 7.75e-06,
+   "expected": "4",
+   "id": "t011",
+   "input": "How many letters are in 'oven'? Answer with just the number.",
+   "latency_ms": 113.37592449294138,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "4",
+   "cached": false,
+   "cost_usd": 7.75e-06,
+   "expected": "4",
+   "id": "t011",
+   "input": "How many letters are in 'oven'? Answer with just the number.",
+   "latency_ms": 80.63165425750832,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "44",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "44",
+   "id": "t012",
+   "input": "What is 13 + 31? Answer with just the number.",
+   "latency_ms": 93.94842287827642,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "44",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "44",
+   "id": "t012",
+   "input": "What is 13 + 31? Answer with just the number.",
+   "latency_ms": 110.25538663639784,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-26",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-26",
+   "id": "t013",
+   "input": "What is 23 - 49? Answer with just the number.",
+   "latency_ms": 88.53451170173345,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-26",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-26",
+   "id": "t013",
+   "input": "What is 23 - 49? Answer with just the number.",
+   "latency_ms": 131.61876346963453,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "646",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "646",
+   "id": "t014",
+   "input": "What is 19 * 34? Answer with just the number.",
+   "latency_ms": 86.98539941951799,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "646",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "646",
+   "id": "t014",
+   "input": "What is 19 * 34? Answer with just the number.",
+   "latency_ms": 146.811228664414,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "evilo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "evilo",
+   "id": "t015",
+   "input": "Reverse the word 'olive'. Answer with just the word.",
+   "latency_ms": 91.6220711203897,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "evilo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "evilo",
+   "id": "t015",
+   "input": "Reverse the word 'olive'. Answer with just the word.",
+   "latency_ms": 98.42080495938711,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DOUGH",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "DOUGH",
+   "id": "t016",
+   "input": "Uppercase the word 'dough'. Answer with just the word.",
+   "latency_ms": 124.85574119458971,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DOUGH",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "DOUGH",
+   "id": "t016",
+   "input": "Uppercase the word 'dough'. Answer with just the word.",
+   "latency_ms": 91.72208335394734,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "12",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "12",
+   "id": "t017",
+   "input": "How many letters are in 'receiptdough'? Answer with just the number.",
+   "latency_ms": 155.6968310144922,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "12",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "12",
+   "id": "t017",
+   "input": "How many letters are in 'receiptdough'? Answer with just the number.",
+   "latency_ms": 127.49123275166077,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "35",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "35",
+   "id": "t018",
+   "input": "What is 19 + 16? Answer with just the number.",
+   "latency_ms": 138.23732404119562,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "35",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "35",
+   "id": "t018",
+   "input": "What is 19 + 16? Answer with just the number.",
+   "latency_ms": 105.6192962420271,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-8",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-8",
+   "id": "t019",
+   "input": "What is 36 - 44? Answer with just the number.",
+   "latency_ms": 105.10493860480551,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-8",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-8",
+   "id": "t019",
+   "input": "What is 36 - 44? Answer with just the number.",
+   "latency_ms": 98.08807524104037,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "486",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "486",
+   "id": "t020",
+   "input": "What is 27 * 18? Answer with just the number.",
+   "latency_ms": 153.09708029358376,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "486",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "486",
+   "id": "t020",
+   "input": "What is 27 * 18? Answer with just the number.",
+   "latency_ms": 97.64285028070367,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t021",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 134.4524281467702,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t021",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 141.08656927888012,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t022",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 94.61081497695515,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t022",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 110.89430365667239,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t023",
+   "input": "How many letters are in 'sauce'? Answer with just the number.",
+   "latency_ms": 127.0693269810539,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t023",
+   "input": "How many letters are in 'sauce'? Answer with just the number.",
+   "latency_ms": 106.34968909823081,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "33",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "33",
+   "id": "t024",
+   "input": "What is 20 + 13? Answer with just the number.",
+   "latency_ms": 105.43415938050134,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "33",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "33",
+   "id": "t024",
+   "input": "What is 20 + 13? Answer with just the number.",
+   "latency_ms": 120.31363666149255,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "9",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "9",
+   "id": "t025",
+   "input": "What is 12 - 3? Answer with just the number.",
+   "latency_ms": 121.87380973141171,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "9",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "9",
+   "id": "t025",
+   "input": "What is 12 - 3? Answer with just the number.",
+   "latency_ms": 91.00811540130647,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "100",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "100",
+   "id": "t026",
+   "input": "What is 5 * 20? Answer with just the number.",
+   "latency_ms": 102.5584098178357,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "100",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "100",
+   "id": "t026",
+   "input": "What is 5 * 20? Answer with just the number.",
+   "latency_ms": 126.06759849835753,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ecuasecuas",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "ecuasecuas",
+   "id": "t027",
+   "input": "Reverse the word 'saucesauce'. Answer with just the word.",
+   "latency_ms": 131.7154263736536,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ecuasecuas",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "ecuasecuas",
+   "id": "t027",
+   "input": "Reverse the word 'saucesauce'. Answer with just the word.",
+   "latency_ms": 143.29961374652265,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ANCHOVYTOPPING",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "ANCHOVYTOPPING",
+   "id": "t028",
+   "input": "Uppercase the word 'anchovytopping'. Answer with just the word.",
+   "latency_ms": 132.2338616012641,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ANCHOVYTOPPING",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "ANCHOVYTOPPING",
+   "id": "t028",
+   "input": "Uppercase the word 'anchovytopping'. Answer with just the word.",
+   "latency_ms": 130.07049982991603,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t029",
+   "input": "How many letters are in 'pepperolive'? Answer with just the number.",
+   "latency_ms": 171.7181231630092,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t029",
+   "input": "How many letters are in 'pepperolive'? Answer with just the number.",
+   "latency_ms": 154.16337982066912,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "58",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "58",
+   "id": "t030",
+   "input": "What is 23 + 35? Answer with just the number.",
+   "latency_ms": 130.3763324353175,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "58",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "58",
+   "id": "t030",
+   "input": "What is 23 + 35? Answer with just the number.",
+   "latency_ms": 105.53711644615375,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-338",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-338",
+   "id": "t031",
+   "input": "What is 231 - 569? Answer with just the number.",
+   "latency_ms": 147.05374589456684,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-338",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-338",
+   "id": "t031",
+   "input": "What is 231 - 569? Answer with just the number.",
+   "latency_ms": 149.4370299455793,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1170",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1170",
+   "id": "t032",
+   "input": "What is 18 * 65? Answer with just the number.",
+   "latency_ms": 123.6789379725504,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1170",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1170",
+   "id": "t032",
+   "input": "What is 18 * 65? Answer with just the number.",
+   "latency_ms": 147.03445518986098,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "yvohcnatpiecer",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "yvohcnatpiecer",
+   "id": "t033",
+   "input": "Reverse the word 'receiptanchovy'. Answer with just the word.",
+   "latency_ms": 210.41659849549347,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "yvohcnatpiecer",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "yvohcnatpiecer",
+   "id": "t033",
+   "input": "Reverse the word 'receiptanchovy'. Answer with just the word.",
+   "latency_ms": 132.78576380164992,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "TOPPINGSAUCE",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "TOPPINGSAUCE",
+   "id": "t034",
+   "input": "Uppercase the word 'toppingsauce'. Answer with just the word.",
+   "latency_ms": 125.9905114852241,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "TOPPINGSAUCE",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "TOPPINGSAUCE",
+   "id": "t034",
+   "input": "Uppercase the word 'toppingsauce'. Answer with just the word.",
+   "latency_ms": 143.77324480419003,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t035",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 132.31983601860438,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t035",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 91.4548342107116,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1138",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1138",
+   "id": "t036",
+   "input": "What is 510 + 628? Answer with just the number.",
+   "latency_ms": 136.97428072951055,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1138",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1138",
+   "id": "t036",
+   "input": "What is 510 + 628? Answer with just the number.",
+   "latency_ms": 125.87973854594,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-1",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-1",
+   "id": "t037",
+   "input": "What is 21 - 22? Answer with just the number.",
+   "latency_ms": 111.26388825121606,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-1",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-1",
+   "id": "t037",
+   "input": "What is 21 - 22? Answer with just the number.",
+   "latency_ms": 100.80468542950308,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "250",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "250",
+   "id": "t038",
+   "input": "What is 10 * 25? Answer with just the number.",
+   "latency_ms": 90.59789353527134,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "250",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "250",
+   "id": "t038",
+   "input": "What is 10 * 25? Answer with just the number.",
+   "latency_ms": 110.20400267696654,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "moorhsum",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t039",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 88.1121861376526,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "moorhsum",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t039",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 203.76645734888007,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t040",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 115.27104452729029,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t040",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 137.89578682082598,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "50",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t041",
+   "input": "How many letters are in 'pizza'? Answer with just the number.",
+   "latency_ms": 88.5633473756956,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "50",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t041",
+   "input": "How many letters are in 'pizza'? Answer with just the number.",
+   "latency_ms": 129.9003042264307,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "43",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "43",
+   "id": "t042",
+   "input": "What is 23 + 20? Answer with just the number.",
+   "latency_ms": 109.23955214983903,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "43",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "43",
+   "id": "t042",
+   "input": "What is 23 + 20? Answer with just the number.",
+   "latency_ms": 103.97851891966376,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "13",
+   "id": "t043",
+   "input": "What is 25 - 12? Answer with just the number.",
+   "latency_ms": 151.07804818073203,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "13",
+   "id": "t043",
+   "input": "What is 25 - 12? Answer with just the number.",
+   "latency_ms": 87.45578111214124,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "546",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "546",
+   "id": "t044",
+   "input": "What is 39 * 14? Answer with just the number.",
+   "latency_ms": 123.68177679427683,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "546",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "546",
+   "id": "t044",
+   "input": "What is 39 * 14? Answer with just the number.",
+   "latency_ms": 98.78238847424396,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "hguod",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t045",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 84.6856711357417,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "hguod",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t045",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 95.60967704099525,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t046",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 130.5629991759526,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t046",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 92.68378877390062,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "4",
+   "cached": false,
+   "cost_usd": 7.75e-06,
+   "expected": "4",
+   "id": "t047",
+   "input": "How many letters are in 'oven'? Answer with just the number.",
+   "latency_ms": 99.15461090158146,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "4",
+   "cached": false,
+   "cost_usd": 7.75e-06,
+   "expected": "4",
+   "id": "t047",
+   "input": "How many letters are in 'oven'? Answer with just the number.",
+   "latency_ms": 129.74516426075752,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "810",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "81",
+   "id": "t048",
+   "input": "What is 33 + 48? Answer with just the number.",
+   "latency_ms": 145.71252943207412,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "810",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "81",
+   "id": "t048",
+   "input": "What is 33 + 48? Answer with just the number.",
+   "latency_ms": 132.55253459376326,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-743",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-743",
+   "id": "t049",
+   "input": "What is 119 - 862? Answer with just the number.",
+   "latency_ms": 128.24797675113288,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-743",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-743",
+   "id": "t049",
+   "input": "What is 119 - 862? Answer with just the number.",
+   "latency_ms": 140.13644165420118,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1927",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1927",
+   "id": "t050",
+   "input": "What is 41 * 47? Answer with just the number.",
+   "latency_ms": 118.88735787897735,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1927",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1927",
+   "id": "t050",
+   "input": "What is 41 * 47? Answer with just the number.",
+   "latency_ms": 89.81118588942589,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "couponmushroomx",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "moorhsumnopuoc",
+   "id": "t051",
+   "input": "Reverse the word 'couponmushroom'. Answer with just the word.",
+   "latency_ms": 169.9413322986308,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "couponmushroomx",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "moorhsumnopuoc",
+   "id": "t051",
+   "input": "Reverse the word 'couponmushroom'. Answer with just the word.",
+   "latency_ms": 191.47708965478265,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MOZZARELLA",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MOZZARELLA",
+   "id": "t052",
+   "input": "Uppercase the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 138.0399370072583,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MOZZARELLA",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MOZZARELLA",
+   "id": "t052",
+   "input": "Uppercase the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 126.17553043249258,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t053",
+   "input": "How many letters are in 'olive'? Answer with just the number.",
+   "latency_ms": 84.52248936114314,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t053",
+   "input": "How many letters are in 'olive'? Answer with just the number.",
+   "latency_ms": 99.05047744728458,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1692",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1692",
+   "id": "t054",
+   "input": "What is 891 + 801? Answer with just the number.",
+   "latency_ms": 122.35962953866348,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1692",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1692",
+   "id": "t054",
+   "input": "What is 891 + 801? Answer with just the number.",
+   "latency_ms": 135.15258797144787,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "34",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "34",
+   "id": "t055",
+   "input": "What is 48 - 14? Answer with just the number.",
+   "latency_ms": 103.79826653690395,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "34",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "34",
+   "id": "t055",
+   "input": "What is 48 - 14? Answer with just the number.",
+   "latency_ms": 135.49488301365304,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "726",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "726",
+   "id": "t056",
+   "input": "What is 33 * 22? Answer with just the number.",
+   "latency_ms": 98.82384833061796,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "726",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "726",
+   "id": "t056",
+   "input": "What is 33 * 22? Answer with just the number.",
+   "latency_ms": 105.7710924568961,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "hguod",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t057",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 92.39551711701098,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "hguod",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t057",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 127.02117408432792,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t058",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 111.36464514502339,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t058",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 110.62012868310123,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t059",
+   "input": "How many letters are in 'coupon'? Answer with just the number.",
+   "latency_ms": 106.83240511341045,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t059",
+   "input": "How many letters are in 'coupon'? Answer with just the number.",
+   "latency_ms": 154.0519352788736,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "18",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "18",
+   "id": "t060",
+   "input": "What is 2 + 16? Answer with just the number.",
+   "latency_ms": 94.22830443332747,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "18",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "18",
+   "id": "t060",
+   "input": "What is 2 + 16? Answer with just the number.",
+   "latency_ms": 121.51044064886888,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-7",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-7",
+   "id": "t061",
+   "input": "What is 1 - 8? Answer with just the number.",
+   "latency_ms": 100.90999873141868,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-7",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-7",
+   "id": "t061",
+   "input": "What is 1 - 8? Answer with just the number.",
+   "latency_ms": 92.95078330319944,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "364",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "364",
+   "id": "t062",
+   "input": "What is 26 * 14? Answer with just the number.",
+   "latency_ms": 92.40834987272719,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "364",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "364",
+   "id": "t062",
+   "input": "What is 26 * 14? Answer with just the number.",
+   "latency_ms": 111.57051227246254,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t063",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 149.0406934204678,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t063",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 97.1356516010112,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TOPPINGPEPPER",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "TOPPINGPEPPER",
+   "id": "t064",
+   "input": "Uppercase the word 'toppingpepper'. Answer with just the word.",
+   "latency_ms": 229.00089763748392,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "TOPPINGPEPPER",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "TOPPINGPEPPER",
+   "id": "t064",
+   "input": "Uppercase the word 'toppingpepper'. Answer with just the word.",
+   "latency_ms": 159.22520954860795,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t065",
+   "input": "How many letters are in 'olive'? Answer with just the number.",
+   "latency_ms": 85.28655068491403,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t065",
+   "input": "How many letters are in 'olive'? Answer with just the number.",
+   "latency_ms": 142.60085699161147,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "86",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "86",
+   "id": "t066",
+   "input": "What is 48 + 38? Answer with just the number.",
+   "latency_ms": 89.46446168594026,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "86",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "86",
+   "id": "t066",
+   "input": "What is 48 + 38? Answer with just the number.",
+   "latency_ms": 113.99988544724064,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "49",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "49",
+   "id": "t067",
+   "input": "What is 259 - 210? Answer with just the number.",
+   "latency_ms": 172.66076144446555,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "49",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "49",
+   "id": "t067",
+   "input": "What is 259 - 210? Answer with just the number.",
+   "latency_ms": 203.38652532668573,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1659",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1659",
+   "id": "t068",
+   "input": "What is 21 * 79? Answer with just the number.",
+   "latency_ms": 135.0707891950548,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1659",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1659",
+   "id": "t068",
+   "input": "What is 21 * 79? Answer with just the number.",
+   "latency_ms": 155.37015335571814,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t069",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 89.1737093102031,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t069",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 94.12510412822915,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t070",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 97.78469014092965,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t070",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 100.25948478322816,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t071",
+   "input": "How many letters are in 'sauce'? Answer with just the number.",
+   "latency_ms": 97.40689912129946,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t071",
+   "input": "How many letters are in 'sauce'? Answer with just the number.",
+   "latency_ms": 99.09388905557165,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "865",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "865",
+   "id": "t072",
+   "input": "What is 452 + 413? Answer with just the number.",
+   "latency_ms": 151.09793299542525,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "865",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "865",
+   "id": "t072",
+   "input": "What is 452 + 413? Answer with just the number.",
+   "latency_ms": 127.82080234042239,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "10",
+   "id": "t073",
+   "input": "What is 41 - 31? Answer with just the number.",
+   "latency_ms": 109.97749493650491,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "10",
+   "id": "t073",
+   "input": "What is 41 - 31? Answer with just the number.",
+   "latency_ms": 115.53734356834836,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "608",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "608",
+   "id": "t074",
+   "input": "What is 32 * 19? Answer with just the number.",
+   "latency_ms": 127.55111424582118,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "608",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "608",
+   "id": "t074",
+   "input": "What is 32 * 19? Answer with just the number.",
+   "latency_ms": 125.3718387679885,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "garlicx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t075",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 114.91183003802216,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "garlicx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t075",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 90.25438231943323,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TPIECERx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "RECEIPT",
+   "id": "t076",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 96.14008610770014,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TPIECERx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "RECEIPT",
+   "id": "t076",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 84.4182907357884,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "15",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "15",
+   "id": "t077",
+   "input": "How many letters are in 'olivemozzarella'? Answer with just the number.",
+   "latency_ms": 164.9404841110291,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "15",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "15",
+   "id": "t077",
+   "input": "How many letters are in 'olivemozzarella'? Answer with just the number.",
+   "latency_ms": 130.30799729404364,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "500",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "50",
+   "id": "t078",
+   "input": "What is 47 + 3? Answer with just the number.",
+   "latency_ms": 92.44761944626062,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "500",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "50",
+   "id": "t078",
+   "input": "What is 47 + 3? Answer with just the number.",
+   "latency_ms": 90.22958432452238,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "180",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "18",
+   "id": "t079",
+   "input": "What is 39 - 21? Answer with just the number.",
+   "latency_ms": 97.69898743394178,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "180",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "18",
+   "id": "t079",
+   "input": "What is 39 - 21? Answer with just the number.",
+   "latency_ms": 88.89140725445785,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "6",
+   "id": "t080",
+   "input": "What is 6 * 1? Answer with just the number.",
+   "latency_ms": 86.29510250090055,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "6",
+   "id": "t080",
+   "input": "What is 6 * 1? Answer with just the number.",
+   "latency_ms": 91.74014810980599,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t081",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 83.95171173497755,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t081",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 90.82175650070513,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "NEVOx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t082",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 96.50908049833016,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "NEVOx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t082",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 134.51612031973025,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "13",
+   "id": "t083",
+   "input": "How many letters are in 'mushroomdough'? Answer with just the number.",
+   "latency_ms": 131.59762467795596,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "13",
+   "id": "t083",
+   "input": "How many letters are in 'mushroomdough'? Answer with just the number.",
+   "latency_ms": 130.87565403287272,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "46",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "46",
+   "id": "t084",
+   "input": "What is 39 + 7? Answer with just the number.",
+   "latency_ms": 107.441786697989,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "46",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "46",
+   "id": "t084",
+   "input": "What is 39 + 7? Answer with just the number.",
+   "latency_ms": 117.10803598465299,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "17",
+   "id": "t085",
+   "input": "What is 20 - 3? Answer with just the number.",
+   "latency_ms": 104.26616884811872,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "17",
+   "id": "t085",
+   "input": "What is 20 - 3? Answer with just the number.",
+   "latency_ms": 94.28512509470033,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "484",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "484",
+   "id": "t086",
+   "input": "What is 22 * 22? Answer with just the number.",
+   "latency_ms": 85.06415202526743,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "484",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "484",
+   "id": "t086",
+   "input": "What is 22 * 22? Answer with just the number.",
+   "latency_ms": 94.76079991134901,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "deliveryx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "yreviled",
+   "id": "t087",
+   "input": "Reverse the word 'delivery'. Answer with just the word.",
+   "latency_ms": 111.20096439214831,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "deliveryx",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "yreviled",
+   "id": "t087",
+   "input": "Reverse the word 'delivery'. Answer with just the word.",
+   "latency_ms": 104.22440248101272,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MUSHROOM",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MUSHROOM",
+   "id": "t088",
+   "input": "Uppercase the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 115.17943877209643,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MUSHROOM",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MUSHROOM",
+   "id": "t088",
+   "input": "Uppercase the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 157.73039237091655,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "80",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t089",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 88.33234604924161,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "80",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t089",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 126.58872823818311,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "46",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "46",
+   "id": "t090",
+   "input": "What is 14 + 32? Answer with just the number.",
+   "latency_ms": 118.90391226471797,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "46",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "46",
+   "id": "t090",
+   "input": "What is 14 + 32? Answer with just the number.",
+   "latency_ms": 83.53772359144858,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "120",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "12",
+   "id": "t091",
+   "input": "What is 44 - 32? Answer with just the number.",
+   "latency_ms": 91.45096459977509,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "120",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "12",
+   "id": "t091",
+   "input": "What is 44 - 32? Answer with just the number.",
+   "latency_ms": 109.84075755135092,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "629",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "629",
+   "id": "t092",
+   "input": "What is 17 * 37? Answer with just the number.",
+   "latency_ms": 110.2724663087398,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "629",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "629",
+   "id": "t092",
+   "input": "What is 17 * 37? Answer with just the number.",
+   "latency_ms": 130.59536071433723,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisabreppep",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "lisabreppep",
+   "id": "t093",
+   "input": "Reverse the word 'pepperbasil'. Answer with just the word.",
+   "latency_ms": 123.14163592777513,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "lisabreppep",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "lisabreppep",
+   "id": "t093",
+   "input": "Reverse the word 'pepperbasil'. Answer with just the word.",
+   "latency_ms": 140.84816205837092,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ANCHOVY",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "ANCHOVY",
+   "id": "t094",
+   "input": "Uppercase the word 'anchovy'. Answer with just the word.",
+   "latency_ms": 113.29154691820452,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ANCHOVY",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "ANCHOVY",
+   "id": "t094",
+   "input": "Uppercase the word 'anchovy'. Answer with just the word.",
+   "latency_ms": 124.79484317112366,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t095",
+   "input": "How many letters are in 'coupon'? Answer with just the number.",
+   "latency_ms": 81.52987170093843,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t095",
+   "input": "How many letters are in 'coupon'? Answer with just the number.",
+   "latency_ms": 120.38171342386237,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "95",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "95",
+   "id": "t096",
+   "input": "What is 47 + 48? Answer with just the number.",
+   "latency_ms": 105.44617618213981,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "95",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "95",
+   "id": "t096",
+   "input": "What is 47 + 48? Answer with just the number.",
+   "latency_ms": 97.9279819013558,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-12",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-12",
+   "id": "t097",
+   "input": "What is 37 - 49? Answer with just the number.",
+   "latency_ms": 139.08074123462984,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-12",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-12",
+   "id": "t097",
+   "input": "What is 37 - 49? Answer with just the number.",
+   "latency_ms": 130.43585673460186,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "966",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "966",
+   "id": "t098",
+   "input": "What is 69 * 14? Answer with just the number.",
+   "latency_ms": 131.9644558931342,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "966",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "966",
+   "id": "t098",
+   "input": "What is 69 * 14? Answer with just the number.",
+   "latency_ms": 146.2266941107333,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "gnippothguod",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "gnippothguod",
+   "id": "t099",
+   "input": "Reverse the word 'doughtopping'. Answer with just the word.",
+   "latency_ms": 169.1739359502184,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "gnippothguod",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "gnippothguod",
+   "id": "t099",
+   "input": "Reverse the word 'doughtopping'. Answer with just the word.",
+   "latency_ms": 132.99144383251735,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MOZZARELLA",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MOZZARELLA",
+   "id": "t100",
+   "input": "Uppercase the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 96.51502713532072,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MOZZARELLA",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MOZZARELLA",
+   "id": "t100",
+   "input": "Uppercase the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 92.08374623700105,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "50",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t101",
+   "input": "How many letters are in 'dough'? Answer with just the number.",
+   "latency_ms": 130.46162432044753,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "50",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t101",
+   "input": "How many letters are in 'dough'? Answer with just the number.",
+   "latency_ms": 116.67017017168885,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1359",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1359",
+   "id": "t102",
+   "input": "What is 578 + 781? Answer with just the number.",
+   "latency_ms": 174.29687824823347,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1359",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1359",
+   "id": "t102",
+   "input": "What is 578 + 781? Answer with just the number.",
+   "latency_ms": 162.7087358004694,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "100",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "10",
+   "id": "t103",
+   "input": "What is 26 - 16? Answer with just the number.",
+   "latency_ms": 118.29794469740682,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "100",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "10",
+   "id": "t103",
+   "input": "What is 26 - 16? Answer with just the number.",
+   "latency_ms": 107.33131152663786,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "10",
+   "id": "t104",
+   "input": "What is 5 * 2? Answer with just the number.",
+   "latency_ms": 123.72782868738797,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "10",
+   "id": "t104",
+   "input": "What is 5 * 2? Answer with just the number.",
+   "latency_ms": 81.36382721933234,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nopuoctpiecer",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "nopuoctpiecer",
+   "id": "t105",
+   "input": "Reverse the word 'receiptcoupon'. Answer with just the word.",
+   "latency_ms": 155.27562719208004,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "nopuoctpiecer",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "nopuoctpiecer",
+   "id": "t105",
+   "input": "Reverse the word 'receiptcoupon'. Answer with just the word.",
+   "latency_ms": 124.09102760264103,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ECUASx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t106",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 114.55416185926697,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ECUASx",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t106",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 97.71556795728802,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t107",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 109.95684457472589,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t107",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 125.312801893218,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "682",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "682",
+   "id": "t108",
+   "input": "What is 320 + 362? Answer with just the number.",
+   "latency_ms": 142.29669617156776,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "682",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "682",
+   "id": "t108",
+   "input": "What is 320 + 362? Answer with just the number.",
+   "latency_ms": 159.71712136346616,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "13",
+   "id": "t109",
+   "input": "What is 672 - 659? Answer with just the number.",
+   "latency_ms": 161.7963393251383,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "13",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "13",
+   "id": "t109",
+   "input": "What is 672 - 659? Answer with just the number.",
+   "latency_ms": 131.7069392228897,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1276",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1276",
+   "id": "t110",
+   "input": "What is 29 * 44? Answer with just the number.",
+   "latency_ms": 98.41177473601894,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1276",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1276",
+   "id": "t110",
+   "input": "What is 29 * 44? Answer with just the number.",
+   "latency_ms": 96.60873359215451,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nopuocmoorhsum",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "nopuocmoorhsum",
+   "id": "t111",
+   "input": "Reverse the word 'mushroomcoupon'. Answer with just the word.",
+   "latency_ms": 144.65371296176954,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "nopuocmoorhsum",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "nopuocmoorhsum",
+   "id": "t111",
+   "input": "Reverse the word 'mushroomcoupon'. Answer with just the word.",
+   "latency_ms": 139.84896564058366,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t112",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 128.66527776185882,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t112",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 81.65685796439293,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "17",
+   "id": "t113",
+   "input": "How many letters are in 'toppingmozzarella'? Answer with just the number.",
+   "latency_ms": 138.89040719610034,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "17",
+   "id": "t113",
+   "input": "How many letters are in 'toppingmozzarella'? Answer with just the number.",
+   "latency_ms": 128.46437691991082,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1433",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1433",
+   "id": "t114",
+   "input": "What is 708 + 725? Answer with just the number.",
+   "latency_ms": 149.608898477415,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1433",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1433",
+   "id": "t114",
+   "input": "What is 708 + 725? Answer with just the number.",
+   "latency_ms": 130.788928797782,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-77",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-77",
+   "id": "t115",
+   "input": "What is 318 - 395? Answer with just the number.",
+   "latency_ms": 128.2099477642233,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-77",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-77",
+   "id": "t115",
+   "input": "What is 318 - 395? Answer with just the number.",
+   "latency_ms": 128.1502671259426,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "288",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "288",
+   "id": "t116",
+   "input": "What is 12 * 24? Answer with just the number.",
+   "latency_ms": 85.17763967206406,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "288",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "288",
+   "id": "t116",
+   "input": "What is 12 * 24? Answer with just the number.",
+   "latency_ms": 100.15986676367325,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t117",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 89.39769327463101,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t117",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 136.89029075036535,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t118",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 106.74957154462157,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t118",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 111.18119128386361,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t119",
+   "input": "How many letters are in 'receiptoven'? Answer with just the number.",
+   "latency_ms": 144.99323660228757,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t119",
+   "input": "How many letters are in 'receiptoven'? Answer with just the number.",
+   "latency_ms": 221.36087077285396,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1079",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1079",
+   "id": "t120",
+   "input": "What is 211 + 868? Answer with just the number.",
+   "latency_ms": 133.07242705506852,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1079",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1079",
+   "id": "t120",
+   "input": "What is 211 + 868? Answer with just the number.",
+   "latency_ms": 186.33169261084657,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "24",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "24",
+   "id": "t121",
+   "input": "What is 49 - 25? Answer with just the number.",
+   "latency_ms": 94.30039463550335,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "24",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "24",
+   "id": "t121",
+   "input": "What is 49 - 25? Answer with just the number.",
+   "latency_ms": 134.86915070173876,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1558",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1558",
+   "id": "t122",
+   "input": "What is 41 * 38? Answer with just the number.",
+   "latency_ms": 143.42051845405067,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1558",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1558",
+   "id": "t122",
+   "input": "What is 41 * 38? Answer with just the number.",
+   "latency_ms": 198.43987185851444,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "azzip",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "azzip",
+   "id": "t123",
+   "input": "Reverse the word 'pizza'. Answer with just the word.",
+   "latency_ms": 90.54917666680961,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "azzip",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "azzip",
+   "id": "t123",
+   "input": "Reverse the word 'pizza'. Answer with just the word.",
+   "latency_ms": 115.41645805317168,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t124",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 145.50250363735026,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t124",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 95.6800690080033,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t125",
+   "input": "How many letters are in 'garlic'? Answer with just the number.",
+   "latency_ms": 113.6378399570182,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t125",
+   "input": "How many letters are in 'garlic'? Answer with just the number.",
+   "latency_ms": 94.6882042538227,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "18",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "18",
+   "id": "t126",
+   "input": "What is 5 + 13? Answer with just the number.",
+   "latency_ms": 111.99185327252476,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "18",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "18",
+   "id": "t126",
+   "input": "What is 5 + 13? Answer with just the number.",
+   "latency_ms": 107.05842872066093,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-37",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-37",
+   "id": "t127",
+   "input": "What is 10 - 47? Answer with just the number.",
+   "latency_ms": 102.59367210350096,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-37",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-37",
+   "id": "t127",
+   "input": "What is 10 - 47? Answer with just the number.",
+   "latency_ms": 162.69542679981174,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "600",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "600",
+   "id": "t128",
+   "input": "What is 24 * 25? Answer with just the number.",
+   "latency_ms": 89.19747431965182,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "600",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "600",
+   "id": "t128",
+   "input": "What is 24 * 25? Answer with just the number.",
+   "latency_ms": 97.99056587699896,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t129",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 104.99196726544025,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t129",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 107.26218407659158,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TOPPING",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "TOPPING",
+   "id": "t130",
+   "input": "Uppercase the word 'topping'. Answer with just the word.",
+   "latency_ms": 168.81301986048157,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TOPPING",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "TOPPING",
+   "id": "t130",
+   "input": "Uppercase the word 'topping'. Answer with just the word.",
+   "latency_ms": 107.03655019903945,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t131",
+   "input": "How many letters are in 'delivery'? Answer with just the number.",
+   "latency_ms": 101.58445273028703,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t131",
+   "input": "How many letters are in 'delivery'? Answer with just the number.",
+   "latency_ms": 122.59098984798626,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "710",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "71",
+   "id": "t132",
+   "input": "What is 38 + 33? Answer with just the number.",
+   "latency_ms": 103.90627479846319,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "710",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "71",
+   "id": "t132",
+   "input": "What is 38 + 33? Answer with just the number.",
+   "latency_ms": 90.10191660930663,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "40",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "40",
+   "id": "t133",
+   "input": "What is 44 - 4? Answer with just the number.",
+   "latency_ms": 140.8002103768886,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "40",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "40",
+   "id": "t133",
+   "input": "What is 44 - 4? Answer with just the number.",
+   "latency_ms": 123.87906369542861,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "95",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "95",
+   "id": "t134",
+   "input": "What is 5 * 19? Answer with just the number.",
+   "latency_ms": 81.23623085186159,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "95",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "95",
+   "id": "t134",
+   "input": "What is 5 * 19? Answer with just the number.",
+   "latency_ms": 93.80331676169216,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "doughx",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t135",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 100.52772595733924,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "doughx",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "hguod",
+   "id": "t135",
+   "input": "Reverse the word 'dough'. Answer with just the word.",
+   "latency_ms": 110.93230749265712,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MUSHROOM",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MUSHROOM",
+   "id": "t136",
+   "input": "Uppercase the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 84.57784597411026,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MUSHROOM",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "MUSHROOM",
+   "id": "t136",
+   "input": "Uppercase the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 107.25831941641378,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t137",
+   "input": "How many letters are in 'pizza'? Answer with just the number.",
+   "latency_ms": 109.67993709921794,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t137",
+   "input": "How many letters are in 'pizza'? Answer with just the number.",
+   "latency_ms": 90.2673172289533,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "69",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "69",
+   "id": "t138",
+   "input": "What is 21 + 48? Answer with just the number.",
+   "latency_ms": 107.90327247918862,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "69",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "69",
+   "id": "t138",
+   "input": "What is 21 + 48? Answer with just the number.",
+   "latency_ms": 92.26664558366298,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-10",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-10",
+   "id": "t139",
+   "input": "What is 5 - 15? Answer with just the number.",
+   "latency_ms": 102.7500689324868,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-10",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-10",
+   "id": "t139",
+   "input": "What is 5 - 15? Answer with just the number.",
+   "latency_ms": 119.52912625309683,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1326",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1326",
+   "id": "t140",
+   "input": "What is 39 * 34? Answer with just the number.",
+   "latency_ms": 95.49221912068569,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1326",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1326",
+   "id": "t140",
+   "input": "What is 39 * 34? Answer with just the number.",
+   "latency_ms": 112.65530335364684,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "reppep",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "reppep",
+   "id": "t141",
+   "input": "Reverse the word 'pepper'. Answer with just the word.",
+   "latency_ms": 98.824140632553,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "reppep",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "reppep",
+   "id": "t141",
+   "input": "Reverse the word 'pepper'. Answer with just the word.",
+   "latency_ms": 106.68025219947697,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MOZZARELLAPEPPER",
+   "cached": false,
+   "cost_usd": 1.2e-05,
+   "expected": "MOZZARELLAPEPPER",
+   "id": "t142",
+   "input": "Uppercase the word 'mozzarellapepper'. Answer with just the word.",
+   "latency_ms": 134.24694335898624,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MOZZARELLAPEPPER",
+   "cached": false,
+   "cost_usd": 1.2e-05,
+   "expected": "MOZZARELLAPEPPER",
+   "id": "t142",
+   "input": "Uppercase the word 'mozzarellapepper'. Answer with just the word.",
+   "latency_ms": 159.43884098822207,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t143",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 130.97233628661346,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t143",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 92.89577286623718,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "14650",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1465",
+   "id": "t144",
+   "input": "What is 541 + 924? Answer with just the number.",
+   "latency_ms": 150.2213671753242,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "14650",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1465",
+   "id": "t144",
+   "input": "What is 541 + 924? Answer with just the number.",
+   "latency_ms": 130.48064336414996,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-27",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-27",
+   "id": "t145",
+   "input": "What is 407 - 434? Answer with just the number.",
+   "latency_ms": 135.40882955735137,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-27",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-27",
+   "id": "t145",
+   "input": "What is 407 - 434? Answer with just the number.",
+   "latency_ms": 123.3594926287146,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "370",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "370",
+   "id": "t146",
+   "input": "What is 37 * 10? Answer with just the number.",
+   "latency_ms": 166.19595261231186,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "370",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "370",
+   "id": "t146",
+   "input": "What is 37 * 10? Answer with just the number.",
+   "latency_ms": 125.69956915707948,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t147",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 87.57977854356169,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t147",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 88.25273865548567,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t148",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 125.46638837658995,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t148",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 128.18077492689468,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t149",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 99.49417954103956,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t149",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 98.64657230789376,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "65",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "65",
+   "id": "t150",
+   "input": "What is 16 + 49? Answer with just the number.",
+   "latency_ms": 90.51548781540345,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "65",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "65",
+   "id": "t150",
+   "input": "What is 16 + 49? Answer with just the number.",
+   "latency_ms": 86.73075384632794,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-4",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-4",
+   "id": "t151",
+   "input": "What is 21 - 25? Answer with just the number.",
+   "latency_ms": 98.1993802488704,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-4",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-4",
+   "id": "t151",
+   "input": "What is 21 - 25? Answer with just the number.",
+   "latency_ms": 87.66333910357385,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1125",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1125",
+   "id": "t152",
+   "input": "What is 25 * 45? Answer with just the number.",
+   "latency_ms": 133.55771730997793,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1125",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1125",
+   "id": "t152",
+   "input": "What is 25 * 45? Answer with just the number.",
+   "latency_ms": 114.49239956308156,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "cilrag",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t153",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 139.28628568507827,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "cilrag",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t153",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 133.93415416428468,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "OLIVE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OLIVE",
+   "id": "t154",
+   "input": "Uppercase the word 'olive'. Answer with just the word.",
+   "latency_ms": 87.99775700753875,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "OLIVE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OLIVE",
+   "id": "t154",
+   "input": "Uppercase the word 'olive'. Answer with just the word.",
+   "latency_ms": 119.7104470026913,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t155",
+   "input": "How many letters are in 'basilsauce'? Answer with just the number.",
+   "latency_ms": 146.90118261438602,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t155",
+   "input": "How many letters are in 'basilsauce'? Answer with just the number.",
+   "latency_ms": 142.25664857839394,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "490",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "49",
+   "id": "t156",
+   "input": "What is 44 + 5? Answer with just the number.",
+   "latency_ms": 94.49873202755678,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "490",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "49",
+   "id": "t156",
+   "input": "What is 44 + 5? Answer with just the number.",
+   "latency_ms": 93.74777632784944,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "41",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "41",
+   "id": "t157",
+   "input": "What is 45 - 4? Answer with just the number.",
+   "latency_ms": 136.21856785139965,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "41",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "41",
+   "id": "t157",
+   "input": "What is 45 - 4? Answer with just the number.",
+   "latency_ms": 125.44716028915352,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "21",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "21",
+   "id": "t158",
+   "input": "What is 1 * 21? Answer with just the number.",
+   "latency_ms": 118.0730791304953,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "21",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "21",
+   "id": "t158",
+   "input": "What is 1 * 21? Answer with just the number.",
+   "latency_ms": 141.0394327653075,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t159",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 105.69040556460449,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t159",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 117.45711934597676,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPTBASIL",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "RECEIPTBASIL",
+   "id": "t160",
+   "input": "Uppercase the word 'receiptbasil'. Answer with just the word.",
+   "latency_ms": 130.61445048430872,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "RECEIPTBASIL",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "RECEIPTBASIL",
+   "id": "t160",
+   "input": "Uppercase the word 'receiptbasil'. Answer with just the word.",
+   "latency_ms": 133.6384154924784,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t161",
+   "input": "How many letters are in 'anchovy'? Answer with just the number.",
+   "latency_ms": 111.16147714249988,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t161",
+   "input": "How many letters are in 'anchovy'? Answer with just the number.",
+   "latency_ms": 107.29141250066891,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "73",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "73",
+   "id": "t162",
+   "input": "What is 29 + 44? Answer with just the number.",
+   "latency_ms": 119.3162112378534,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "73",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "73",
+   "id": "t162",
+   "input": "What is 29 + 44? Answer with just the number.",
+   "latency_ms": 102.19587484228447,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "22",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "22",
+   "id": "t163",
+   "input": "What is 24 - 2? Answer with just the number.",
+   "latency_ms": 92.28838188557022,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "22",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "22",
+   "id": "t163",
+   "input": "What is 24 - 2? Answer with just the number.",
+   "latency_ms": 89.6931601719875,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "896",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "896",
+   "id": "t164",
+   "input": "What is 32 * 28? Answer with just the number.",
+   "latency_ms": 142.9821141062123,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "896",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "896",
+   "id": "t164",
+   "input": "What is 32 * 28? Answer with just the number.",
+   "latency_ms": 124.10565374265147,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ecuas",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "ecuas",
+   "id": "t165",
+   "input": "Reverse the word 'sauce'. Answer with just the word.",
+   "latency_ms": 90.61109302529694,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ecuas",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "ecuas",
+   "id": "t165",
+   "input": "Reverse the word 'sauce'. Answer with just the word.",
+   "latency_ms": 122.49754391624177,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "COUPON",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "COUPON",
+   "id": "t166",
+   "input": "Uppercase the word 'coupon'. Answer with just the word.",
+   "latency_ms": 92.51372524061561,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "COUPON",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "COUPON",
+   "id": "t166",
+   "input": "Uppercase the word 'coupon'. Answer with just the word.",
+   "latency_ms": 94.86488394068847,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t167",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 101.3134460844295,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t167",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 107.02451409388352,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "672",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "672",
+   "id": "t168",
+   "input": "What is 350 + 322? Answer with just the number.",
+   "latency_ms": 135.19856559251096,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "672",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "672",
+   "id": "t168",
+   "input": "What is 350 + 322? Answer with just the number.",
+   "latency_ms": 130.41772683948378,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-19",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-19",
+   "id": "t169",
+   "input": "What is 20 - 39? Answer with just the number.",
+   "latency_ms": 102.8458762881719,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-19",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-19",
+   "id": "t169",
+   "input": "What is 20 - 39? Answer with just the number.",
+   "latency_ms": 106.02200639078005,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "836",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "836",
+   "id": "t170",
+   "input": "What is 22 * 38? Answer with just the number.",
+   "latency_ms": 101.35561976909827,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "836",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "836",
+   "id": "t170",
+   "input": "What is 22 * 38? Answer with just the number.",
+   "latency_ms": 93.09473078468527,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t171",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 104.53833227959802,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t171",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 134.3741512554427,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "MUSHROOMGARLIC",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MUSHROOMGARLIC",
+   "id": "t172",
+   "input": "Uppercase the word 'mushroomgarlic'. Answer with just the word.",
+   "latency_ms": 136.73568844428877,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MUSHROOMGARLIC",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MUSHROOMGARLIC",
+   "id": "t172",
+   "input": "Uppercase the word 'mushroomgarlic'. Answer with just the word.",
+   "latency_ms": 182.5187952386285,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t173",
+   "input": "How many letters are in 'crust'? Answer with just the number.",
+   "latency_ms": 84.49949333358546,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t173",
+   "input": "How many letters are in 'crust'? Answer with just the number.",
+   "latency_ms": 111.16639275945617,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "58",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "58",
+   "id": "t174",
+   "input": "What is 28 + 30? Answer with just the number.",
+   "latency_ms": 133.2074093912047,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "58",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "58",
+   "id": "t174",
+   "input": "What is 28 + 30? Answer with just the number.",
+   "latency_ms": 86.91690484850388,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "719",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "719",
+   "id": "t175",
+   "input": "What is 898 - 179? Answer with just the number.",
+   "latency_ms": 132.30374462680237,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "719",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "719",
+   "id": "t175",
+   "input": "What is 898 - 179? Answer with just the number.",
+   "latency_ms": 168.1219206725864,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1015",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1015",
+   "id": "t176",
+   "input": "What is 35 * 29? Answer with just the number.",
+   "latency_ms": 116.02693816637489,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1015",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1015",
+   "id": "t176",
+   "input": "What is 35 * 29? Answer with just the number.",
+   "latency_ms": 132.2370881768094,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t177",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 107.21132025886432,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t177",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 108.84742510631352,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TOPPING",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "TOPPING",
+   "id": "t178",
+   "input": "Uppercase the word 'topping'. Answer with just the word.",
+   "latency_ms": 108.19991286761982,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "TOPPING",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "TOPPING",
+   "id": "t178",
+   "input": "Uppercase the word 'topping'. Answer with just the word.",
+   "latency_ms": 156.59024599896566,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t179",
+   "input": "How many letters are in 'pepper'? Answer with just the number.",
+   "latency_ms": 124.62240233313833,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t179",
+   "input": "How many letters are in 'pepper'? Answer with just the number.",
+   "latency_ms": 123.12617537545654,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "798",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "798",
+   "id": "t180",
+   "input": "What is 286 + 512? Answer with just the number.",
+   "latency_ms": 125.63718982630445,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "798",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "798",
+   "id": "t180",
+   "input": "What is 286 + 512? Answer with just the number.",
+   "latency_ms": 194.714836577168,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "478",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "478",
+   "id": "t181",
+   "input": "What is 642 - 164? Answer with just the number.",
+   "latency_ms": 143.10351127739315,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "478",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "478",
+   "id": "t181",
+   "input": "What is 642 - 164? Answer with just the number.",
+   "latency_ms": 125.3816075464256,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "390",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "390",
+   "id": "t182",
+   "input": "What is 10 * 39? Answer with just the number.",
+   "latency_ms": 97.88273732380893,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "390",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "390",
+   "id": "t182",
+   "input": "What is 10 * 39? Answer with just the number.",
+   "latency_ms": 89.089166552757,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t183",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 98.39619265958657,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t183",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 143.9189940485936,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t184",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 91.61187507681522,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t184",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 114.35673107506128,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t185",
+   "input": "How many letters are in 'crustdough'? Answer with just the number.",
+   "latency_ms": 137.17363291752218,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t185",
+   "input": "How many letters are in 'crustdough'? Answer with just the number.",
+   "latency_ms": 134.09985159894723,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "80",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "80",
+   "id": "t186",
+   "input": "What is 48 + 32? Answer with just the number.",
+   "latency_ms": 114.51717856722647,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "80",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "80",
+   "id": "t186",
+   "input": "What is 48 + 32? Answer with just the number.",
+   "latency_ms": 107.58682820280838,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "11",
+   "id": "t187",
+   "input": "What is 15 - 4? Answer with just the number.",
+   "latency_ms": 95.17355224588913,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "11",
+   "id": "t187",
+   "input": "What is 15 - 4? Answer with just the number.",
+   "latency_ms": 122.87057781552028,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "2880",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "2880",
+   "id": "t188",
+   "input": "What is 64 * 45? Answer with just the number.",
+   "latency_ms": 193.9823690844504,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "2880",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "2880",
+   "id": "t188",
+   "input": "What is 64 * 45? Answer with just the number.",
+   "latency_ms": 160.9060068975879,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ecuas",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "ecuas",
+   "id": "t189",
+   "input": "Reverse the word 'sauce'. Answer with just the word.",
+   "latency_ms": 100.64941456589027,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ecuas",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "ecuas",
+   "id": "t189",
+   "input": "Reverse the word 'sauce'. Answer with just the word.",
+   "latency_ms": 101.636705924885,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "ANCHOVYPEPPER",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "ANCHOVYPEPPER",
+   "id": "t190",
+   "input": "Uppercase the word 'anchovypepper'. Answer with just the word.",
+   "latency_ms": 180.71733263366335,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "ANCHOVYPEPPER",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "ANCHOVYPEPPER",
+   "id": "t190",
+   "input": "Uppercase the word 'anchovypepper'. Answer with just the word.",
+   "latency_ms": 121.45808472540213,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t191",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 98.60142908022162,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t191",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 85.04224332743135,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "484",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "484",
+   "id": "t192",
+   "input": "What is 172 + 312? Answer with just the number.",
+   "latency_ms": 132.8802449672093,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "484",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "484",
+   "id": "t192",
+   "input": "What is 172 + 312? Answer with just the number.",
+   "latency_ms": 130.09182824633658,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-24",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-24",
+   "id": "t193",
+   "input": "What is 21 - 45? Answer with just the number.",
+   "latency_ms": 112.44315016057227,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-24",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-24",
+   "id": "t193",
+   "input": "What is 21 - 45? Answer with just the number.",
+   "latency_ms": 107.34350174145425,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "180",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "180",
+   "id": "t194",
+   "input": "What is 15 * 12? Answer with just the number.",
+   "latency_ms": 92.52857745956845,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "180",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "180",
+   "id": "t194",
+   "input": "What is 15 * 12? Answer with just the number.",
+   "latency_ms": 107.41895656984914,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t195",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 112.11922257850108,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "lisab",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "lisab",
+   "id": "t195",
+   "input": "Reverse the word 'basil'. Answer with just the word.",
+   "latency_ms": 135.11364812844096,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t196",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 105.73222362732693,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t196",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 99.46494631839752,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t197",
+   "input": "How many letters are in 'garlicoven'? Answer with just the number.",
+   "latency_ms": 142.4259149326145,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t197",
+   "input": "How many letters are in 'garlicoven'? Answer with just the number.",
+   "latency_ms": 158.54233890480333,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "757",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "757",
+   "id": "t198",
+   "input": "What is 178 + 579? Answer with just the number.",
+   "latency_ms": 128.0294322926877,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "757",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "757",
+   "id": "t198",
+   "input": "What is 178 + 579? Answer with just the number.",
+   "latency_ms": 150.0101141342248,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-462",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-462",
+   "id": "t199",
+   "input": "What is 512 - 974? Answer with just the number.",
+   "latency_ms": 160.4893619515124,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-462",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-462",
+   "id": "t199",
+   "input": "What is 512 - 974? Answer with just the number.",
+   "latency_ms": 146.04483657139062,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "2295",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "2295",
+   "id": "t200",
+   "input": "What is 51 * 45? Answer with just the number.",
+   "latency_ms": 153.9878772170377,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "2295",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "2295",
+   "id": "t200",
+   "input": "What is 51 * 45? Answer with just the number.",
+   "latency_ms": 125.73812013254926,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "hguodtpiecer",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "hguodtpiecer",
+   "id": "t201",
+   "input": "Reverse the word 'receiptdough'. Answer with just the word.",
+   "latency_ms": 146.5914334239701,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "hguodtpiecer",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "hguodtpiecer",
+   "id": "t201",
+   "input": "Reverse the word 'receiptdough'. Answer with just the word.",
+   "latency_ms": 155.71586070453327,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "OVEN",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t202",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 114.99931139242022,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "OVEN",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t202",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 134.6491486545694,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t203",
+   "input": "How many letters are in 'doughbasil'? Answer with just the number.",
+   "latency_ms": 150.03107649893656,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t203",
+   "input": "How many letters are in 'doughbasil'? Answer with just the number.",
+   "latency_ms": 138.82766189654944,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "59",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "59",
+   "id": "t204",
+   "input": "What is 18 + 41? Answer with just the number.",
+   "latency_ms": 105.3803720306492,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "59",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "59",
+   "id": "t204",
+   "input": "What is 18 + 41? Answer with just the number.",
+   "latency_ms": 115.96633143662194,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "101",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "101",
+   "id": "t205",
+   "input": "What is 426 - 325? Answer with just the number.",
+   "latency_ms": 145.5696111230736,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "101",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "101",
+   "id": "t205",
+   "input": "What is 426 - 325? Answer with just the number.",
+   "latency_ms": 123.4897140971142,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "70",
+   "id": "t206",
+   "input": "What is 10 * 7? Answer with just the number.",
+   "latency_ms": 101.03997596049686,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "70",
+   "id": "t206",
+   "input": "What is 10 * 7? Answer with just the number.",
+   "latency_ms": 118.13226240885555,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "crustx",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t207",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 143.16064577256657,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "crustx",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t207",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 94.99131052124213,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t208",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 113.69627919302974,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t208",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 178.7293018635297,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t209",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 129.0630478771632,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t209",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 91.0779078303526,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "42",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "42",
+   "id": "t210",
+   "input": "What is 8 + 34? Answer with just the number.",
+   "latency_ms": 93.63471740006034,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "42",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "42",
+   "id": "t210",
+   "input": "What is 8 + 34? Answer with just the number.",
+   "latency_ms": 121.68753163308898,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-3",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-3",
+   "id": "t211",
+   "input": "What is 35 - 38? Answer with just the number.",
+   "latency_ms": 93.78040374475322,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-3",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-3",
+   "id": "t211",
+   "input": "What is 35 - 38? Answer with just the number.",
+   "latency_ms": 95.6798848747797,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "900",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "900",
+   "id": "t212",
+   "input": "What is 20 * 45? Answer with just the number.",
+   "latency_ms": 173.33957771249055,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "900",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "900",
+   "id": "t212",
+   "input": "What is 20 * 45? Answer with just the number.",
+   "latency_ms": 93.68920940591313,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t213",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 89.1498696594719,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t213",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 82.93011583119947,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t214",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 88.23092386089438,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t214",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 101.90524591590582,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "15",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "15",
+   "id": "t215",
+   "input": "How many letters are in 'olivemozzarella'? Answer with just the number.",
+   "latency_ms": 131.84114273827223,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "15",
+   "cached": false,
+   "cost_usd": 8.5e-06,
+   "expected": "15",
+   "id": "t215",
+   "input": "How many letters are in 'olivemozzarella'? Answer with just the number.",
+   "latency_ms": 132.76372982510586,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "560",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "56",
+   "id": "t216",
+   "input": "What is 46 + 10? Answer with just the number.",
+   "latency_ms": 117.85154824748132,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "560",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "56",
+   "id": "t216",
+   "input": "What is 46 + 10? Answer with just the number.",
+   "latency_ms": 97.75301657163358,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "44",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "44",
+   "id": "t217",
+   "input": "What is 49 - 5? Answer with just the number.",
+   "latency_ms": 115.91816805469833,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "44",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "44",
+   "id": "t217",
+   "input": "What is 49 - 5? Answer with just the number.",
+   "latency_ms": 97.50895184311254,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "55860",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "5586",
+   "id": "t218",
+   "input": "What is 57 * 98? Answer with just the number.",
+   "latency_ms": 127.85629215498723,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "55860",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "5586",
+   "id": "t218",
+   "input": "What is 57 * 98? Answer with just the number.",
+   "latency_ms": 139.06641307533155,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "eviloreppep",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "eviloreppep",
+   "id": "t219",
+   "input": "Reverse the word 'pepperolive'. Answer with just the word.",
+   "latency_ms": 141.47155866423697,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "eviloreppep",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "eviloreppep",
+   "id": "t219",
+   "input": "Reverse the word 'pepperolive'. Answer with just the word.",
+   "latency_ms": 125.66998445452167,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MUSHROOMRECEIPT",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MUSHROOMRECEIPT",
+   "id": "t220",
+   "input": "Uppercase the word 'mushroomreceipt'. Answer with just the word.",
+   "latency_ms": 163.72031488217272,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "MUSHROOMRECEIPT",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "MUSHROOMRECEIPT",
+   "id": "t220",
+   "input": "Uppercase the word 'mushroomreceipt'. Answer with just the word.",
+   "latency_ms": 141.88014024724626,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t221",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 93.67780414047165,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t221",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 94.47343495010064,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "63",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "63",
+   "id": "t222",
+   "input": "What is 36 + 27? Answer with just the number.",
+   "latency_ms": 139.8111403717534,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "63",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "63",
+   "id": "t222",
+   "input": "What is 36 + 27? Answer with just the number.",
+   "latency_ms": 95.54928000192223,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "6",
+   "id": "t223",
+   "input": "What is 29 - 23? Answer with just the number.",
+   "latency_ms": 157.62211763471907,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "6",
+   "id": "t223",
+   "input": "What is 29 - 23? Answer with just the number.",
+   "latency_ms": 122.92197053389444,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "252",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "252",
+   "id": "t224",
+   "input": "What is 42 * 6? Answer with just the number.",
+   "latency_ms": 92.28440412635797,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "252",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "252",
+   "id": "t224",
+   "input": "What is 42 * 6? Answer with just the number.",
+   "latency_ms": 112.58644121530313,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "yvohcna",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "yvohcna",
+   "id": "t225",
+   "input": "Reverse the word 'anchovy'. Answer with just the word.",
+   "latency_ms": 162.30971448266013,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "yvohcna",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "yvohcna",
+   "id": "t225",
+   "input": "Reverse the word 'anchovy'. Answer with just the word.",
+   "latency_ms": 102.45810728556103,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "OVEN",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t226",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 87.76812723516258,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "OVEN",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "OVEN",
+   "id": "t226",
+   "input": "Uppercase the word 'oven'. Answer with just the word.",
+   "latency_ms": 106.33632111410148,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t227",
+   "input": "How many letters are in 'couponbasil'? Answer with just the number.",
+   "latency_ms": 139.55492999415432,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "11",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "11",
+   "id": "t227",
+   "input": "How many letters are in 'couponbasil'? Answer with just the number.",
+   "latency_ms": 161.13321488377562,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "992",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "992",
+   "id": "t228",
+   "input": "What is 776 + 216? Answer with just the number.",
+   "latency_ms": 128.4645317008458,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "992",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "992",
+   "id": "t228",
+   "input": "What is 776 + 216? Answer with just the number.",
+   "latency_ms": 127.79434651444865,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "270",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "27",
+   "id": "t229",
+   "input": "What is 29 - 2? Answer with just the number.",
+   "latency_ms": 116.64207958842046,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "270",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "27",
+   "id": "t229",
+   "input": "What is 29 - 2? Answer with just the number.",
+   "latency_ms": 91.95274015897907,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1353",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1353",
+   "id": "t230",
+   "input": "What is 33 * 41? Answer with just the number.",
+   "latency_ms": 88.58375300682286,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1353",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1353",
+   "id": "t230",
+   "input": "What is 33 * 41? Answer with just the number.",
+   "latency_ms": 87.29065946437014,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t231",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 102.25379575760307,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "nevo",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "nevo",
+   "id": "t231",
+   "input": "Reverse the word 'oven'. Answer with just the word.",
+   "latency_ms": 100.65479786915125,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t232",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 97.04153247510192,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t232",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 100.5424711774663,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t233",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 141.52002326486607,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t233",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 144.10854386663397,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "76",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "76",
+   "id": "t234",
+   "input": "What is 40 + 36? Answer with just the number.",
+   "latency_ms": 107.12705592155511,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "76",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "76",
+   "id": "t234",
+   "input": "What is 40 + 36? Answer with just the number.",
+   "latency_ms": 85.18019241133872,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "6",
+   "id": "t235",
+   "input": "What is 29 - 23? Answer with just the number.",
+   "latency_ms": 156.82396984916124,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "6",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "6",
+   "id": "t235",
+   "input": "What is 29 - 23? Answer with just the number.",
+   "latency_ms": 102.9660772782047,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "3834",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "3834",
+   "id": "t236",
+   "input": "What is 54 * 71? Answer with just the number.",
+   "latency_ms": 135.37449252359104,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "3834",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "3834",
+   "id": "t236",
+   "input": "What is 54 * 71? Answer with just the number.",
+   "latency_ms": 134.25312448154293,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t237",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 100.39211750163336,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t237",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 87.89258359411981,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t238",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 153.03906077474304,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t238",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 91.15900822921147,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t239",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 132.52819948246741,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t239",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 116.43247337393771,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "70",
+   "id": "t240",
+   "input": "What is 27 + 43? Answer with just the number.",
+   "latency_ms": 119.27814762184153,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "70",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "70",
+   "id": "t240",
+   "input": "What is 27 + 43? Answer with just the number.",
+   "latency_ms": 124.21829534897236,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-12",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-12",
+   "id": "t241",
+   "input": "What is 24 - 36? Answer with just the number.",
+   "latency_ms": 93.85692361096196,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-12",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-12",
+   "id": "t241",
+   "input": "What is 24 - 36? Answer with just the number.",
+   "latency_ms": 100.15118086931633,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5767",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "5767",
+   "id": "t242",
+   "input": "What is 73 * 79? Answer with just the number.",
+   "latency_ms": 143.74804682008343,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "5767",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "5767",
+   "id": "t242",
+   "input": "What is 73 * 79? Answer with just the number.",
+   "latency_ms": 135.0812790550189,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "olivex",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "evilo",
+   "id": "t243",
+   "input": "Reverse the word 'olive'. Answer with just the word.",
+   "latency_ms": 81.45158849447746,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "olivex",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "evilo",
+   "id": "t243",
+   "input": "Reverse the word 'olive'. Answer with just the word.",
+   "latency_ms": 83.29567009650125,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t244",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 93.25884684960944,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PEPPER",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PEPPER",
+   "id": "t244",
+   "input": "Uppercase the word 'pepper'. Answer with just the word.",
+   "latency_ms": 105.84798622026365,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t245",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 92.86348844927437,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "7",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "7",
+   "id": "t245",
+   "input": "How many letters are in 'receipt'? Answer with just the number.",
+   "latency_ms": 135.64554019315904,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "61",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "61",
+   "id": "t246",
+   "input": "What is 42 + 19? Answer with just the number.",
+   "latency_ms": 99.00775380445833,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "61",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "61",
+   "id": "t246",
+   "input": "What is 42 + 19? Answer with just the number.",
+   "latency_ms": 109.71765808756311,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-242",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-242",
+   "id": "t247",
+   "input": "What is 634 - 876? Answer with just the number.",
+   "latency_ms": 158.3474230243542,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-242",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-242",
+   "id": "t247",
+   "input": "What is 634 - 876? Answer with just the number.",
+   "latency_ms": 169.9785735790843,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "9",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "9",
+   "id": "t248",
+   "input": "What is 3 * 3? Answer with just the number.",
+   "latency_ms": 102.79441841033584,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "9",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "9",
+   "id": "t248",
+   "input": "What is 3 * 3? Answer with just the number.",
+   "latency_ms": 107.1837691523717,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippotcilrag",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "gnippotcilrag",
+   "id": "t249",
+   "input": "Reverse the word 'garlictopping'. Answer with just the word.",
+   "latency_ms": 148.1601050333041,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "gnippotcilrag",
+   "cached": false,
+   "cost_usd": 1.025e-05,
+   "expected": "gnippotcilrag",
+   "id": "t249",
+   "input": "Reverse the word 'garlictopping'. Answer with just the word.",
+   "latency_ms": 157.89099942216927,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t250",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 210.46097921853965,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "CRUST",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "CRUST",
+   "id": "t250",
+   "input": "Uppercase the word 'crust'. Answer with just the word.",
+   "latency_ms": 104.95442930607372,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "17",
+   "id": "t251",
+   "input": "How many letters are in 'receiptmozzarella'? Answer with just the number.",
+   "latency_ms": 169.9130015111809,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "17",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "17",
+   "id": "t251",
+   "input": "How many letters are in 'receiptmozzarella'? Answer with just the number.",
+   "latency_ms": 155.3307978790232,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "hard"
+   ]
+  },
+  {
+   "actual": "14",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "14",
+   "id": "t252",
+   "input": "What is 6 + 8? Answer with just the number.",
+   "latency_ms": 150.27489893326745,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "14",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "14",
+   "id": "t252",
+   "input": "What is 6 + 8? Answer with just the number.",
+   "latency_ms": 118.21993187074446,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "475",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "475",
+   "id": "t253",
+   "input": "What is 814 - 339? Answer with just the number.",
+   "latency_ms": 143.26268288506478,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "475",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "475",
+   "id": "t253",
+   "input": "What is 814 - 339? Answer with just the number.",
+   "latency_ms": 149.27315006035002,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "12",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "12",
+   "id": "t254",
+   "input": "What is 4 * 3? Answer with just the number.",
+   "latency_ms": 128.6660593212837,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "12",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "12",
+   "id": "t254",
+   "input": "What is 4 * 3? Answer with just the number.",
+   "latency_ms": 101.93217542635998,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "hguodcilrag",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "hguodcilrag",
+   "id": "t255",
+   "input": "Reverse the word 'garlicdough'. Answer with just the word.",
+   "latency_ms": 131.1365719429836,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "hguodcilrag",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "hguodcilrag",
+   "id": "t255",
+   "input": "Reverse the word 'garlicdough'. Answer with just the word.",
+   "latency_ms": 126.90775417660457,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "hard"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t256",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 98.12733544224062,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "SAUCE",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "SAUCE",
+   "id": "t256",
+   "input": "Uppercase the word 'sauce'. Answer with just the word.",
+   "latency_ms": 159.90901322675506,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t257",
+   "input": "How many letters are in 'delivery'? Answer with just the number.",
+   "latency_ms": 82.99817481183962,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t257",
+   "input": "How many letters are in 'delivery'? Answer with just the number.",
+   "latency_ms": 147.97930003858485,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1016",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1016",
+   "id": "t258",
+   "input": "What is 294 + 722? Answer with just the number.",
+   "latency_ms": 130.50598920363547,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1016",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1016",
+   "id": "t258",
+   "input": "What is 294 + 722? Answer with just the number.",
+   "latency_ms": 128.3580650425027,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-15",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-15",
+   "id": "t259",
+   "input": "What is 18 - 33? Answer with just the number.",
+   "latency_ms": 86.86440116643216,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-15",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-15",
+   "id": "t259",
+   "input": "What is 18 - 33? Answer with just the number.",
+   "latency_ms": 107.36173002346128,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "806",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "806",
+   "id": "t260",
+   "input": "What is 26 * 31? Answer with just the number.",
+   "latency_ms": 125.05683171718866,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "806",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "806",
+   "id": "t260",
+   "input": "What is 26 * 31? Answer with just the number.",
+   "latency_ms": 84.57891477966956,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t261",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 122.78773202717913,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t261",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 85.50288356718708,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t262",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 96.8402166396381,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "PIZZA",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "PIZZA",
+   "id": "t262",
+   "input": "Uppercase the word 'pizza'. Answer with just the word.",
+   "latency_ms": 119.08582468063307,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t263",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 107.08752134272783,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10",
+   "cached": false,
+   "cost_usd": 8.25e-06,
+   "expected": "10",
+   "id": "t263",
+   "input": "How many letters are in 'mozzarella'? Answer with just the number.",
+   "latency_ms": 100.64042639513612,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "42",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "42",
+   "id": "t264",
+   "input": "What is 25 + 17? Answer with just the number.",
+   "latency_ms": 104.1839708625795,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "42",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "42",
+   "id": "t264",
+   "input": "What is 25 + 17? Answer with just the number.",
+   "latency_ms": 102.41227052418898,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-16",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-16",
+   "id": "t265",
+   "input": "What is 11 - 27? Answer with just the number.",
+   "latency_ms": 107.9455932272128,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-16",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-16",
+   "id": "t265",
+   "input": "What is 11 - 27? Answer with just the number.",
+   "latency_ms": 90.56060648269312,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "930",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "930",
+   "id": "t266",
+   "input": "What is 31 * 30? Answer with just the number.",
+   "latency_ms": 119.4278046692896,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "930",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "930",
+   "id": "t266",
+   "input": "What is 31 * 30? Answer with just the number.",
+   "latency_ms": 105.83510568917487,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "allerazzom",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "allerazzom",
+   "id": "t267",
+   "input": "Reverse the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 110.96635289179893,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "allerazzom",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "allerazzom",
+   "id": "t267",
+   "input": "Reverse the word 'mozzarella'. Answer with just the word.",
+   "latency_ms": 102.28817030855492,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t268",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 94.20595386268081,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "RECEIPT",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "RECEIPT",
+   "id": "t268",
+   "input": "Uppercase the word 'receipt'. Answer with just the word.",
+   "latency_ms": 104.4655972160496,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "60",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t269",
+   "input": "How many letters are in 'garlic'? Answer with just the number.",
+   "latency_ms": 126.67099979072569,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "60",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t269",
+   "input": "How many letters are in 'garlic'? Answer with just the number.",
+   "latency_ms": 109.69048442831644,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1027",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1027",
+   "id": "t270",
+   "input": "What is 842 + 185? Answer with just the number.",
+   "latency_ms": 146.51078755281878,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1027",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1027",
+   "id": "t270",
+   "input": "What is 842 + 185? Answer with just the number.",
+   "latency_ms": 139.3201746899517,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "38",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "38",
+   "id": "t271",
+   "input": "What is 43 - 5? Answer with just the number.",
+   "latency_ms": 86.80071461380493,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "38",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "38",
+   "id": "t271",
+   "input": "What is 43 - 5? Answer with just the number.",
+   "latency_ms": 84.47457819867647,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1612",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1612",
+   "id": "t272",
+   "input": "What is 52 * 31? Answer with just the number.",
+   "latency_ms": 169.83071189956465,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1612",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1612",
+   "id": "t272",
+   "input": "What is 52 * 31? Answer with just the number.",
+   "latency_ms": 148.7438786132903,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "hard"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t273",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 147.0998726191171,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tsurc",
+   "cached": false,
+   "cost_usd": 7.25e-06,
+   "expected": "tsurc",
+   "id": "t273",
+   "input": "Reverse the word 'crust'. Answer with just the word.",
+   "latency_ms": 111.42632418638175,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "YREVILEDx",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t274",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 91.00240059997907,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "YREVILEDx",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t274",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 90.65969870472408,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t275",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 116.7978078865045,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "8",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "8",
+   "id": "t275",
+   "input": "How many letters are in 'mushroom'? Answer with just the number.",
+   "latency_ms": 86.88310851730641,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "85",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "85",
+   "id": "t276",
+   "input": "What is 44 + 41? Answer with just the number.",
+   "latency_ms": 136.6651265542602,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "85",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "85",
+   "id": "t276",
+   "input": "What is 44 + 41? Answer with just the number.",
+   "latency_ms": 108.90522850896778,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-4",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-4",
+   "id": "t277",
+   "input": "What is 9 - 13? Answer with just the number.",
+   "latency_ms": 108.73303771758313,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-4",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "-4",
+   "id": "t277",
+   "input": "What is 9 - 13? Answer with just the number.",
+   "latency_ms": 142.97753996952804,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "726",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "726",
+   "id": "t278",
+   "input": "What is 33 * 22? Answer with just the number.",
+   "latency_ms": 106.71845121190532,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "726",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "726",
+   "id": "t278",
+   "input": "What is 33 * 22? Answer with just the number.",
+   "latency_ms": 139.37284736381474,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tpiecer",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "tpiecer",
+   "id": "t279",
+   "input": "Reverse the word 'receipt'. Answer with just the word.",
+   "latency_ms": 125.9807268441962,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "tpiecer",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "tpiecer",
+   "id": "t279",
+   "input": "Reverse the word 'receipt'. Answer with just the word.",
+   "latency_ms": 150.8913486820582,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "COUPONANCHOVY",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "COUPONANCHOVY",
+   "id": "t280",
+   "input": "Uppercase the word 'couponanchovy'. Answer with just the word.",
+   "latency_ms": 144.8536197354032,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "COUPONANCHOVY",
+   "cached": false,
+   "cost_usd": 1.05e-05,
+   "expected": "COUPONANCHOVY",
+   "id": "t280",
+   "input": "Uppercase the word 'couponanchovy'. Answer with just the word.",
+   "latency_ms": 171.21587116229327,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "hard"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t281",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 116.0659433233993,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t281",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 92.21330393761137,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "488",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "488",
+   "id": "t282",
+   "input": "What is 474 + 14? Answer with just the number.",
+   "latency_ms": 130.57011619325542,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "488",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "488",
+   "id": "t282",
+   "input": "What is 474 + 14? Answer with just the number.",
+   "latency_ms": 180.98280168134096,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-26",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-26",
+   "id": "t283",
+   "input": "What is 12 - 38? Answer with just the number.",
+   "latency_ms": 113.66600049813536,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-26",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-26",
+   "id": "t283",
+   "input": "What is 12 - 38? Answer with just the number.",
+   "latency_ms": 95.58087108644467,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "easy"
+   ]
+  },
+  {
+   "actual": "176",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "176",
+   "id": "t284",
+   "input": "What is 11 * 16? Answer with just the number.",
+   "latency_ms": 144.4582484179202,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "176",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "176",
+   "id": "t284",
+   "input": "What is 11 * 16? Answer with just the number.",
+   "latency_ms": 143.78654159099744,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t285",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 96.85993627922554,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "gnippot",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "gnippot",
+   "id": "t285",
+   "input": "Reverse the word 'topping'. Answer with just the word.",
+   "latency_ms": 88.82434833506743,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t286",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 93.68066947575537,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t286",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 90.00434504465586,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t287",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 101.15209311328462,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t287",
+   "input": "How many letters are in 'basil'? Answer with just the number.",
+   "latency_ms": 117.25842274241072,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "1609",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1609",
+   "id": "t288",
+   "input": "What is 829 + 780? Answer with just the number.",
+   "latency_ms": 140.21292644772075,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "1609",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1609",
+   "id": "t288",
+   "input": "What is 829 + 780? Answer with just the number.",
+   "latency_ms": 147.1388329592224,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "add",
+    "hard"
+   ]
+  },
+  {
+   "actual": "78",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "78",
+   "id": "t289",
+   "input": "What is 152 - 74? Answer with just the number.",
+   "latency_ms": 153.56028837704247,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "78",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "78",
+   "id": "t289",
+   "input": "What is 152 - 74? Answer with just the number.",
+   "latency_ms": 155.97624286530228,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "22",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "22",
+   "id": "t290",
+   "input": "What is 22 * 1? Answer with just the number.",
+   "latency_ms": 144.00340055542944,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "22",
+   "cached": false,
+   "cost_usd": 6.75e-06,
+   "expected": "22",
+   "id": "t290",
+   "input": "What is 22 * 1? Answer with just the number.",
+   "latency_ms": 84.70587205011894,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "cilrag",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t291",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 132.2327675554452,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "cilrag",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "cilrag",
+   "id": "t291",
+   "input": "Reverse the word 'garlic'. Answer with just the word.",
+   "latency_ms": 119.54606762435479,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t292",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 84.91137881823337,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "GARLIC",
+   "cached": false,
+   "cost_usd": 7.5e-06,
+   "expected": "GARLIC",
+   "id": "t292",
+   "input": "Uppercase the word 'garlic'. Answer with just the word.",
+   "latency_ms": 102.52979397633793,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "60",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t293",
+   "input": "How many letters are in 'pepper'? Answer with just the number.",
+   "latency_ms": 103.00686900935705,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "60",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "6",
+   "id": "t293",
+   "input": "How many letters are in 'pepper'? Answer with just the number.",
+   "latency_ms": 82.84088389851772,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "550",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "55",
+   "id": "t294",
+   "input": "What is 19 + 36? Answer with just the number.",
+   "latency_ms": 95.80016385409803,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "550",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "55",
+   "id": "t294",
+   "input": "What is 19 + 36? Answer with just the number.",
+   "latency_ms": 103.88077675992423,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "add",
+    "easy"
+   ]
+  },
+  {
+   "actual": "-161",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-161",
+   "id": "t295",
+   "input": "What is 120 - 281? Answer with just the number.",
+   "latency_ms": 194.3595024534798,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "-161",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "-161",
+   "id": "t295",
+   "input": "What is 120 - 281? Answer with just the number.",
+   "latency_ms": 136.50097160751832,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "sub",
+    "hard"
+   ]
+  },
+  {
+   "actual": "10080",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1008",
+   "id": "t296",
+   "input": "What is 36 * 28? Answer with just the number.",
+   "latency_ms": 105.89732965053918,
+   "seed": 0,
+   "success": false,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "10080",
+   "cached": false,
+   "cost_usd": 7e-06,
+   "expected": "1008",
+   "id": "t296",
+   "input": "What is 36 * 28? Answer with just the number.",
+   "latency_ms": 87.01156279931966,
+   "seed": 1,
+   "success": false,
+   "tags": [
+    "mul",
+    "easy"
+   ]
+  },
+  {
+   "actual": "moorhsum",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t297",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 98.14991530360338,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "moorhsum",
+   "cached": false,
+   "cost_usd": 8.75e-06,
+   "expected": "moorhsum",
+   "id": "t297",
+   "input": "Reverse the word 'mushroom'. Answer with just the word.",
+   "latency_ms": 90.4272320605879,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "reverse",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t298",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 113.4401568744324,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "DELIVERY",
+   "cached": false,
+   "cost_usd": 9e-06,
+   "expected": "DELIVERY",
+   "id": "t298",
+   "input": "Uppercase the word 'delivery'. Answer with just the word.",
+   "latency_ms": 117.67171781515343,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "upper",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t299",
+   "input": "How many letters are in 'dough'? Answer with just the number.",
+   "latency_ms": 102.2453538366727,
+   "seed": 0,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  },
+  {
+   "actual": "5",
+   "cached": false,
+   "cost_usd": 8e-06,
+   "expected": "5",
+   "id": "t299",
+   "input": "How many letters are in 'dough'? Answer with just the number.",
+   "latency_ms": 184.4203729198352,
+   "seed": 1,
+   "success": true,
+   "tags": [
+    "count",
+    "easy"
+   ]
+  }
+ ],
+ "meta": {
+  "config_hash": "822c50021ecfd6a1",
+  "model": "mock-system-one",
+  "n_examples": 300,
+  "name": "demo-agent-eval",
+  "seeds": [
+   0,
+   1
+  ],
+  "variant": "main"
+ }
+}

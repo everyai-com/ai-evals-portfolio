@@ -1,0 +1,29 @@
+# Example GitHub Actions schedule for the nightly flywheel (copy into .github/workflows/ to enable).
+name: dpo-nightly
+on:
+  schedule:
+    - cron: "30 2 * * *"      # 02:30 UTC every night
+  workflow_dispatch: {}
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with: { python-version: "3.12" }
+      - run: uv venv --python 3.12 .venv && uv pip install -e ".[dev]"
+      - name: Restore flywheel state
+        uses: actions/cache@v4
+        with:
+          path: projects/p06_dpo_flywheel/state
+          key: dpo-state-${{ github.run_id }}
+          restore-keys: dpo-state-
+      - name: Run nightly job
+        run: projects/p06_dpo_flywheel/nightly.sh
+        env:
+          EVENTS: projects/p06_dpo_flywheel/data/feedback.jsonl
+      - name: Commit new golden cases
+        run: |
+          git config user.name "dpo-flywheel[bot]"; git config user.email "flywheel@users.noreply.github.com"
+          git add projects/p06_dpo_flywheel/data/golden_additions.jsonl projects/p06_dpo_flywheel/data/CHANGELOG.md
+          git diff --cached --quiet || git commit -m "chore(flywheel): nightly golden additions" && git push

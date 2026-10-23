@@ -1,0 +1,25 @@
+# Drift detector thresholds (see core.DriftDetector / module docstring for the formulas).
+baseline_window_days: 7
+min_baseline_days: 3
+cusum:
+  k: 0.5            # slack, in baseline sigmas
+  h: 3.0            # decision interval -> warning
+  critical_h: 6.0
+  min_sigma: 0.02   # floor on baseline sigma so a flat baseline cannot make noise look like drift
+zscore:
+  warn: 3.0
+  critical: 4.5
+psi:
+  warn: 0.10
+  critical: 0.25
+  bias_correct: true  # subtract E[PSI] = (k-1)(1/n_base + 1/n_today) before thresholding
+  max_p: 0.001        # chi-square(k-1) tail of PSI*n_b*n_c/(n_b+n_c) must be at most this
+  tool_call_bins: [0, 1, 2, 3, 4, 100]          # bins: 0, 1, 2, 3, 4+
+  answer_length_bins: [0, 30, 60, 90, 130, 100000]
+hallucination:
+  ratio: 2.0        # today >= ratio * baseline ...
+  min_abs: 0.03     # ... and at least this much higher in absolute terms
+  critical_ratio: 3.0
+  min_count: 3      # need at least this many flagged trajectories today
+  max_p: 0.005      # binomial tail P(X >= k | n_today, baseline_rate)
+max_sample_ids: 5
