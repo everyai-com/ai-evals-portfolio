@@ -281,7 +281,7 @@
    "expected": "92",
    "id": "t007",
    "input": "What is 856 - 764? Answer with just the number.",
-   "latency_ms": 177.09839100416144,
+   "latency_ms": 177.09839100416147,
    "seed": 1,
    "success": true,
    "tags": [
@@ -356,7 +356,7 @@
    "expected": "MOZZARELLAPIZZA",
    "id": "t010",
    "input": "Uppercase the word 'mozzarellapizza'. Answer with just the word.",
-   "latency_ms": 164.39988405773653,
+   "latency_ms": 164.3998840577365,
    "seed": 0,
    "success": true,
    "tags": [
@@ -416,7 +416,7 @@
    "expected": "44",
    "id": "t012",
    "input": "What is 13 + 31? Answer with just the number.",
-   "latency_ms": 93.94842287827642,
+   "latency_ms": 93.94842287827643,
    "seed": 0,
    "success": true,
    "tags": [
@@ -1271,7 +1271,7 @@
    "expected": "RECEIPT",
    "id": "t040",
    "input": "Uppercase the word 'receipt'. Answer with just the word.",
-   "latency_ms": 137.89578682082598,
+   "latency_ms": 137.895786820826,
    "seed": 1,
    "success": true,
    "tags": [
@@ -1436,7 +1436,7 @@
    "expected": "CRUST",
    "id": "t046",
    "input": "Uppercase the word 'crust'. Answer with just the word.",
-   "latency_ms": 130.5629991759526,
+   "latency_ms": 130.56299917595257,
    "seed": 0,
    "success": true,
    "tags": [
@@ -1511,7 +1511,7 @@
    "expected": "81",
    "id": "t048",
    "input": "What is 33 + 48? Answer with just the number.",
-   "latency_ms": 132.55253459376326,
+   "latency_ms": 132.5525345937632,
    "seed": 1,
    "success": false,
    "tags": [
@@ -1721,7 +1721,7 @@
    "expected": "34",
    "id": "t055",
    "input": "What is 48 - 14? Answer with just the number.",
-   "latency_ms": 135.49488301365304,
+   "latency_ms": 135.494883013653,
    "seed": 1,
    "success": true,
    "tags": [
@@ -1946,7 +1946,7 @@
    "expected": "nevo",
    "id": "t063",
    "input": "Reverse the word 'oven'. Answer with just the word.",
-   "latency_ms": 149.0406934204678,
+   "latency_ms": 149.04069342046776,
    "seed": 0,
    "success": true,
    "tags": [
@@ -2291,7 +2291,7 @@
    "expected": "608",
    "id": "t074",
    "input": "What is 32 * 19? Answer with just the number.",
-   "latency_ms": 125.3718387679885,
+   "latency_ms": 125.37183876798852,
    "seed": 1,
    "success": true,
    "tags": [
@@ -2771,7 +2771,7 @@
    "expected": "46",
    "id": "t090",
    "input": "What is 14 + 32? Answer with just the number.",
-   "latency_ms": 83.53772359144858,
+   "latency_ms": 83.5377235914486,
    "seed": 1,
    "success": true,
    "tags": [
@@ -3101,7 +3101,7 @@
    "expected": "5",
    "id": "t101",
    "input": "How many letters are in 'dough'? Answer with just the number.",
-   "latency_ms": 116.67017017168885,
+   "latency_ms": 116.67017017168888,
    "seed": 1,
    "success": false,
    "tags": [
@@ -3131,7 +3131,7 @@
    "expected": "1359",
    "id": "t102",
    "input": "What is 578 + 781? Answer with just the number.",
-   "latency_ms": 162.7087358004694,
+   "latency_ms": 162.70873580046938,
    "seed": 1,
    "success": true,
    "tags": [
@@ -3251,7 +3251,7 @@
    "expected": "SAUCE",
    "id": "t106",
    "input": "Uppercase the word 'sauce'. Answer with just the word.",
-   "latency_ms": 97.71556795728802,
+   "latency_ms": 97.71556795728803,
    "seed": 1,
    "success": false,
    "tags": [
@@ -3551,7 +3551,7 @@
    "expected": "288",
    "id": "t116",
    "input": "What is 12 * 24? Answer with just the number.",
-   "latency_ms": 100.15986676367325,
+   "latency_ms": 100.15986676367324,
    "seed": 1,
    "success": true,
    "tags": [
@@ -3671,7 +3671,7 @@
    "expected": "1079",
    "id": "t120",
    "input": "What is 211 + 868? Answer with just the number.",
-   "latency_ms": 186.33169261084657,
+   "latency_ms": 186.33169261084655,
    "seed": 1,
    "success": true,
    "tags": [
@@ -3731,7 +3731,7 @@
    "expected": "1558",
    "id": "t122",
    "input": "What is 41 * 38? Answer with just the number.",
-   "latency_ms": 198.43987185851444,
+   "latency_ms": 198.43987185851438,
    "seed": 1,
    "success": true,
    "tags": [
@@ -4811,7 +4811,7 @@
    "expected": "21",
    "id": "t158",
    "input": "What is 1 * 21? Answer with just the number.",
-   "latency_ms": 141.0394327653075,
+   "latency_ms": 141.03943276530754,
    "seed": 1,
    "success": true,
    "tags": [
@@ -5021,7 +5021,7 @@
    "expected": "ecuas",
    "id": "t165",
    "input": "Reverse the word 'sauce'. Answer with just the word.",
-   "latency_ms": 122.49754391624177,
+   "latency_ms": 122.4975439162418,
    "seed": 1,
    "success": true,
    "tags": [
@@ -5201,7 +5201,7 @@
    "expected": "tsurc",
    "id": "t171",
    "input": "Reverse the word 'crust'. Answer with just the word.",
-   "latency_ms": 134.3741512554427,
+   "latency_ms": 134.37415125544274,
    "seed": 1,
    "success": true,
    "tags": [
@@ -6326,7 +6326,7 @@
    "expected": "10",
    "id": "t209",
    "input": "How many letters are in 'mozzarella'? Answer with just the number.",
-   "latency_ms": 129.0630478771632,
+   "latency_ms": 129.06304787716317,
    "seed": 0,
    "success": true,
    "tags": [
@@ -6416,7 +6416,7 @@
    "expected": "900",
    "id": "t212",
    "input": "What is 20 * 45? Answer with just the number.",
-   "latency_ms": 173.33957771249055,
+   "latency_ms": 173.3395777124905,
    "seed": 0,
    "success": true,
    "tags": [
@@ -6746,7 +6746,7 @@
    "expected": "6",
    "id": "t223",
    "input": "What is 29 - 23? Answer with just the number.",
-   "latency_ms": 157.62211763471907,
+   "latency_ms": 157.62211763471905,
    "seed": 0,
    "success": true,
    "tags": [
@@ -6971,7 +6971,7 @@
    "expected": "1353",
    "id": "t230",
    "input": "What is 33 * 41? Answer with just the number.",
-   "latency_ms": 87.29065946437014,
+   "latency_ms": 87.29065946437012,
    "seed": 1,
    "success": true,
    "tags": [
@@ -7256,7 +7256,7 @@
    "expected": "70",
    "id": "t240",
    "input": "What is 27 + 43? Answer with just the number.",
-   "latency_ms": 119.27814762184153,
+   "latency_ms": 119.27814762184154,
    "seed": 0,
    "success": true,
    "tags": [
@@ -7556,7 +7556,7 @@
    "expected": "CRUST",
    "id": "t250",
    "input": "Uppercase the word 'crust'. Answer with just the word.",
-   "latency_ms": 210.46097921853965,
+   "latency_ms": 210.4609792185396,
    "seed": 0,
    "success": true,
    "tags": [
@@ -8036,7 +8036,7 @@
    "expected": "930",
    "id": "t266",
    "input": "What is 31 * 30? Answer with just the number.",
-   "latency_ms": 119.4278046692896,
+   "latency_ms": 119.42780466928957,
    "seed": 0,
    "success": true,
    "tags": [
@@ -8216,7 +8216,7 @@
    "expected": "1612",
    "id": "t272",
    "input": "What is 52 * 31? Answer with just the number.",
-   "latency_ms": 169.83071189956465,
+   "latency_ms": 169.83071189956462,
    "seed": 0,
    "success": true,
    "tags": [
@@ -8561,7 +8561,7 @@
    "expected": "-26",
    "id": "t283",
    "input": "What is 12 - 38? Answer with just the number.",
-   "latency_ms": 95.58087108644467,
+   "latency_ms": 95.58087108644466,
    "seed": 1,
    "success": true,
    "tags": [
@@ -8741,7 +8741,7 @@
    "expected": "78",
    "id": "t289",
    "input": "What is 152 - 74? Answer with just the number.",
-   "latency_ms": 155.97624286530228,
+   "latency_ms": 155.97624286530225,
    "seed": 1,
    "success": true,
    "tags": [
@@ -9011,7 +9011,7 @@
    "expected": "DELIVERY",
    "id": "t298",
    "input": "Uppercase the word 'delivery'. Answer with just the word.",
-   "latency_ms": 117.67171781515343,
+   "latency_ms": 117.67171781515346,
    "seed": 1,
    "success": true,
    "tags": [
@@ -9041,7 +9041,7 @@
    "expected": "5",
    "id": "t299",
    "input": "How many letters are in 'dough'? Answer with just the number.",
-   "latency_ms": 184.4203729198352,
+   "latency_ms": 184.42037291983513,
    "seed": 1,
    "success": true,
    "tags": [
