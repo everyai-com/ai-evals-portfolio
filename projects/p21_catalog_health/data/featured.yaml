@@ -1,0 +1,45 @@
+# Admin-pinned items: org-wide and per team (ids from catalog.jsonl).
+org:
+- item-0000
+- item-0001
+- item-0002
+- item-0003
+- item-0004
+- item-0005
+teams:
+  sales:
+  - item-0000
+  - item-0022
+  - item-0027
+  support:
+  - item-0009
+  - item-0011
+  - item-0031
+  - item-0037
+  engineering:
+  - item-0005
+  - item-0012
+  - item-0014
+  hr:
+  - item-0001
+  - item-0004
+  - item-0007
+  - item-0035
+  - item-0036
+  finance:
+  - item-0003
+  - item-0013
+  - item-0015
+  marketing:
+  - item-0010
+  - item-0019
+  - item-0023
+  legal:
+  - item-0008
+  - item-0017
+  - item-0020
+  ops:
+  - item-0002
+  - item-0006
+  - item-0016
+  - item-0018

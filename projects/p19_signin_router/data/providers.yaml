@@ -1,0 +1,44 @@
+# Identity registry for "a bunch of companies in a trench coat" (fictional group: Northwire).
+# Precedence in Router.resolve: passkey -> domain's IdP -> parent IdP (acquired + federated)
+# -> magic link. Unknown domains fall to magic link; disposable domains are rejected.
+default_method: magic_link
+disposable_domains: [mailinator.com, guerrillamail.com, 10minutemail.com, tempmail.com, yopmail.com, sharklasers.com]
+providers:
+  - id: northwire-google
+    kind: google_workspace
+    business_unit: telecom
+    domains: [northwire.com]
+    aliases: [northwire.ca, northwiremobility.com]      # same workspace, historical mail domains
+  - id: pebble-google                                    # sub-brand on its own workspace
+    kind: google_workspace
+    business_unit: telecom
+    domains: [pebblemobile.ca]
+  - id: northwire-health-entra
+    kind: entra
+    business_unit: health
+    domains: [northwirehealth.com, northwirehealth.ca]
+  - id: careline-okta                                    # acquired company, kept its own Okta
+    kind: okta
+    business_unit: health
+    domains: [careline.io]
+  - id: agrinorth-adfs
+    kind: saml:agrinorth-adfs
+    business_unit: agriculture
+    domains: [agrinorth.com]
+  - id: ledgerly-entra
+    kind: entra
+    business_unit: finance
+    domains: [ledgerly.com]
+acquired:
+  - domain: fieldco.ca            # acquired brand, federated into the parent's Google workspace
+    acquired_by: northwire.com
+    federated: true
+    business_unit: telecom
+  - domain: plainsmobile.ca       # acquired brand, not federated yet -> magic link until SSO lands
+    acquired_by: northwire.com
+    federated: false
+    business_unit: telecom
+  - domain: clinicpath.com        # acquired by the health unit, federated into Entra
+    acquired_by: northwirehealth.com
+    federated: true
+    business_unit: health

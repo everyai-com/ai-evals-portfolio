@@ -1,0 +1,7 @@
+name: expense-helper
+owner: builder@example.com
+risk_tier: medium
+data_classes: [internal, pii]
+outbound_domains: [api.stripe.com, hooks.slack.com]
+description: Vibe-coded expense helper with planted problems.
+entrypoint: app.py

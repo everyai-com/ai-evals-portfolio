@@ -1,0 +1,31 @@
+# The questions the platform must be able to answer. Decide these BEFORE deciding where data lives.
+# needs.exactness: exact | approximate      needs.retention: hot | warm | cold
+# needs.query:     point | aggregate | distinct | scan   needs.write_rate: low | medium | high
+questions:
+  - id: distinct_users_month
+    text: How many distinct people used the platform this month?
+    needs: {exactness: exact, retention: hot, query: distinct, write_rate: high}
+  - id: pageviews_per_day
+    text: Page views per day, per app, for the usage dashboard
+    needs: {exactness: approximate, retention: warm, query: aggregate, write_rate: high}
+  - id: clicks_per_feature
+    text: Which features get clicked most (trend over weeks)
+    needs: {exactness: approximate, retention: warm, query: aggregate, write_rate: high}
+  - id: every_version_shipped
+    text: Every app version ever shipped, with its bundle, for audit and rollback
+    needs: {exactness: exact, retention: cold, query: scan, write_rate: medium}
+  - id: user_profile
+    text: Look up one user's profile and permissions
+    needs: {exactness: exact, retention: hot, query: point, write_rate: low}
+  - id: app_record
+    text: Look up an app's owner, settings and current version
+    needs: {exactness: exact, retention: hot, query: point, write_rate: low}
+  - id: deploys_per_app_today
+    text: How many deploys did each app do today (exact, shown to the owner)
+    needs: {exactness: exact, retention: hot, query: aggregate, write_rate: high}
+  - id: request_logs_debug
+    text: Request logs for the last 30 days to debug an incident
+    needs: {exactness: approximate, retention: warm, query: scan, write_rate: high}
+  - id: compliance_access_log
+    text: Who accessed which confidential app, kept for 7 years
+    needs: {exactness: exact, retention: cold, query: scan, write_rate: medium}

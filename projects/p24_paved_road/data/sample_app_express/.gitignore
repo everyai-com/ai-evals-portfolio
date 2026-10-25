@@ -1,0 +1,2 @@
+# re-include the fixture secrets file that the monorepo .gitignore excludes (placeholder values only)
+!.env

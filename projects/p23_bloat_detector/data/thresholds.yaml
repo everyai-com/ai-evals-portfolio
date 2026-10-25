@@ -1,0 +1,10 @@
+# Verdict thresholds for RefactorBudget. `null` disables a rule.
+# "Book the refactor before the bloat": any breach flips book_the_refactor to true.
+comment_ratio_max: 0.35        # standalone comment lines / code lines
+duplicate_pct_max: 0.03        # removable duplicate lines / code lines
+concept_cluster_max: 3         # a concept with >= 3 differently-named implementations
+wrapper_depth_max: 2           # wrapper -> wrapper -> impl is tolerated; deeper is not
+diary_lines_max: 40            # lines inside diary findings (long blocks, narration, first person)
+near_duplicates_max: null      # informational by default
+dead_code_max: null            # informational: public APIs used outside the scanned dir look dead
+commits_48h_max: 100           # only checked when `velocity` is supplied

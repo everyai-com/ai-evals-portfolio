@@ -1,0 +1,3 @@
+# fixture used by the unit tests; the scanner must skip this path
+stripe={{FAKE:stripe_live_1}}
+aws={{FAKE:aws_3}}

@@ -1,0 +1,4 @@
+# USD per unit for non-model event kinds. Model calls are priced by evalkit.llm.estimate_cost.
+tool_call: 0.002          # per call
+container_seconds: 0.00004 # per second of sandbox CPU
+ocr_page: 0.015           # per page

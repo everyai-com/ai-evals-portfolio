@@ -1,0 +1,8 @@
+{"participant": "p01", "role": "product manager", "tool": "prototyping studio", "step_reached": "make_zip", "finished": false, "unaided": true, "minutes": 35, "blocker": "where do I get a zip? the studio only has a share link"}
+{"participant": "p02", "role": "HR business partner", "tool": "chat assistant", "step_reached": "make_zip", "finished": false, "unaided": true, "minutes": 22, "blocker": "no idea how to make a zip of the files the assistant wrote"}
+{"participant": "p03", "role": "software engineer", "tool": "editor + cli", "step_reached": "open_url", "finished": true, "unaided": true, "minutes": 14, "blocker": ""}
+{"participant": "p04", "role": "marketing analyst", "tool": "prototyping studio", "step_reached": "make_zip", "finished": false, "unaided": false, "minutes": 40, "blocker": "could not find a download or export as zip button"}
+{"participant": "p05", "role": "finance analyst", "tool": "prototyping studio", "step_reached": "fix_precheck", "finished": false, "unaided": true, "minutes": 48, "blocker": "precheck says the app starts its own express server and I do not know what that means"}
+{"participant": "p06", "role": "operations lead", "tool": "chat assistant", "step_reached": "make_zip", "finished": false, "unaided": true, "minutes": 18, "blocker": "stuck making the zip, the assistant gave me code not files"}
+{"participant": "p07", "role": "customer support lead", "tool": "hosted studio", "step_reached": "open_url", "finished": true, "unaided": true, "minutes": 26, "blocker": ""}
+{"participant": "p08", "role": "sales enablement", "tool": "prototyping studio", "step_reached": "make_zip", "finished": false, "unaided": true, "minutes": 30, "blocker": "zip export produced a folder with node_modules and the upload failed on size"}

@@ -37,3 +37,9 @@ uv venv --python 3.12 .venv && uv pip install -e ".[dev]"
 .venv/bin/pytest projects/p07_significance_engine -q
 .venv/bin/python -m projects.p07_significance_engine.cli --help
 ```
+
+## Platform-lesson projects (p17 onwards)
+
+Projects p17–p25 come from TELUS's "12 mistakes building an agent platform for 100,000
+employees" talk (Cloudflare, Oct 2026). Same conventions as above. Each README opens with the
+mistake it answers, in one sentence, and the test that proves the lesson is encoded.

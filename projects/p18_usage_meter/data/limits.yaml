@@ -1,0 +1,25 @@
+# Hard caps block; budgets warn (80 % and 100 %, once each per tenant per month).
+per_request:
+  max_tokens: 16000        # input + output estimate per request
+  max_units: 200           # per request for tool_call / ocr_page / container_seconds
+rate_limit:                # token bucket per agent
+  requests_per_minute: 60
+  burst: 20
+agents:
+  default: {daily_cap_usd: 25.0}
+  ocr-batch: {daily_cap_usd: 40.0}
+  code-reviewer: {daily_cap_usd: 60.0}
+users:
+  default: {daily_cap_usd: 30.0}
+tenants:
+  default: {monthly_budget_usd: 1500.0}
+  acme: {monthly_budget_usd: 2500.0}
+  globex: {monthly_budget_usd: 500.0}
+  initech: {monthly_budget_usd: 400.0}
+alerts:
+  budget_thresholds: [0.8, 1.0]
+anomaly:
+  baseline_days: 14
+  mad_k: 6.0               # spike if hourly spend > median + k * (1.4826 * MAD)
+  min_abs_usd: 0.50        # and at least this much above the median
+  recurrence_floor: 0.5    # scheduled_burst if Wilson lower bound of daily recurrence >= this

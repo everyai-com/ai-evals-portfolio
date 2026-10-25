@@ -1,0 +1,27 @@
+# Demo configuration. The simulated target's knee sits at concurrency_limit / (service_s x 1.1)
+# users at 1 request/s each: 150 / 0.055 ~= 2,700 users (1.1 = the 10% service degradation at
+# full utilisation; see targets.py).
+target:
+  simulated:
+    service_ms: 50
+    service_cv: 0.3
+    concurrency_limit: 150
+    queue_limit: 150
+    error_slope: 0.2
+    cold_start_ms: 800
+    cold_start_window_s: 2
+    response_bytes: 2048
+
+launch_target_users: 10000      # "thousands of people who all joined at once"
+
+rate_limiter:                   # per-user bucket kills the join burst; the global bucket admits
+  per_user_rps: 1.0             # only what the knee can take, so excess becomes 429 not 5xx
+  burst: 1
+  global_rps: 2400
+  global_burst: 120
+
+scenarios:
+  ramp:  {kind: ramp, users: 5000, duration: 60}
+  spike: {kind: spike, users: 10000, window: 10, hold: 20, join_burst: 3}
+  step:  {kind: step, start_users: 500, users: 8000, step_seconds: 10}
+  soak:  {kind: soak, users: 2000, duration: 30}

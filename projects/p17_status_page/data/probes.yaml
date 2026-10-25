@@ -1,0 +1,29 @@
+# Probe definitions for the Gizmos status page.
+# home_region is where the users are; a failure there is an incident on its own.
+# quorum is how many regions must fail together before a remote-only failure counts.
+interval_s: 300
+regions: [us-east, eu-west, ap-southeast]
+home_region: us-east
+quorum: 2
+debounce_ticks: 2
+probes:
+  - name: gateway
+    kind: http
+    target: https://gizmos.example.internal/healthz
+    timeout_s: 5
+    expected_status: 200
+    body_regex: '"ok"\s*:\s*true'
+  - name: agent-api
+    kind: http
+    target: https://api.gizmos.example.internal/v1/ping
+    timeout_s: 5
+    expected_status: 200
+  - name: model-proxy
+    kind: tcp
+    target: model-proxy.gizmos.example.internal:8443
+    timeout_s: 3
+  - name: tool-sandbox
+    kind: function
+    target: projects.p17_status_page.core:sandbox_selfcheck
+    timeout_s: 2
+    regions: [us-east, eu-west]

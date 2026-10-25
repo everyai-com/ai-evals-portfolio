@@ -1,0 +1,28 @@
+# Which table currently serves which question, and what class of store it lives in.
+# Planted misplacements: distinct_users_month served from the sampled analytics store (counts
+# ~7x too low) and app_versions kept in the hot transactional DB (half the closet).
+tables:
+  - name: users
+    store_class: transactional
+    serves: [user_profile]
+  - name: apps
+    store_class: transactional
+    serves: [app_record]
+  - name: events_pageview_sampled
+    store_class: analytics_sampled
+    serves: [pageviews_per_day, distinct_users_month]
+  - name: events_click_sampled
+    store_class: analytics_sampled
+    serves: [clicks_per_feature]
+  - name: app_versions
+    store_class: transactional
+    serves: [every_version_shipped]
+  - name: deploy_counts
+    store_class: exact_counter
+    serves: [deploys_per_app_today]
+  - name: request_logs
+    store_class: transactional
+    serves: [request_logs_debug]
+  - name: access_archive
+    store_class: cold_archive
+    serves: [compliance_access_log]

@@ -20,6 +20,16 @@ PROJECTS = {
     "context": "projects.p13_context_eviction.cli",
     "contamination": "projects.p14_contamination_checker.cli",
     "harness": "projects.p16_unified_harness.cli",
+    # platform lessons (TELUS 12 mistakes)
+    "status": "projects.p17_status_page.cli",
+    "meter": "projects.p18_usage_meter.cli",
+    "signin": "projects.p19_signin_router.cli",
+    "capacity": "projects.p20_capacity_line.cli",
+    "catalog": "projects.p21_catalog_health.cli",
+    "deploygate": "projects.p22_deploy_gate.cli",
+    "bloat": "projects.p23_bloat_detector.cli",
+    "pavedroad": "projects.p24_paved_road.cli",
+    "surge": "projects.p25_surge_test.cli",
 }
 
 
