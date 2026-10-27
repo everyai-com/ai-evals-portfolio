@@ -13,7 +13,13 @@ import json
 import sys
 from pathlib import Path
 
-from projects.p23_bloat_detector.budget import RefactorBudget, load_thresholds, render_plan, render_scan, render_velocity
+from projects.p23_bloat_detector.budget import (
+    RefactorBudget,
+    load_thresholds,
+    render_plan,
+    render_scan,
+    render_velocity,
+)
 from projects.p23_bloat_detector.core import Analyzer
 from projects.p23_bloat_detector.velocity import git_velocity
 

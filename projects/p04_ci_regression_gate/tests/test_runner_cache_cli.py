@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import pytest
 import yaml
@@ -10,7 +9,11 @@ import yaml
 from projects.p04_ci_regression_gate import cli
 from projects.p04_ci_regression_gate.core import BudgetExceeded, EvalCache, EvalConfig, EvalRunner
 from projects.p04_ci_regression_gate.demo_sut import VARIANTS, make_sut
-from projects.p04_ci_regression_gate.post_comment import COMMENT_MARKER, FakeGitHub, post_or_update_comment
+from projects.p04_ci_regression_gate.post_comment import (
+    COMMENT_MARKER,
+    FakeGitHub,
+    post_or_update_comment,
+)
 from projects.p04_ci_regression_gate.tests.conftest import BASELINE, CONFIG, HERE, run_variant
 
 ROOT = HERE.parent.parent
@@ -111,7 +114,9 @@ def test_workflow_and_action_yaml(config):
     wf = yaml.safe_load((ROOT / ".github" / "workflows" / "eval-gate.yml").read_text())
     triggers = wf.get("on", wf.get(True))                          # PyYAML parses bare `on` as True
     assert "pull_request" in triggers and triggers["push"]["branches"] == ["main"]
-    assert set(wf["jobs"]) == {"gate", "update-baseline"}
+    assert set(wf["jobs"]) == {"checks", "gate", "update-baseline"}
+    checks = "\n".join(s.get("run", "") for s in wf["jobs"]["checks"]["steps"])
+    assert "ruff check ." in checks and "pytest" in checks
     gate_steps = wf["jobs"]["gate"]["steps"]
     uses = [s.get("uses", "") for s in gate_steps]
     assert any(u.startswith("astral-sh/setup-uv") for u in uses)

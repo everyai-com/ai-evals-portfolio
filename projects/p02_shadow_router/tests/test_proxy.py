@@ -3,8 +3,14 @@ import time
 import pytest
 
 from evalkit.llm import MockLLM
-from projects.p02_shadow_router.core import JsonlStore, MemoryStore, ShadowAgentRunner, ShadowProxy, should_shadow
 from evalkit.trajectory import Trajectory
+from projects.p02_shadow_router.core import (
+    JsonlStore,
+    MemoryStore,
+    ShadowAgentRunner,
+    ShadowProxy,
+    should_shadow,
+)
 
 
 class Exploding:
@@ -57,9 +63,8 @@ def test_shadow_timeout_is_logged_not_raised():
 
 
 def test_primary_errors_do_propagate():
-    with ShadowProxy(Exploding(), MockLLM("s"), sample_rate=1.0) as proxy:
-        with pytest.raises(RuntimeError):
-            proxy.complete("x", request_id="r")
+    with ShadowProxy(Exploding(), MockLLM("s"), sample_rate=1.0) as proxy, pytest.raises(RuntimeError):
+        proxy.complete("x", request_id="r")
 
 
 def test_sampling_rate_within_tolerance_and_deterministic():

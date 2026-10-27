@@ -1,5 +1,10 @@
 from evalkit.trajectory import Trajectory
-from projects.p02_shadow_router.core import TrajectoryDiff, containment_match, edit_distance, normalize
+from projects.p02_shadow_router.core import (
+    TrajectoryDiff,
+    containment_match,
+    edit_distance,
+    normalize,
+)
 
 
 def traj(answer, tools=(), success=None, cost=0.0, lat=0.0, tokens=0):

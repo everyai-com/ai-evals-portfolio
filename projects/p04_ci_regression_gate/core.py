@@ -8,9 +8,10 @@ import json
 import os
 import time
 from collections import defaultdict
-from dataclasses import dataclass, field, asdict
+from collections.abc import Callable
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 import yaml
@@ -38,7 +39,7 @@ class EvalConfig:
     path: Path | None = None
 
     @classmethod
-    def load(cls, path: str | Path) -> "EvalConfig":
+    def load(cls, path: str | Path) -> EvalConfig:
         path = Path(path)
         raw = yaml.safe_load(path.read_text())
         base = path.parent
@@ -429,8 +430,8 @@ def render_comment(result: GateResult, baseline: dict[str, Any], current: dict[s
         icon = {"pass": "✅", "warn": "⚠️", "block": "❌"}[v.status]
         rows.append([v.metric, base, cur, _fmt_delta(v), ci, v.threshold, f"{icon} {v.status}", v.note])
     lines = [marker, f"## Eval gate: {_badge(result)}", "",
-             f"`{cur_meta.get('variant', '?')}` vs baseline `{baseline['meta'].get('variant', 'main')}` · "
-             f"model `{cur_meta.get('model')}` · {result.n_paired} paired items · seeds {cur_meta.get('seeds')}", "",
+             (f"`{cur_meta.get('variant', '?')}` vs baseline `{baseline['meta'].get('variant', 'main')}` · "
+             f"model `{cur_meta.get('model')}` · {result.n_paired} paired items · seeds {cur_meta.get('seeds')}"), "",
              md_table(["metric", "baseline", "PR", "Δ", "95% CI", "threshold", "status", "note"], rows), ""]
     if result.failing:
         n_reg = sum(1 for f in result.failing if f["regression"])
@@ -447,13 +448,13 @@ def render_comment(result: GateResult, baseline: dict[str, Any], current: dict[s
                   ""]
     cache = current.get("cache", {})
     lines += ["### Run stats", "",
-              f"- cache: {cache.get('hits', 0)} hits / {cache.get('misses', 0)} misses "
-              f"(hit rate {cache.get('hit_rate', 0.0) * 100:.0f}%)",
-              f"- cost: ${agg['cost_total_usd']:.4f} total, ${agg['cost_per_task']:.6f} per task "
-              f"over {agg['n_calls']} calls",
+              (f"- cache: {cache.get('hits', 0)} hits / {cache.get('misses', 0)} misses "
+              f"(hit rate {cache.get('hit_rate', 0.0) * 100:.0f}%)"),
+              (f"- cost: ${agg['cost_total_usd']:.4f} total, ${agg['cost_per_task']:.6f} per task "
+              f"over {agg['n_calls']} calls"),
               f"- latency: p50 {agg['latency_p50_ms']:.0f} ms, p95 {agg['latency_p95_ms']:.0f} ms", "",
-              "<sub>Decision rule: block when task-success drop > max_drop *and* the paired-bootstrap 95% CI "
-              "excludes zero; latency/cost block after k consecutive breaches (hysteresis).</sub>"]
+              ("<sub>Decision rule: block when task-success drop > max_drop *and* the paired-bootstrap 95% CI "
+              "excludes zero; latency/cost block after k consecutive breaches (hysteresis).</sub>")]
     return "\n".join(lines) + "\n"
 
 
@@ -469,8 +470,7 @@ def write_github_outputs(result: GateResult, current: dict[str, Any], comment_pa
                "comment_path": comment_path or ""}
     if env.get("GITHUB_OUTPUT"):
         with open(env["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
-            for k, val in outputs.items():
-                f.write(f"{k}={val}\n")
+            f.writelines(f"{k}={val}\n" for k, val in outputs.items())
     if env.get("GITHUB_STEP_SUMMARY") and comment_path and Path(comment_path).exists():
         with open(env["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as f:
             f.write(Path(comment_path).read_text())

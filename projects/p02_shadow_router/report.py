@@ -100,7 +100,7 @@ class ReportBuilder:
         self.seed = seed
 
     @classmethod
-    def from_store(cls, store: Any, **kw: Any) -> "ReportBuilder":
+    def from_store(cls, store: Any, **kw: Any) -> ReportBuilder:
         rows = store.read() if hasattr(store, "read") else __import__("evalkit.io", fromlist=["read_jsonl"]).read_jsonl(store)
         return cls(rows, **kw)
 

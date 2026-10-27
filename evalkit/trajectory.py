@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import json
-from dataclasses import dataclass, field, asdict
+from dataclasses import asdict, dataclass, field
 from typing import Any
 
 
@@ -77,7 +77,7 @@ class Trajectory:
         return json.dumps(self.to_dict(), sort_keys=True)
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "Trajectory":
+    def from_dict(cls, d: dict[str, Any]) -> Trajectory:
         steps = []
         for s in d.get("steps", []):
             tc = s.get("tool_call")
@@ -90,20 +90,20 @@ class Trajectory:
                    success=d.get("success"), model=d.get("model", ""), meta=d.get("meta", {}))
 
     @classmethod
-    def from_json(cls, s: str) -> "Trajectory":
+    def from_json(cls, s: str) -> Trajectory:
         return cls.from_dict(json.loads(s))
 
     def add_tool(self, name: str, args: dict[str, Any], result: Any = None, error: str | None = None,
-                 **kw: Any) -> "Trajectory":
+                 **kw: Any) -> Trajectory:
         self.steps.append(Step(index=len(self.steps), kind="tool",
                                tool_call=ToolCall(name=name, args=args, result=result, error=error), **kw))
         return self
 
-    def add_llm(self, content: str, **kw: Any) -> "Trajectory":
+    def add_llm(self, content: str, **kw: Any) -> Trajectory:
         self.steps.append(Step(index=len(self.steps), kind="llm", content=content, **kw))
         return self
 
-    def finish(self, answer: str, success: bool | None = None) -> "Trajectory":
+    def finish(self, answer: str, success: bool | None = None) -> Trajectory:
         self.steps.append(Step(index=len(self.steps), kind="final", content=answer))
         self.final_answer = answer
         self.success = success

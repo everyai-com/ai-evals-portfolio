@@ -22,10 +22,11 @@ import re
 import threading
 import time
 import uuid
+from collections.abc import Callable
 from concurrent.futures import Future, ThreadPoolExecutor, wait
 from dataclasses import asdict, dataclass
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any, Self
 
 from evalkit.io import read_jsonl
 from evalkit.llm import LLMClient, LLMResponse
@@ -41,7 +42,7 @@ def should_shadow(request_id: str, sample_rate: float, seed: int = 0) -> bool:
         return False
     if sample_rate >= 1:
         return True
-    digest = hashlib.sha256(f"{seed}:{request_id}".encode("utf-8")).hexdigest()
+    digest = hashlib.sha256(f"{seed}:{request_id}".encode()).hexdigest()
     return int(digest[:8], 16) / 0x1_0000_0000 < sample_rate
 
 
@@ -174,7 +175,7 @@ class _ShadowBase:
     def _safe_append(self, record: dict[str, Any]) -> None:
         try:
             self.store.append(record)
-        except Exception:  # noqa: BLE001
+        except Exception:
             log.exception("could not persist shadow record %s", record.get("request_id"))
 
     def drain(self, timeout: float | None = None) -> int:
@@ -190,10 +191,10 @@ class _ShadowBase:
         self.drain()
         self._executor.shutdown(wait=True)
 
-    def __enter__(self) -> "_ShadowBase":
+    def __enter__(self) -> Self:
         return self
 
-    def __exit__(self, *exc: Any) -> None:
+    def __exit__(self, *exc: object) -> None:
         self.close()
 
 
@@ -217,7 +218,7 @@ class ShadowProxy(_ShadowBase):
                  meta: dict[str, Any] | None = None) -> LLMResponse:
         rid = request_id or uuid.uuid4().hex
         meta = dict(meta or {})
-        kw = dict(system=system, temperature=temperature, max_tokens=max_tokens, seed=seed)
+        kw = {"system": system, "temperature": temperature, "max_tokens": max_tokens, "seed": seed}
         resp = self.primary.complete(prompt, **kw)
         record = {"request_id": rid, "kind": "completion", "prompt": prompt, "system": system,
                   "meta": meta, "ts": float(meta.get("ts", time.time())), "shadowed": False,
@@ -274,7 +275,7 @@ def containment_match(prompt: str, a: str, b: str) -> bool:
     return bool(na) and bool(nb) and (na in nb or nb in na)
 
 
-JUDGES: dict[str, "Judge"] = {"normalized": normalized_match, "contains": containment_match}
+JUDGES: dict[str, Judge] = {"normalized": normalized_match, "contains": containment_match}
 
 
 def edit_distance(a: list[str], b: list[str]) -> int:

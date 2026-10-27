@@ -11,9 +11,16 @@ import yaml
 from evalkit.io import read_jsonl
 from evalkit.llm import MockLLM, get_client
 from evalkit.report import md_table, pct
-from projects.p09_drift_monitor.core import (DriftDetector, JudgeScorer, LengthScorer, OfflineEvaluator,
-                                             RuleScorer, TrafficSampler, default_judge_handler,
-                                             load_thresholds)
+from projects.p09_drift_monitor.core import (
+    DriftDetector,
+    JudgeScorer,
+    LengthScorer,
+    OfflineEvaluator,
+    RuleScorer,
+    TrafficSampler,
+    default_judge_handler,
+    load_thresholds,
+)
 from projects.p09_drift_monitor.daemon import Daemon, StdoutSink
 from projects.p09_drift_monitor.synth import date_for, make_day
 
@@ -85,8 +92,8 @@ def render_report(daemon: Daemon) -> str:
              ",".join(sorted({f"{a.detector}:{a.severity[0].upper()}" for a in by_date.get(m.date, [])})) or "-"]
             for m in metrics]
     out = ["# Drift monitor report", "",
-           f"Days: {len(metrics)}; alerts: {len(alerts)} "
-           f"({sum(a.severity == 'critical' for a in alerts)} critical)", "",
+           (f"Days: {len(metrics)}; alerts: {len(alerts)} "
+           f"({sum(a.severity == 'critical' for a in alerts)} critical)"), "",
            "```",
            f"success rate   {sparkline([m.success_rate for m in metrics], 0.5, 1.0)}",
            f"hallucination  {sparkline([m.hallucination_rate for m in metrics], 0.0, 0.2)}",

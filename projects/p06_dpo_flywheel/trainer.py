@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import json
 import os
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any
 
@@ -30,7 +30,7 @@ class TrainConfig:
     throughput_tok_per_s: float = 2500.0   # 7B model, LoRA, bf16, one A100-80GB (rough)
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any] | None) -> "TrainConfig":
+    def from_dict(cls, d: dict[str, Any] | None) -> TrainConfig:
         d = dict(d or {})
         if "target_modules" in d:
             d["target_modules"] = tuple(d["target_modules"])
@@ -76,7 +76,7 @@ def _real_available() -> bool:
         import peft  # noqa: F401
         import trl  # noqa: F401
         return True
-    except Exception:
+    except Exception:  # a broken optional install falls back to the mock trainer  # noqa: BLE001
         return False
 
 

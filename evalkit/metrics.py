@@ -3,10 +3,9 @@ from __future__ import annotations
 
 import math
 from collections import Counter
-from typing import Hashable, Sequence
+from collections.abc import Hashable, Sequence
 
 import numpy as np
-
 
 # ---------- classification ----------
 

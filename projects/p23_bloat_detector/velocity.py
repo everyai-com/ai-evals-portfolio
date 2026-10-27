@@ -11,9 +11,10 @@ from __future__ import annotations
 
 import subprocess
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import asdict, dataclass, field
-from datetime import datetime, timezone
-from typing import Any, Callable
+from datetime import UTC, datetime
+from typing import Any
 
 Runner = Callable[[list[str], str], str]
 
@@ -49,7 +50,7 @@ def git_runner(args: list[str], cwd: str) -> str:
 def is_git_repo(path: str, runner: Runner = git_runner) -> bool:
     try:
         return runner(["rev-parse", "--is-inside-work-tree"], path).strip() == "true"
-    except Exception:
+    except Exception:  # an injected runner may raise anything: treat as not a repo  # noqa: BLE001
         return False
 
 
@@ -84,14 +85,14 @@ def max_in_window(timestamps: list[int], window_s: int = 48 * 3600) -> tuple[int
 
 
 def compute_velocity(commits: list[Commit], days: int) -> Velocity:
-    per_day = Counter(datetime.fromtimestamp(c.ts, tz=timezone.utc).strftime("%Y-%m-%d") for c in commits)
+    per_day = Counter(datetime.fromtimestamp(c.ts, tz=UTC).strftime("%Y-%m-%d") for c in commits)
     best, start = max_in_window([c.ts for c in commits])
     added = sum(c.added for c in commits)
     deleted = sum(c.deleted for c in commits)
     return Velocity(
         days=days, n_commits=len(commits), commits_per_day=dict(sorted(per_day.items())),
         max_commits_48h=best,
-        busiest_window_start=datetime.fromtimestamp(start, tz=timezone.utc).strftime("%Y-%m-%d %H:%M") if start else None,
+        busiest_window_start=datetime.fromtimestamp(start, tz=UTC).strftime("%Y-%m-%d %H:%M") if start else None,
         lines_added=added, lines_deleted=deleted, add_delete_ratio=round(added / max(1, deleted), 3),
         busiest_days=per_day.most_common(3))
 

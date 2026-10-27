@@ -36,7 +36,7 @@ def main(argv: list[str] | None = None) -> int:
     out_dir.mkdir(exist_ok=True)
     failures = 0
     for name, cmd in COMMANDS.items():
-        proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True)
+        proc = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, check=False)
         body = f"$ {' '.join(cmd[1:])}\n\n{proc.stdout}"
         if proc.returncode not in (0, 1):   # 1 = eval failed, which is a legitimate result
             body += f"\n[exit {proc.returncode}]\n{proc.stderr}"

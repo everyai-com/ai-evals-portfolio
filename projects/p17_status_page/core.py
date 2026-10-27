@@ -474,8 +474,8 @@ def _esc(s: Any) -> str:
 
 def _bar_svg(days: list[dict[str, Any]]) -> str:
     w, h, gap = 8, 28, 2
-    parts = [f'<svg class="bars" viewBox="0 0 {30 * (w + gap)} {h}" width="{30 * (w + gap)}" height="{h}" '
-             f'role="img" aria-label="30-day uptime">']
+    parts = [(f'<svg class="bars" viewBox="0 0 {30 * (w + gap)} {h}" width="{30 * (w + gap)}" height="{h}" '
+             f'role="img" aria-label="30-day uptime">')]
     for i, d in enumerate(days):
         u = d["uptime"]
         if u is None:

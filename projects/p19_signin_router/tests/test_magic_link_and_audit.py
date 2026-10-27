@@ -115,11 +115,11 @@ def test_cli_resolve_and_magic_link(tmp_path, capsys):
     capsys.readouterr()
     st = str(tmp_path / "state")
     assert main(["magic-link", "issue", "--email", "x@plainsmobile.ca", "--state", st, "--now", "100", "--secret", "k"]) == 0
-    token = [line for line in capsys.readouterr().out.splitlines() if line.startswith("token: ")][0].split(" ", 1)[1]
+    token = next(line for line in capsys.readouterr().out.splitlines() if line.startswith("token: ")).split(" ", 1)[1]
     assert main(["magic-link", "verify", "--token", token, "--state", st, "--now", "200", "--secret", "k"]) == 0
     assert main(["magic-link", "verify", "--token", token, "--state", st, "--now", "200", "--secret", "k"]) == 1
     assert "already used" in capsys.readouterr().out
     assert main(["magic-link", "issue", "--email", "x@plainsmobile.ca", "--state", st, "--now", "100", "--secret", "k"]) == 0
-    token2 = [line for line in capsys.readouterr().out.splitlines() if line.startswith("token: ")][0].split(" ", 1)[1]
+    token2 = next(line for line in capsys.readouterr().out.splitlines() if line.startswith("token: ")).split(" ", 1)[1]
     assert main(["magic-link", "verify", "--token", token2, "--state", st, "--now", "100000", "--secret", "k"]) == 1
     assert "expired" in capsys.readouterr().out

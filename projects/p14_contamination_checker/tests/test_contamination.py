@@ -39,7 +39,7 @@ def test_normalisation_and_hashing():
 
 
 def test_all_planted_exact_leaks_flagged_exact(report, corpus):
-    train, ev = corpus
+    _train, ev = corpus
     exact = _by_planted(report, ev)["exact"]
     assert len(exact) == 10 and all(i.tier == "exact" for i in exact)
     assert all(i.exact_match_id and i.exact_match_id.startswith("train-") for i in exact)
@@ -73,7 +73,7 @@ def test_partial_spans_caught_by_ngram_tier(report, corpus):
 
 
 def test_clean_rows_false_positive_rate_below_2_percent(report, corpus):
-    train, ev = corpus
+    _train, ev = corpus
     clean = _by_planted(report, ev)[None]
     fpr = sum(i.tier != "clean" for i in clean) / len(clean)
     assert len(clean) == 170 and fpr < 0.02
@@ -189,7 +189,7 @@ def test_embedding_scanner_top_k_and_backend():
 
 
 def test_clean_split_row_counts(report, corpus, tmp_path):
-    train, ev = corpus
+    _train, ev = corpus
     out = core.clean_split(report, ev, tmp_path / "clean.jsonl", tmp_path / "removed.jsonl")
     assert out == {
         "kept": 170,

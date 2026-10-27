@@ -55,7 +55,7 @@ def make_events(seed: int = 0) -> list[dict]:
                 hour = float(np.clip(rng.normal(13, 2.5), 8, 18.99))
                 agent = AGENTS[int(rng.integers(len(AGENTS)))]
                 r = rng.random()
-                base = dict(ts=ts(d, hour), tenant=tenant, team=team, cost_centre=cc, user=user, agent_id=agent)
+                base = {"ts": ts(d, hour), "tenant": tenant, "team": team, "cost_centre": cc, "user": user, "agent_id": agent}
                 if r < 0.65:
                     model = MODELS[int(rng.choice(3, p=[0.6, 0.3, 0.1]))]
                     emit(**base, kind="model_call", model=model, input_tokens=int(rng.integers(300, 4000)),

@@ -82,6 +82,5 @@ if __name__ == "__main__":
     out = Path(__file__).with_name("feedback.jsonl")
     evs = make_feedback()
     with open(out, "w", encoding="utf-8") as f:
-        for e in evs:
-            f.write(json.dumps(e, ensure_ascii=False) + "\n")
+        f.writelines(json.dumps(e, ensure_ascii=False) + "\n" for e in evs)
     print(f"wrote {len(evs)} events to {out}")

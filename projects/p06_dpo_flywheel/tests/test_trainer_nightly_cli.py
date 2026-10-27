@@ -8,7 +8,6 @@ import pytest
 
 from evalkit.io import read_jsonl, write_jsonl
 from evalkit.llm import MockLLM
-
 from projects.p06_dpo_flywheel import cli
 from projects.p06_dpo_flywheel.nightly import NightlyConfig, NightlyJob
 from projects.p06_dpo_flywheel.trainer import DataValidationError, train_lora

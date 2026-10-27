@@ -12,10 +12,10 @@ from __future__ import annotations
 
 import json
 import re
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from evalkit.llm import MockLLM
-
 from projects.p11_counterfactual_replay.core import ExecutionContext
 
 QUESTION = "What is the combined headcount of Acme Corp's three largest offices?"

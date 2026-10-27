@@ -10,8 +10,9 @@ import json
 import os
 import re
 import time
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 
 
 @dataclass
@@ -26,7 +27,7 @@ class LLMResponse:
 
     def json(self) -> Any:
         """Parse the first JSON object/array in the text."""
-        m = re.search(r"(\{.*\}|\[.*\])", self.text, re.S)
+        m = re.search(r"(\{.*\}|\[.*\])", self.text, re.DOTALL)
         if not m:
             raise ValueError(f"no JSON in response: {self.text[:200]!r}")
         return json.loads(m.group(1))
@@ -76,7 +77,7 @@ class MockLLM:
                  latency_ms: float = 0.0, fail_rate: float = 0.0, seed: int = 0,
                  verbosity: float = 1.0):
         self.model = model
-        self.handlers = [(re.compile(p, re.S | re.I), h) for p, h in (handlers or [])]
+        self.handlers = [(re.compile(p, re.DOTALL | re.IGNORECASE), h) for p, h in (handlers or [])]
         self.latency_ms = latency_ms
         self.fail_rate = fail_rate
         self.seed = seed
@@ -119,8 +120,8 @@ class AnthropicLLM:
     def complete(self, prompt: str, *, system: str = "", temperature: float = 0.0,
                  max_tokens: int = 1024, seed: int | None = None) -> LLMResponse:
         t0 = time.perf_counter()
-        kwargs: dict[str, Any] = dict(model=self.model, max_tokens=max_tokens, temperature=temperature,
-                                      messages=[{"role": "user", "content": prompt}])
+        kwargs: dict[str, Any] = {"model": self.model, "max_tokens": max_tokens, "temperature": temperature,
+                                      "messages": [{"role": "user", "content": prompt}]}
         if system:
             kwargs["system"] = system
         msg = self._client.messages.create(**kwargs)

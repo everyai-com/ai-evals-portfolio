@@ -15,8 +15,16 @@ import os
 import sys
 from pathlib import Path
 
-from projects.p04_ci_regression_gate.core import (BudgetExceeded, EvalCache, EvalConfig, EvalRunner, Gate,
-                                                  GateState, render_comment, write_github_outputs)
+from projects.p04_ci_regression_gate.core import (
+    BudgetExceeded,
+    EvalCache,
+    EvalConfig,
+    EvalRunner,
+    Gate,
+    GateState,
+    render_comment,
+    write_github_outputs,
+)
 from projects.p04_ci_regression_gate.demo_sut import VARIANTS, make_sut
 
 HERE = Path(__file__).parent

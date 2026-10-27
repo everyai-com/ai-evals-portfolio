@@ -6,14 +6,28 @@ import json
 from pathlib import Path
 
 from projects.p25_surge_test.cli import main
-from projects.p25_surge_test.core import (Scenario, analyse, find_knee, headroom, littles_law, render_html,
-                                          render_markdown, run_scenario)
-from projects.p25_surge_test.targets import FunctionTarget, RateLimiter, Request, Response, SimulatedTarget
+from projects.p25_surge_test.core import (
+    Scenario,
+    analyse,
+    find_knee,
+    headroom,
+    littles_law,
+    render_html,
+    render_markdown,
+    run_scenario,
+)
+from projects.p25_surge_test.targets import (
+    FunctionTarget,
+    RateLimiter,
+    Request,
+    Response,
+    SimulatedTarget,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 # small twin of the demo target: knee at 30 / 0.05 s = 600 users at 1 req/s
-SMALL = dict(service_ms=50, service_cv=0.3, concurrency_limit=30, queue_limit=30, error_slope=0.5,
-             cold_start_ms=400, cold_start_window_s=1)
+SMALL = {"service_ms": 50, "service_cv": 0.3, "concurrency_limit": 30, "queue_limit": 30, "error_slope": 0.5,
+             "cold_start_ms": 400, "cold_start_window_s": 1}
 
 
 def _target(seed=0, **kw):

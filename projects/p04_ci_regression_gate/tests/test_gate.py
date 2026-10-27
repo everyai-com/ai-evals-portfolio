@@ -3,7 +3,13 @@ from __future__ import annotations
 
 import json
 
-from projects.p04_ci_regression_gate.core import COMMENT_MARKER, Gate, GateState, detect_flaky, render_comment
+from projects.p04_ci_regression_gate.core import (
+    COMMENT_MARKER,
+    Gate,
+    GateState,
+    detect_flaky,
+    render_comment,
+)
 
 
 def test_pr_good_passes(config, baseline, results):

@@ -5,9 +5,10 @@ digits, dropped first names, an unsupported extra claim, one refusal) so the fra
 something to disagree about. The script matches on the *input*, never on the expected answer."""
 from __future__ import annotations
 
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
-from evalkit.llm import LLMClient, LLMResponse, MockLLM, get_client
+from evalkit.llm import LLMClient, LLMResponse, get_client
 
 FAQ_SCRIPT: list[tuple[str, str]] = [
     (r"capital of france", "Paris is the capital of France."),

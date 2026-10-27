@@ -33,7 +33,7 @@ def run_one(attack: Attack, guardrails: Guardrails, tools: dict, taxonomy: dict[
     try:
         r = run_attack(attack, guardrails, tools, taxonomy)
         return {"attack": attack, "failure": r["failure"], "result": r["result"]}
-    except Exception as e:
+    except Exception as e:  # the crash oracle: any exception is a finding  # noqa: BLE001
         f = Failure(attack.id, attack.category, "crash", "context_overflow_crash", "high", None, repr(e))
         return {"attack": attack, "failure": f, "result": None}
 
@@ -163,7 +163,7 @@ def replay(record: dict[str, Any], taxonomy: dict[str, Any] | None = None) -> di
 
 def render_markdown(matrix: dict[str, Any], top: int = 10) -> str:
     s = matrix["summaries"]
-    out = [f"# Agent red-team fuzz report", "",
+    out = ["# Agent red-team fuzz report", "",
            f"attacks: {matrix['n']}  |  seed: {matrix['seed']}  |  mode: {matrix['mode']}", ""]
     out.append("## Fuzz matrix: failures per category (rate [Wilson 95% CI])")
     names = [k for k in ("off", "on") if k in s]

@@ -6,11 +6,10 @@ from pathlib import Path
 
 from evalkit.io import read_jsonl
 from evalkit.llm import MockLLM
-
+from projects.p12_synthetic_edgecases.core import Deduper, make_case
 from projects.p12_synthetic_edgecases.llm_gen import DEMO_BATCH, LLMGenerator, demo_llm_handler
 from projects.p12_synthetic_edgecases.metamorphic import RELATIONS, generate_pairs, relation_holds
 from projects.p12_synthetic_edgecases.operators import OPERATORS, apply_operators
-from projects.p12_synthetic_edgecases.core import Deduper, make_case
 from projects.p12_synthetic_edgecases.spec import TaskSpec, nfkc, validate_case
 from projects.p12_synthetic_edgecases.sut import baseline_sut
 
@@ -20,7 +19,7 @@ GOLDEN = read_jsonl(DATA / "golden_seed.jsonl")
 
 
 def test_every_operator_yields_valid_deduped_mutations():
-    for name, op in OPERATORS.items():
+    for name in OPERATORS:
         total = 0
         for g in GOLDEN:
             muts = apply_operators(g, SPEC, seed=0, names=[name])

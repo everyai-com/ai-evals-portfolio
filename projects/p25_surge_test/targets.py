@@ -27,9 +27,9 @@ import threading
 import time
 import urllib.error
 import urllib.request
-from collections import defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 
 import numpy as np
 
@@ -76,7 +76,7 @@ class FunctionTarget:
         t0 = time.perf_counter()
         try:
             out = self.fn(request)
-        except Exception:  # a crashing handler is a 500, not a crashed harness
+        except Exception:  # a crashing handler is a 500, not a crashed harness  # noqa: BLE001
             return Response(500, (time.perf_counter() - t0) * 1000, 0)
         ms = (time.perf_counter() - t0) * 1000
         if isinstance(out, Response):
@@ -139,7 +139,7 @@ class SimulatedTarget:
         self.peak_in_flight = 0
 
     @classmethod
-    def from_config(cls, cfg: dict[str, Any], seed: int = 0, virtual_clock: bool = True) -> "SimulatedTarget":
+    def from_config(cls, cfg: dict[str, Any], seed: int = 0, virtual_clock: bool = True) -> SimulatedTarget:
         return cls(**{k: v for k, v in cfg.items() if k in cls.__init__.__code__.co_varnames}, seed=seed, virtual_clock=virtual_clock)
 
     def nominal_capacity_users(self, rps_per_user: float = 1.0) -> float:
@@ -194,7 +194,7 @@ class SimulatedTarget:
 
 
 class _Bucket:
-    __slots__ = ("tokens", "last")
+    __slots__ = ("last", "tokens")
 
     def __init__(self, tokens: float, last: float):
         self.tokens, self.last = tokens, last

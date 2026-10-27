@@ -1,7 +1,8 @@
 """Tiny markdown helpers so every project emits the same report shape."""
 from __future__ import annotations
 
-from typing import Any, Sequence
+from collections.abc import Sequence
+from typing import Any
 
 
 def md_table(headers: Sequence[str], rows: Sequence[Sequence[Any]]) -> str:

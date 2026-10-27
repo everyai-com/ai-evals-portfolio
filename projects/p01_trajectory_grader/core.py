@@ -26,9 +26,10 @@ confirmation step is not "mostly right", it is unsafe to ship.
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field, asdict
+from collections.abc import Iterable
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 import yaml
 
@@ -149,7 +150,7 @@ class ToolRegistry:
         self.tools: dict[str, ToolSchema] = {t.name: t for t in tools}
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "ToolRegistry":
+    def from_dict(cls, d: dict[str, Any]) -> ToolRegistry:
         tools = []
         for name, spec in (d.get("tools") or {}).items():
             spec = spec or {}
@@ -164,7 +165,7 @@ class ToolRegistry:
         return cls(tools)
 
     @classmethod
-    def load(cls, path: str | Path) -> "ToolRegistry":
+    def load(cls, path: str | Path) -> ToolRegistry:
         with open(path, "r", encoding="utf-8") as f:
             return cls.from_dict(yaml.safe_load(f) or {})
 
@@ -193,7 +194,7 @@ class ArgMatcher:
     value: Any = None
 
     @classmethod
-    def parse(cls, spec: Any) -> "ArgMatcher":
+    def parse(cls, spec: Any) -> ArgMatcher:
         if spec is None or spec == "any" or spec == {"any": True}:
             return cls("any")
         if isinstance(spec, dict):
@@ -268,7 +269,7 @@ class GoldenPath:
         self._by_id = {n.id: n for n in self.nodes}
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "GoldenPath":
+    def from_dict(cls, d: dict[str, Any]) -> GoldenPath:
         nodes = [GoldenNode(id=str(n["id"]), tool=str(n["tool"]),
                             args={k: ArgMatcher.parse(v) for k, v in (n.get("args") or {}).items()},
                             optional=bool(n.get("optional", False)))
@@ -282,12 +283,12 @@ class GoldenPath:
                    safety_gates=gates, description=d.get("description", ""))
 
     @classmethod
-    def load(cls, path: str | Path) -> "GoldenPath":
+    def load(cls, path: str | Path) -> GoldenPath:
         with open(path, "r", encoding="utf-8") as f:
             return cls.from_dict(yaml.safe_load(f))
 
     @classmethod
-    def load_dir(cls, path: str | Path) -> dict[str, "GoldenPath"]:
+    def load_dir(cls, path: str | Path) -> dict[str, GoldenPath]:
         out: dict[str, GoldenPath] = {}
         for p in sorted(Path(path).glob("*.y*ml")):
             g = cls.load(p)

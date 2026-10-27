@@ -7,10 +7,11 @@ import json
 import re
 import unicodedata
 from collections import Counter, defaultdict
-from dataclasses import dataclass, field, asdict
+from collections.abc import Callable
+from dataclasses import asdict, dataclass, field
 from datetime import date as _date
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 
@@ -136,8 +137,7 @@ class FeedbackStore:
                 stats.watermark = str(ev["ts"])
         stats.accepted = len(accepted)
         with open(self.events_path, "a", encoding="utf-8") as f:
-            for e in accepted:
-                f.write(json.dumps(e, ensure_ascii=False, sort_keys=True) + "\n")
+            f.writelines(json.dumps(e, ensure_ascii=False, sort_keys=True) + "\n" for e in accepted)
         self.watermark = stats.watermark
         self.seen_path.write_text(json.dumps(sorted(self.seen)))
         self.wm_path.write_text(json.dumps({"ts": self.watermark}))
@@ -293,8 +293,7 @@ def append_golden(pairs: list[dict[str, Any]], golden_path: str | Path, changelo
         return 0
     golden_path.parent.mkdir(parents=True, exist_ok=True)
     with open(golden_path, "a", encoding="utf-8") as f:
-        for c in new:
-            f.write(json.dumps(c, ensure_ascii=False, sort_keys=True) + "\n")
+        f.writelines(json.dumps(c, ensure_ascii=False, sort_keys=True) + "\n" for c in new)
     today = today or _date.today().isoformat()
     srcs = Counter(c["source"] for c in new)
     line = f"- {today}: +{len(new)} golden cases from DPO pairs (" + ", ".join(f"{k}={v}" for k, v in sorted(srcs.items())) + f"); total {len(existing) + len(new)}\n"

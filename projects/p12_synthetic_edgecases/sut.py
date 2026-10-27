@@ -14,14 +14,14 @@ from datetime import datetime
 from typing import Any
 
 MONTHS = "january|february|march|april|may|june|july|august|september|october|november|december"
-_QTY = re.compile(r"(?<![\w-])([0-9]+)\s*(?:units?|pcs|pieces|boxes|x)\b", re.I)
+_QTY = re.compile(r"(?<![\w-])([0-9]+)\s*(?:units?|pcs|pieces|boxes|x)\b", re.IGNORECASE)
 _SKU = re.compile(r"SKU-([0-9]{4})")
 _DATES = [
     (re.compile(r"\b(\d{4})-(\d{2})-(\d{2})\b"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
     (re.compile(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b"), lambda m: (int(m[3]), int(m[1]), int(m[2]))),
-    (re.compile(rf"\b({MONTHS})\s+(\d{{1,2}}),?\s+(\d{{4}})\b", re.I),
+    (re.compile(rf"\b({MONTHS})\s+(\d{{1,2}}),?\s+(\d{{4}})\b", re.IGNORECASE),
      lambda m: (int(m[3]), datetime.strptime(m[1][:3].title(), "%b").month, int(m[2]))),
-    (re.compile(rf"\b(\d{{1,2}})\s+({MONTHS})\s+(\d{{4}})\b", re.I),
+    (re.compile(rf"\b(\d{{1,2}})\s+({MONTHS})\s+(\d{{4}})\b", re.IGNORECASE),
      lambda m: (int(m[3]), datetime.strptime(m[2][:3].title(), "%b").month, int(m[1]))),
 ]
 

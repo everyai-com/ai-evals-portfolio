@@ -7,11 +7,18 @@ import logging
 import sys
 import time
 import urllib.request
+from collections.abc import Callable, Sequence
 from pathlib import Path
-from typing import Any, Callable, Protocol, Sequence
+from typing import Any, Protocol
 
 from evalkit.io import read_jsonl, write_jsonl
-from projects.p09_drift_monitor.core import Alert, DayMetrics, DriftDetector, OfflineEvaluator, TrafficSampler
+from projects.p09_drift_monitor.core import (
+    Alert,
+    DayMetrics,
+    DriftDetector,
+    OfflineEvaluator,
+    TrafficSampler,
+)
 
 log = logging.getLogger("p09_drift_monitor")
 
@@ -37,8 +44,7 @@ class JsonlSink:
 
     def emit(self, alerts: Sequence[Alert]) -> None:
         with open(self.path, "a", encoding="utf-8") as f:
-            for a in alerts:
-                f.write(json.dumps(a.to_dict(), sort_keys=True) + "\n")
+            f.writelines(json.dumps(a.to_dict(), sort_keys=True) + "\n" for a in alerts)
 
 
 class WebhookSink:

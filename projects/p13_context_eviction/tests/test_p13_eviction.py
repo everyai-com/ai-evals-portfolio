@@ -3,12 +3,20 @@ import json
 import pytest
 
 from evalkit.llm import MockLLM, approx_tokens
-
 from projects.p13_context_eviction import cli
 from projects.p13_context_eviction.core import (
-    FactPlanter, LLMAnswerer, LookupAnswerer, Message, NoiseGenerator, RetrievalContext,
-    SummarizeOldest, TruncateOldest, build_conversation, default_managers, run_matrix,
-    summary_handler, total_tokens,
+    FactPlanter,
+    LLMAnswerer,
+    LookupAnswerer,
+    Message,
+    NoiseGenerator,
+    RetrievalContext,
+    SummarizeOldest,
+    build_conversation,
+    default_managers,
+    run_matrix,
+    summary_handler,
+    total_tokens,
 )
 
 BUDGET = 4000

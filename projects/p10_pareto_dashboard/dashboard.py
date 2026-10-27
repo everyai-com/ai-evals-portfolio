@@ -41,8 +41,8 @@ def svg_children(pts: list[dict[str, Any]], colors: dict[str, str]) -> str:
     y0 = max(0.0, math.floor((min(p["lo"] for p in pts) - 0.05) * 10) / 10)
     y1 = 1.0
     iw, ih = W - M["l"] - M["r"], H - M["t"] - M["b"]
-    sx = lambda c: M["l"] + (math.log10(max(c, 1e-9)) - x0) / (x1 - x0) * iw  # noqa: E731
-    sy = lambda s: M["t"] + (y1 - s) / (y1 - y0) * ih  # noqa: E731
+    sx = lambda c: M["l"] + (math.log10(max(c, 1e-9)) - x0) / (x1 - x0) * iw
+    sy = lambda s: M["t"] + (y1 - s) / (y1 - y0) * ih
     s = [f'<rect x="{M["l"]}" y="{M["t"]}" width="{iw}" height="{ih}" class="plot"/>']
     k = math.floor(x0)
     while k <= math.ceil(x1):

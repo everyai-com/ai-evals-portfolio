@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 import math
-from dataclasses import dataclass, asdict
-from typing import Sequence
+from collections.abc import Sequence
+from dataclasses import asdict, dataclass
 
 import numpy as np
 
@@ -29,7 +29,7 @@ class DeltaReport:
         sign = "+" if self.delta >= 0 else "-"
         pct = abs(self.delta) * 100
         hw = self.half_width * 100
-        p = f"p<0.05" if self.p_value < 0.05 else f"p={self.p_value:.2f}"
+        p = "p<0.05" if self.p_value < 0.05 else f"p={self.p_value:.2f}"
         if self.winner == "tie":
             return (f"No significant difference on {self.metric}: Δ={sign}{pct:.1f}% ± {hw:.1f}% "
                     f"({p}, n={self.n})")
@@ -113,7 +113,7 @@ def mcnemar_exact(a: Sequence[int], b: Sequence[int]) -> dict:
     if n_disc == 0:
         return {"b_fixes": b01, "b_breaks": b10, "p_value": 1.0}
     k = min(b01, b10)
-    p = sum(math.comb(n_disc, i) for i in range(0, k + 1)) / 2 ** n_disc
+    p = sum(math.comb(n_disc, i) for i in range(k + 1)) / 2 ** n_disc
     return {"b_fixes": b01, "b_breaks": b10, "p_value": min(1.0, 2 * p)}
 
 

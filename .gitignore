@@ -9,12 +9,13 @@ build/
 .env
 runs/
 *.lock.tmp
-# CLI scratch outputs (defaults write to cwd)
+# CLI scratch outputs (defaults write to cwd). Anchored to the root so they never hide a
+# same-named source package (an unanchored adapters/ once hid p16's adapters).
 .eval-cache/
-state/
-pairs/
-adapters/
-out/
+/state/
+/pairs/
+/adapters/
+/out/
 results.json
 gate_state.json
 gate_comment.md

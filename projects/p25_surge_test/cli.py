@@ -13,8 +13,17 @@ import argparse
 import sys
 from pathlib import Path
 
-from projects.p25_surge_test.core import (Scenario, analyse, build_target, headroom, load_config, render_html,
-                                          render_markdown, result_json, run_scenario)
+from projects.p25_surge_test.core import (
+    Scenario,
+    analyse,
+    build_target,
+    headroom,
+    load_config,
+    render_html,
+    render_markdown,
+    result_json,
+    run_scenario,
+)
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"

@@ -5,11 +5,20 @@ import json
 from pathlib import Path
 
 from evalkit.io import write_jsonl
-
 from projects.p24_paved_road.cli import main
-from projects.p24_paved_road.core import (CompatValidator, FirstRun, PlatformSpec, cluster_blockers, generate_all,
-                                          load_first_runs, render_agents_md_snippet, render_findings, render_llms_txt,
-                                          render_skill, summarise_first_runs)
+from projects.p24_paved_road.core import (
+    CompatValidator,
+    FirstRun,
+    PlatformSpec,
+    cluster_blockers,
+    generate_all,
+    load_first_runs,
+    render_agents_md_snippet,
+    render_findings,
+    render_llms_txt,
+    render_skill,
+    summarise_first_runs,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 SPEC = PlatformSpec.load(DATA / "platform.yaml")
@@ -148,7 +157,7 @@ def test_first_run_summary_finds_the_zip_blocker_and_is_not_ready():
     assert s.n == 8 and s.top_stuck_step == "make_zip" and s.stuck_by_step["make_zip"] == 5
     assert s.finished == 2 and s.finished_unaided_non_engineers == 1
     assert s.median_minutes_to_deploy == 20.0
-    assert list(s.blocker_themes)[0] == "zip" and len(s.blocker_themes["zip"]) == 5
+    assert next(iter(s.blocker_themes)) == "zip" and len(s.blocker_themes["zip"]) == 5
     assert "own server" in s.blocker_themes and s.blocker_themes["own server"] == ["p05"]
     assert s.ready_to_call_easy is False and "make_zip" in s.verdict and "not easy yet" in s.verdict
 
@@ -180,7 +189,7 @@ def test_blocker_clustering_falls_back_to_frequent_word():
             FirstRun("2", "pm", "build_app", False, True, 5, "the assistant wrote wrong code"),
             FirstRun("3", "pm", "deploy", False, True, 5, "")]
     themes = cluster_blockers(runs)
-    assert list(themes) in (["assistant"], ["code"]) and themes[list(themes)[0]] == ["1", "2"]
+    assert list(themes) in (["assistant"], ["code"]) and themes[next(iter(themes))] == ["1", "2"]
 
 
 def test_cli_first_runs_exit_codes_and_json(tmp_path, capsys):

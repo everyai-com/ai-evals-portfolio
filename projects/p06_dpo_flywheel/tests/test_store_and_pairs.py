@@ -5,10 +5,19 @@ from pathlib import Path
 
 from evalkit.io import read_jsonl
 from evalkit.llm import MockLLM
-
-from projects.p06_dpo_flywheel.core import (EMAIL_RX, LONG_DIGITS_RX, PHONE_RX, FeedbackStore, FilterConfig,
-                                            PairBuilder, append_golden, contains_pii, heuristic_judge, scrub_pii,
-                                            split_pairs)
+from projects.p06_dpo_flywheel.core import (
+    EMAIL_RX,
+    LONG_DIGITS_RX,
+    PHONE_RX,
+    FeedbackStore,
+    FilterConfig,
+    PairBuilder,
+    append_golden,
+    contains_pii,
+    heuristic_judge,
+    scrub_pii,
+    split_pairs,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 EVENTS = read_jsonl(DATA / "feedback.jsonl")
@@ -82,8 +91,8 @@ def test_regenerated_candidate_rejected_when_judge_says_worse():
     bad_client = MockLLM(handlers=[(r".", "I can't help with that.")])
     b = PairBuilder(client=bad_client)
     assert b.build([down]) == [] and b.stats["regen_rejected"] == 1 and len(bad_client.calls) == 1
-    good_client = MockLLM(handlers=[(r".", "Sorry about the duplicate charge on order 40002: one line is a pending "
-                                           "authorisation hold that your bank releases within 3-5 business days, so you are billed once.")])
+    good_client = MockLLM(handlers=[(r".", ("Sorry about the duplicate charge on order 40002: one line is a pending "
+                                           "authorisation hold that your bank releases within 3-5 business days, so you are billed once."))])
     pairs = PairBuilder(client=good_client).build([down])
     assert len(pairs) == 1 and pairs[0]["source"] == "regenerated" and 0 < pairs[0]["confidence"] <= 0.6
     assert heuristic_judge(down["prompt"], pairs[0]["chosen"]) > heuristic_judge(down["prompt"], down["response"])

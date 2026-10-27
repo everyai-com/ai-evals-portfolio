@@ -12,8 +12,8 @@ def tenant_name(t: str) -> str:
 
 
 def render_markdown(metrics: dict[str, Any]) -> str:
-    out = [f"# Cost-quality Pareto report (System-Two price scale {metrics['price_scale']:g}x, "
-           f"{metrics['n_rows']} eval rows)", ""]
+    out = [(f"# Cost-quality Pareto report (System-Two price scale {metrics['price_scale']:g}x, "
+           f"{metrics['n_rows']} eval rows)"), ""]
     for t in metrics["tenant_order"]:
         blk = metrics["tenants"][t]
         pols = sorted(blk["policies"], key=lambda p: p["mean_cost"])

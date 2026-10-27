@@ -3,14 +3,14 @@ labels without a human. relation(expected_source) -> expected_follow_up."""
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, asdict
+from collections.abc import Callable
+from dataclasses import asdict, dataclass
 from datetime import timedelta
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 
 from evalkit.io import stable_hash
-
 from projects.p12_synthetic_edgecases.spec import parse_iso, replace_date, replace_qty
 
 
