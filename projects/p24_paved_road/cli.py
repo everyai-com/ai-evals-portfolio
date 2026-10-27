@@ -13,8 +13,15 @@ import json
 import sys
 from pathlib import Path
 
-from projects.p24_paved_road.core import (CompatValidator, PlatformSpec, generate_all, load_first_runs,
-                                          render_findings, render_first_runs, summarise_first_runs)
+from projects.p24_paved_road.core import (
+    CompatValidator,
+    PlatformSpec,
+    generate_all,
+    load_first_runs,
+    render_findings,
+    render_first_runs,
+    summarise_first_runs,
+)
 
 HERE = Path(__file__).parent
 DATA = HERE / "data"

@@ -4,10 +4,20 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from projects.p23_bloat_detector.budget import RefactorBudget, load_thresholds, render_plan, render_scan
+from projects.p23_bloat_detector.budget import (
+    RefactorBudget,
+    load_thresholds,
+    render_plan,
+    render_scan,
+)
 from projects.p23_bloat_detector.cli import main
 from projects.p23_bloat_detector.core import Analyzer
-from projects.p23_bloat_detector.velocity import compute_velocity, git_velocity, max_in_window, parse_log
+from projects.p23_bloat_detector.velocity import (
+    compute_velocity,
+    git_velocity,
+    max_in_window,
+    parse_log,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 BLOATED = Analyzer().scan(DATA / "bloated_repo")

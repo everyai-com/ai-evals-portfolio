@@ -35,8 +35,9 @@ from __future__ import annotations
 import math
 import re
 from collections import Counter
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 
 import numpy as np
 
@@ -178,7 +179,7 @@ class SummarizeOldest:
 
 
 _TOKEN_RX = re.compile(r"[a-z0-9_]+")
-STOPWORDS = frozenset("a an and are as at be by for from has have in is it its of on or that the this to was what which who with current value".split())
+STOPWORDS = frozenset(["a", "an", "and", "are", "as", "at", "be", "by", "for", "from", "has", "have", "in", "is", "it", "its", "of", "on", "or", "that", "the", "this", "to", "was", "what", "which", "who", "with", "current", "value"])
 
 
 def tokenize(text: str) -> list[str]:
@@ -355,8 +356,8 @@ class FactPlanter:
     """Plant N ``KEY: k=v`` facts at early/middle/late positions; ``update_fraction`` of them
     get a later contradicting ``KEY: k changed to v2`` so the tester checks LATEST-value recall."""
 
-    KEYS = ["user_id", "budget", "deadline", "region", "project", "tier", "currency", "owner",
-            "sprint", "locale", "timezone", "priority", "cluster_id", "quota", "release", "vendor"]
+    KEYS = ("user_id", "budget", "deadline", "region", "project", "tier", "currency", "owner",
+            "sprint", "locale", "timezone", "priority", "cluster_id", "quota", "release", "vendor")
 
     def __init__(self, seed: int = 0, update_fraction: float = 0.5):
         self.rng = np.random.default_rng(seed + 1000)

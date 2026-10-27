@@ -12,8 +12,8 @@ def _f(v: Any) -> str:
 
 def render_markdown(result: dict[str, Any], top_failures: int = 5) -> str:
     out = ["# RAG adversarial harness", "",
-           f"strict grounding: **{'on' if result['strict_grounding'] else 'off'}**  |  k={result['k']}  |  "
-           f"seed={result['seed']}  |  overall: **{'PASS' if result['passed'] else 'FAIL'}**", ""]
+           (f"strict grounding: **{'on' if result['strict_grounding'] else 'off'}**  |  k={result['k']}  |  "
+           f"seed={result['seed']}  |  overall: **{'PASS' if result['passed'] else 'FAIL'}**"), ""]
     rows = []
     for v in result["variants"]:
         rm, gm = v["retrieval"]["metrics"], v["generation"]["metrics"]

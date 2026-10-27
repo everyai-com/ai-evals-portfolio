@@ -1,9 +1,25 @@
 import numpy as np
 import pytest
 
-from evalkit.metrics import (cohen_kappa, fleiss_kappa, precision_recall_f1, wilson_ci, bootstrap_ci,
-                             mrr, ndcg_at_k, hit_rate, recall_at_k, interpret_kappa)
-from evalkit.stats import paired_bootstrap, permutation_test, mcnemar_exact, required_sample_size, _z
+from evalkit.metrics import (
+    bootstrap_ci,
+    cohen_kappa,
+    fleiss_kappa,
+    hit_rate,
+    interpret_kappa,
+    mrr,
+    ndcg_at_k,
+    precision_recall_f1,
+    recall_at_k,
+    wilson_ci,
+)
+from evalkit.stats import (
+    _z,
+    mcnemar_exact,
+    paired_bootstrap,
+    permutation_test,
+    required_sample_size,
+)
 
 
 def test_prf1_basic():

@@ -14,7 +14,6 @@ from typing import Any
 import yaml
 
 from evalkit.report import md_table, pct
-
 from projects.p23_bloat_detector.core import FunctionInfo, RepoMetrics, diary_line_set
 from projects.p23_bloat_detector.velocity import Velocity
 
@@ -218,8 +217,8 @@ def render_plan(plan: RefactorPlan, max_rows: int = 20) -> str:
             out.append(f"\n... {len(plan.actions) - max_rows} more actions")
     else:
         out.append("no actions: nothing to merge, collapse or delete.")
-    out += ["", f"source lines before: {plan.lines_before} -> projected after refactor: {plan.projected_lines} "
-                f"(-{plan.lines_removed}, {pct(plan.lines_removed / max(1, plan.lines_before))})"]
+    out += ["", (f"source lines before: {plan.lines_before} -> projected after refactor: {plan.projected_lines} "
+                f"(-{plan.lines_removed}, {pct(plan.lines_removed / max(1, plan.lines_before))})")]
     return "\n".join(out)
 
 

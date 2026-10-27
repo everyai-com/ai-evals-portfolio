@@ -44,11 +44,11 @@ def _cmd_calibrate(a: argparse.Namespace) -> int:
     else:
         overrides = {
             k: v
-            for k, v in dict(
-                position_bias=a.position_bias,
-                verbosity_bias=a.verbosity_bias,
-                self_preference=a.self_preference,
-            ).items()
+            for k, v in {
+                "position_bias": a.position_bias,
+                "verbosity_bias": a.verbosity_bias,
+                "self_preference": a.self_preference,
+            }.items()
             if v is not None
         }
         client = core.make_mock_judge(anchors, a.judge, seed=a.seed, **overrides)

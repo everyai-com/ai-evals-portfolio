@@ -5,21 +5,26 @@ from __future__ import annotations
 
 import json
 from collections import Counter, defaultdict
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from datetime import date as _date
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 
 from evalkit.io import read_jsonl, stable_hash, write_jsonl
 from evalkit.llm import LLMClient
 from evalkit.report import md_table
-
 from projects.p12_synthetic_edgecases.llm_gen import LLMGenerator
 from projects.p12_synthetic_edgecases.metamorphic import generate_pairs
 from projects.p12_synthetic_edgecases.operators import OPERATORS, apply_operators
-from projects.p12_synthetic_edgecases.spec import TaskSpec, char_ngrams, normalise_text, validate_case
+from projects.p12_synthetic_edgecases.spec import (
+    TaskSpec,
+    char_ngrams,
+    normalise_text,
+    validate_case,
+)
 from projects.p12_synthetic_edgecases.sut import baseline_sut
 
 SUT = Callable[[str], Any]
@@ -91,7 +96,7 @@ class DifficultyEstimator:
         for _ in range(self.n_runs):
             try:
                 outs.append(self.sut(case["input"]))
-            except Exception as e:  # a crash is a failure, and a finding
+            except Exception as e:  # a crash is a failure, and a finding  # noqa: BLE001
                 outs.append({"error": f"exception: {type(e).__name__}"})
         distinct = {json.dumps(o, sort_keys=True, default=str) for o in outs}
         disagreement = len(distinct) > 1
@@ -139,8 +144,8 @@ def coverage_matrix(cases: list[dict[str, Any]], spec: TaskSpec, golden: list[di
 
 def render_coverage(cov: Coverage, spec: TaskSpec, stats: dict[str, Any]) -> str:
     cats = list(spec.failure_taxonomy)
-    lines = ["# Coverage report", "", f"- candidates: {stats['candidates']} -> kept {stats['kept']} "
-             f"(dropped: {stats['dropped']})", f"- labelled {stats['labelled']}, review queue {stats['review_queue']}", "",
+    lines = ["# Coverage report", "", (f"- candidates: {stats['candidates']} -> kept {stats['kept']} "
+             f"(dropped: {stats['dropped']})"), f"- labelled {stats['labelled']}, review queue {stats['review_queue']}", "",
              "## By operator", "", md_table(["operator", "cases"], sorted(cov.by_operator.items())), "",
              "## By taxonomy category", "", md_table(["category", "cases"], [[k, cov.by_category.get(k, 0)] for k in cats]), "",
              "## Tag x category", "",

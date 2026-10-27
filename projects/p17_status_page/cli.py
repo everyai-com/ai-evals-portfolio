@@ -30,7 +30,7 @@ DEFAULT_START = "2026-10-24T00:00:00Z"
 def parse_ts(s: str | None) -> float:
     if not s:
         return time.time()
-    return datetime.fromisoformat(s.replace("Z", "+00:00")).astimezone(UTC).timestamp()
+    return datetime.fromisoformat(s).astimezone(UTC).timestamp()
 
 
 def build_monitor(args: argparse.Namespace) -> tuple[Monitor, float]:

@@ -4,9 +4,18 @@ from __future__ import annotations
 import textwrap
 from pathlib import Path
 
-from projects.p23_bloat_detector.core import (Analyzer, classify_js_lines, concept_stem, detect_diary,
-                                              find_concept_clusters, find_dead_code, find_duplicate_clusters,
-                                              find_near_duplicates, find_wrapper_chains, name_tokens)
+from projects.p23_bloat_detector.core import (
+    Analyzer,
+    classify_js_lines,
+    concept_stem,
+    detect_diary,
+    find_concept_clusters,
+    find_dead_code,
+    find_duplicate_clusters,
+    find_near_duplicates,
+    find_wrapper_chains,
+    name_tokens,
+)
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 

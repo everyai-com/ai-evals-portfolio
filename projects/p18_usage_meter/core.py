@@ -55,7 +55,7 @@ KINDS = ("model_call", "tool_call", "container_seconds", "ocr_page")
 
 
 def parse_ts(ts: str) -> datetime:
-    return datetime.fromisoformat(ts.replace("Z", "+00:00")).astimezone(UTC)
+    return datetime.fromisoformat(ts).astimezone(UTC)
 
 
 def fmt_ts(d: datetime) -> str:
@@ -556,8 +556,8 @@ def _usd(x: float | None) -> str:
 
 def render_chargeback(report: dict[str, Any]) -> str:
     out = [f"# Chargeback report{(' — ' + report['month']) if report['month'] else ''}", "",
-           f"Total: **{_usd(report['total'])}** across {report['events']} events, "
-           f"{len(report['cost_centres'])} cost centres.", ""]
+           (f"Total: **{_usd(report['total'])}** across {report['events']} events, "
+           f"{len(report['cost_centres'])} cost centres."), ""]
     out += ["## Cost centres", md_table(["cost centre", "spend", "share", "events", "cost / success"],
                                         [[cc, _usd(v["spend"]), pct(v["share"]), v["events"], _usd(v["cost_per_success"])]
                                          for cc, v in report["cost_centres"].items()]), ""]

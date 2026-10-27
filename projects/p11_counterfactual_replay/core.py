@@ -23,14 +23,15 @@ An *agent* is any callable ``agent(ctx) -> str`` that only talks to the world th
 from __future__ import annotations
 
 import json
+from collections.abc import Callable
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 
 from evalkit.io import read_jsonl, stable_hash, write_jsonl
 from evalkit.llm import LLMClient
 from evalkit.report import md_table
-from evalkit.trajectory import Step, ToolCall, Trajectory
+from evalkit.trajectory import Step, Trajectory
 
 Tool = Callable[..., Any]
 ToolRegistry = dict[str, Tool]

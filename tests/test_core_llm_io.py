@@ -1,5 +1,6 @@
 import json
-from evalkit import MockLLM, Trajectory, read_jsonl, write_jsonl, stable_hash
+
+from evalkit import MockLLM, Trajectory, read_jsonl, stable_hash, write_jsonl
 from evalkit.llm import estimate_cost
 
 

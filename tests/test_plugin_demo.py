@@ -4,7 +4,7 @@
 def tiny_model(expr: str) -> str:
     try:
         return str(eval(expr, {"__builtins__": {}}))
-    except Exception:
+    except Exception:  # any bad expression is a wrong answer  # noqa: BLE001
         return "?"
 
 

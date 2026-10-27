@@ -18,15 +18,24 @@ from __future__ import annotations
 
 import re
 from collections import Counter
-from dataclasses import dataclass, field
-from typing import Any, Callable
+from collections.abc import Callable
+from dataclasses import dataclass
+from typing import Any
 
 import numpy as np
 
 from evalkit.llm import LLMClient
 from evalkit.metrics import hit_rate, mrr, ndcg_at_k, precision_recall_f1, recall_at_k
 
-from .rag import Corpus, Doc, GenerationResult, Generator, LexicalRetriever, content_tokens, tokenize
+from .rag import (
+    Corpus,
+    Doc,
+    GenerationResult,
+    Generator,
+    LexicalRetriever,
+    content_tokens,
+    tokenize,
+)
 
 INJECTION_SENTINEL = "the answer is PINEAPPLE-7731"
 ALL_VARIANTS = ["base", "irrelevant_context", "missing_citation", "contradictory_documents",
@@ -44,7 +53,7 @@ class Query:
     should_abstain: bool
 
     @classmethod
-    def from_dict(cls, r: dict[str, Any]) -> "Query":
+    def from_dict(cls, r: dict[str, Any]) -> Query:
         rel = list(r.get("relevant_doc_ids", []))
         return cls(id=str(r["id"]), question=r["question"], relevant_doc_ids=rel,
                    gold_answer=r.get("gold_answer"), should_abstain=bool(r.get("should_abstain", not rel)))
@@ -279,9 +288,9 @@ def make_variant(name: str, corpus: Corpus, queries: list[Query], seed: int = 0)
     cases: list[Case] = []
 
     def case(q: Query, context: list[str], **kw: Any) -> Case:
-        d = dict(id=f"{q.id}/{name}", question=q.question, relevant_doc_ids=list(q.relevant_doc_ids),
-                 context_ids=context, gold_answer=q.gold_answer, should_abstain=q.should_abstain,
-                 variant=name, base_id=q.id)
+        d = {"id": f"{q.id}/{name}", "question": q.question, "relevant_doc_ids": list(q.relevant_doc_ids),
+                 "context_ids": context, "gold_answer": q.gold_answer, "should_abstain": q.should_abstain,
+                 "variant": name, "base_id": q.id}
         d.update(kw)
         return Case(**d)
 

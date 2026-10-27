@@ -28,7 +28,7 @@ def test_html_is_self_contained_with_embedded_json_and_one_svg_per_tenant():
     html = render_dashboard(metrics)
     n_tenants = len(TENANTS)
     assert html.count("<svg") == n_tenants + 1  # one per tenant plus the pooled panel
-    m = re.search(r'<script id="pareto-data" type="application/json">(.*?)</script>', html, re.S)
+    m = re.search(r'<script id="pareto-data" type="application/json">(.*?)</script>', html, re.DOTALL)
     embedded = json.loads(m.group(1).replace("<\\/", "</"))
     assert set(embedded["tenants"]) == set(TENANTS) | {"__global__"}
     assert embedded["tenants"]["pizza-us"]["policies"][0]["mean_cost_two"] >= 0

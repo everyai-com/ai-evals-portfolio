@@ -24,7 +24,7 @@ class TaskSpec:
     path: Path | None = None
 
     @classmethod
-    def load(cls, path: str | Path) -> "TaskSpec":
+    def load(cls, path: str | Path) -> TaskSpec:
         raw = yaml.safe_load(Path(path).read_text())
         return cls(task=raw["task"], description=raw.get("description", ""), input=raw.get("input", {}),
                    output_schema=raw["output_schema"], error_reasons=raw.get("error_reasons", []),

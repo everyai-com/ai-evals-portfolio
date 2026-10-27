@@ -29,9 +29,10 @@ import json
 import math
 import re
 from collections import defaultdict
+from collections.abc import Callable, Iterable, Sequence
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Callable, Iterable, Protocol, Sequence
+from typing import Any, Protocol
 
 import numpy as np
 import yaml
@@ -44,7 +45,7 @@ from evalkit.trajectory import Trajectory
 
 def _unit(seed: int, date: str, key: str) -> float:
     """Deterministic uniform in (0, 1] keyed on (seed, date, task_id)."""
-    h = hashlib.sha256(f"{seed}:{date}:{key}".encode("utf-8")).hexdigest()
+    h = hashlib.sha256(f"{seed}:{date}:{key}".encode()).hexdigest()
     return (int(h[:12], 16) + 1) / (0x1_0000_0000_0000 + 1)
 
 
@@ -222,7 +223,7 @@ class DayMetrics:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "DayMetrics":
+    def from_dict(cls, d: dict[str, Any]) -> DayMetrics:
         known = {k: d[k] for k in cls.__dataclass_fields__ if k in d}
         return cls(**known)
 
@@ -387,7 +388,7 @@ class Alert:
         return asdict(self)
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "Alert":
+    def from_dict(cls, d: dict[str, Any]) -> Alert:
         return cls(**{k: d[k] for k in cls.__dataclass_fields__ if k in d})
 
 

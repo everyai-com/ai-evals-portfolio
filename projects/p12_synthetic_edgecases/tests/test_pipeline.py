@@ -7,10 +7,15 @@ from pathlib import Path
 
 from evalkit.io import read_jsonl, write_jsonl
 from evalkit.llm import MockLLM
-
 from projects.p12_synthetic_edgecases import cli
-from projects.p12_synthetic_edgecases.core import (DifficultyEstimator, coverage_matrix, generate_cases, promote,
-                                                   render_coverage, select_round_robin, write_outputs)
+from projects.p12_synthetic_edgecases.core import (
+    DifficultyEstimator,
+    coverage_matrix,
+    generate_cases,
+    promote,
+    render_coverage,
+    select_round_robin,
+)
 from projects.p12_synthetic_edgecases.llm_gen import demo_llm_handler
 from projects.p12_synthetic_edgecases.spec import TaskSpec
 from projects.p12_synthetic_edgecases.sut import baseline_sut
@@ -69,7 +74,7 @@ def test_generation_is_deterministic_with_same_seed():
     assert [c["input"] for c in a.kept] == [c["input"] for c in b.kept]
     c = generate_cases(GOLDEN, SPEC, n=120, seed=8, client=_client())
     assert [x["id"] for x in c.kept] != [x["id"] for x in a.kept]
-    assert len(set(x["id"] for x in a.kept)) == 120                       # ids unique
+    assert len({x["id"] for x in a.kept}) == 120                       # ids unique
     assert all({"operator", "parent_id", "generator", "seed"} <= set(x) for x in a.kept)   # provenance
     assert {x["generator"] for x in a.kept} == {"rule", "metamorphic", "llm"}
 

@@ -30,7 +30,7 @@ def _sum_args(prompt: str) -> tuple[int, int]:
 
 
 def _capital(prompt: str) -> str:
-    country = re.search(r"capital of (\w+)", prompt, re.I).group(1)
+    country = re.search(r"capital of (\w+)", prompt, re.IGNORECASE).group(1)
     return CAPITALS.get(country, "Unknown")
 
 
@@ -42,12 +42,17 @@ def _review(prompt: str) -> str:
     return "neutral"
 
 
+def _metres(prompt: str) -> str:
+    km = int(re.search(r"(\d+) kilometres", prompt).group(1))
+    return f"{km * 1000} metres"
+
+
 def primary_client() -> MockLLM:
     return MockLLM("mock-system-one", handlers=[
         (r"capital of", lambda s, p: _capital(p)),
         (r"sum of", lambda s, p: str(sum(_sum_args(p)) % 100 if sum(_sum_args(p)) > 100 else sum(_sum_args(p)))),
         (r"sentiment", lambda s, p: _review(p).upper()),
-        (r"kilometres", lambda s, p: f"{int(re.search(r'(\d+) kilometres', p).group(1)) * 1000} metres"),
+        (r"kilometres", lambda s, p: _metres(p)),
         (r"summar", lambda s, p: "Summary: " + p.split("about", 1)[1].strip(".") + " explained briefly."),
     ])
 

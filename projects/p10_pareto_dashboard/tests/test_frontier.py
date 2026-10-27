@@ -2,8 +2,17 @@ import math
 
 import pytest
 
-from projects.p10_pareto_dashboard.core import (GLOBAL, PolicyStats, aggregate, annotate_frontier, build_metrics,
-                                                marginal_costs, pareto_frontier, price_sensitivity, scaled_cost)
+from projects.p10_pareto_dashboard.core import (
+    GLOBAL,
+    PolicyStats,
+    aggregate,
+    annotate_frontier,
+    build_metrics,
+    marginal_costs,
+    pareto_frontier,
+    price_sensitivity,
+    scaled_cost,
+)
 
 
 def test_pareto_frontier_hand_built_five_points():

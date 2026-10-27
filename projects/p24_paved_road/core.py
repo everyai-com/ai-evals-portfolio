@@ -11,9 +11,10 @@ import re
 import statistics
 import tomllib
 from collections import Counter, defaultdict
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 import yaml
 
@@ -49,13 +50,13 @@ class PlatformSpec:
     raw: dict[str, Any] = field(default_factory=dict, repr=False)
 
     @classmethod
-    def load(cls, path: str | Path = DEFAULT_SPEC) -> "PlatformSpec":
+    def load(cls, path: str | Path = DEFAULT_SPEC) -> PlatformSpec:
         with open(path, encoding="utf-8") as f:
             d = yaml.safe_load(f)
         return cls.from_dict(d)
 
     @classmethod
-    def from_dict(cls, d: dict[str, Any]) -> "PlatformSpec":
+    def from_dict(cls, d: dict[str, Any]) -> PlatformSpec:
         return cls(
             name=d["name"], tagline=d.get("tagline", ""), studio_url=d.get("studio_url", ""),
             docs_url=d.get("docs_url", ""), deploys=list(d.get("deploys", [])),
@@ -578,7 +579,7 @@ class CompatValidator:
             return
         text = _read(p) or ""
         if rt == "python":
-            ok = re.search(rf"^\s*(async\s+)?def\s+{export}\s*\(", text, re.M) is not None
+            ok = re.search(rf"^\s*(async\s+)?def\s+{export}\s*\(", text, re.MULTILINE) is not None
         else:
             ok = re.search(rf"export\s+(async\s+)?function\s+{export}\b|export\s+(const|let|var)\s+{export}\b"
                            rf"|exports\.{export}\s*=|module\.exports\s*=\s*\{{[^}}]*\b{export}\b|export\s*\{{[^}}]*\b{export}\b", text) is not None

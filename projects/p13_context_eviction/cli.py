@@ -12,11 +12,15 @@ import json
 import sys
 from pathlib import Path
 
-from evalkit.llm import MockLLM, get_client
+from evalkit.llm import get_client
 from evalkit.report import md_table, pct
-
 from projects.p13_context_eviction.core import (
-    LLMAnswerer, LookupAnswerer, ScenarioResult, default_managers, probe_handler, run_matrix,
+    LLMAnswerer,
+    LookupAnswerer,
+    ScenarioResult,
+    default_managers,
+    probe_handler,
+    run_matrix,
     summary_handler,
 )
 

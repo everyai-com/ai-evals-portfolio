@@ -43,7 +43,7 @@ def _b64(s: str) -> str:
 
 def _unicode_obfuscate(s: str) -> str:
     # insert zero-width spaces; NFKC in the filter collapses fullwidth, ZWSP is stripped by patterns
-    return s.replace("ignore", "ig​nore")
+    return s.replace("ignore", "ig\u200bnore")
 
 
 DIRECT = [

@@ -1,12 +1,16 @@
 import json
 import math
 
-import numpy as np
 import pytest
 
 from evalkit.metrics import wilson_ci
 from projects.p02_shadow_router.cli import main
-from projects.p02_shadow_router.report import DEFAULT_THRESHOLDS, ReportBuilder, load_thresholds, recommend
+from projects.p02_shadow_router.report import (
+    DEFAULT_THRESHOLDS,
+    ReportBuilder,
+    load_thresholds,
+    recommend,
+)
 
 
 def rec(i, p_text, s_text, p_cost, s_cost, p_lat, s_lat, shadowed=True, err=None, expected=None, ts=0.0):

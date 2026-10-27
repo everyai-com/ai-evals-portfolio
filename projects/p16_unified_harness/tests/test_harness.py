@@ -9,14 +9,23 @@ import pytest
 import yaml
 
 from evalkit.io import read_jsonl, write_jsonl
-
 from projects.p16_unified_harness import cli
 from projects.p16_unified_harness.adapters import (
-    ADAPTERS, DeepEvalAdapter, Framework, NativeAdapter, PromptfooAdapter, RagasAdapter, UnifiedResult,
+    ADAPTERS,
+    DeepEvalAdapter,
+    Framework,
+    NativeAdapter,
+    PromptfooAdapter,
+    RagasAdapter,
+    UnifiedResult,
 )
 from projects.p16_unified_harness.adapters.promptfoo_adapter import generate_promptfoo_config
 from projects.p16_unified_harness.core import (
-    export_jsonl, load_config, normalise_metrics, render_markdown, run_harness,
+    export_jsonl,
+    load_config,
+    normalise_metrics,
+    render_markdown,
+    run_harness,
 )
 from projects.p16_unified_harness.sut import get_sut
 from projects.p16_unified_harness.textmetrics import context_precision, faithfulness, token_f1

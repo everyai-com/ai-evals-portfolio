@@ -27,14 +27,13 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 import numpy as np
 import yaml
 
 from evalkit.report import md_table, pct
-
-from projects.p25_surge_test.targets import RateLimiter, Request, Response, SimulatedTarget, Target
+from projects.p25_surge_test.targets import RateLimiter, Request, SimulatedTarget, Target
 
 HERE = Path(__file__).parent
 DEFAULT_CONFIG = HERE / "data" / "scenarios.yaml"
@@ -65,7 +64,7 @@ class Scenario:
     name: str = ""
 
     @classmethod
-    def from_config(cls, cfg: dict[str, Any], **overrides: Any) -> "Scenario":
+    def from_config(cls, cfg: dict[str, Any], **overrides: Any) -> Scenario:
         d = {k: v for k, v in cfg.items() if k in cls.__dataclass_fields__}
         d.update({k: v for k, v in overrides.items() if v is not None})
         return cls(**d)

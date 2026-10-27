@@ -509,10 +509,10 @@ class ContaminationReport:
         out = [
             f"# Contamination report: {len(self.items)} eval rows vs {self.n_train} train rows",
             "",
-            f"**Contamination rate: {pct(self.rate)}** ({len(self.contaminated)}/{len(self.items)}, "
+            (f"**Contamination rate: {pct(self.rate)}** ({len(self.contaminated)}/{len(self.items)}, "
             f"Wilson 95% CI [{pct(lo)}, {pct(hi)}]). Tiers: exact, near_duplicate ({th['ngram']}-gram overlap >= "
             f"{th['near_duplicate']}), semantic_match (cosine >= {th['cosine']}, {self.backend}), partial "
-            f"(overlap >= {th['partial']} or a {th['exact_ngram']}-gram hit).",
+            f"(overlap >= {th['partial']} or a {th['exact_ngram']}-gram hit)."),
             "",
             md_table(
                 ["tier", "count", "share"],
@@ -547,10 +547,10 @@ class ContaminationReport:
                 "",
                 "## Contamination-aware reporting",
                 "",
-                f"`{r['metric']}` on the full eval set: **{r['full']:.3f}** (n={r['n_full']}); on the clean subset: "
+                (f"`{r['metric']}` on the full eval set: **{r['full']:.3f}** (n={r['n_full']}); on the clean subset: "
                 f"**{r['clean']:.3f}** (n={r['n_clean']}); on contaminated rows: {r['contaminated']:.3f} "
                 f"(n={r['n_contaminated']}). Leakage inflates the headline metric by "
-                f"{(r['full'] - r['clean']) * 100:+.1f} points; report the clean number.",
+                f"{(r['full'] - r['clean']) * 100:+.1f} points; report the clean number."),
             ]
         return "\n".join(out)
 

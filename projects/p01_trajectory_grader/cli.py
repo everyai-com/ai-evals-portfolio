@@ -15,9 +15,12 @@ from pathlib import Path
 from evalkit.io import read_jsonl
 from evalkit.report import md_table
 from evalkit.trajectory import Trajectory
-
 from projects.p01_trajectory_grader.core import (
-    OK, GoldenPath, GradeResult, ToolRegistry, TrajectoryGrader,
+    OK,
+    GoldenPath,
+    GradeResult,
+    ToolRegistry,
+    TrajectoryGrader,
 )
 
 HERE = Path(__file__).parent

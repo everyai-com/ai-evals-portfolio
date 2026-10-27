@@ -4,11 +4,19 @@ import pytest
 
 from evalkit.io import read_jsonl
 from evalkit.trajectory import Trajectory
-
 from projects.p01_trajectory_grader import cli
 from projects.p01_trajectory_grader.core import (
-    DANGEROUS_SEQUENCE, EXTRA_CALL, HALLUCINATED_PARAMETER, OUT_OF_ORDER, SKIPPED_REQUIRED,
-    SKIPPED_SAFETY_GATE, UNKNOWN_TOOL, WRONG_ARGS, GoldenPath, ToolRegistry, TrajectoryGrader,
+    DANGEROUS_SEQUENCE,
+    EXTRA_CALL,
+    HALLUCINATED_PARAMETER,
+    OUT_OF_ORDER,
+    SKIPPED_REQUIRED,
+    SKIPPED_SAFETY_GATE,
+    UNKNOWN_TOOL,
+    WRONG_ARGS,
+    GoldenPath,
+    ToolRegistry,
+    TrajectoryGrader,
     edit_distance,
 )
 
@@ -52,7 +60,7 @@ def test_hallucinated_param_fails_run(grader, fixtures):
     res = grader.grade(fixtures["refund_hallucinated_param"])
     assert not res.passed
     assert HALLUCINATED_PARAMETER in verdicts(res)
-    bad = [v for v in res.verdicts if v.verdict == HALLUCINATED_PARAMETER][0]
+    bad = next(v for v in res.verdicts if v.verdict == HALLUCINATED_PARAMETER)
     assert "currency" in bad.detail and bad.tool == "issue_refund"
 
 

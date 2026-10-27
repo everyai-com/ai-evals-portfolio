@@ -15,7 +15,8 @@ import json
 import os
 import sys
 import urllib.request
-from typing import Any, Callable
+from collections.abc import Callable
+from typing import Any
 
 from projects.p04_ci_regression_gate.core import COMMENT_MARKER
 
@@ -25,7 +26,7 @@ API = "https://api.github.com"
 
 def urllib_transport(method: str, url: str, headers: dict[str, str], body: bytes | None) -> tuple[int, Any]:
     req = urllib.request.Request(url, data=body, method=method, headers=headers)
-    with urllib.request.urlopen(req, timeout=30) as resp:  # noqa: S310 (fixed https host)
+    with urllib.request.urlopen(req, timeout=30) as resp:
         raw = resp.read()
         return resp.status, (json.loads(raw) if raw else None)
 

@@ -10,14 +10,18 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 
 from evalkit.io import read_jsonl
 from evalkit.llm import get_client
 from evalkit.report import md_table
-
-from projects.p12_synthetic_edgecases.core import coverage_matrix, generate_cases, promote, render_coverage, write_outputs
+from projects.p12_synthetic_edgecases.core import (
+    coverage_matrix,
+    generate_cases,
+    promote,
+    render_coverage,
+    write_outputs,
+)
 from projects.p12_synthetic_edgecases.llm_gen import demo_llm_handler
 from projects.p12_synthetic_edgecases.spec import TaskSpec
 

@@ -19,8 +19,9 @@ Latency is *simulated* (reported by the SUT, not measured) so the demo is fast a
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 

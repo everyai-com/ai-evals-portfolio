@@ -23,9 +23,10 @@ import io
 import re
 import tokenize
 from collections import defaultdict
+from collections.abc import Iterable
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 
 PY_EXT = {".py"}
 JS_EXT = {".js", ".jsx", ".ts", ".tsx", ".mjs", ".cjs"}

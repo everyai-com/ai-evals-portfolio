@@ -24,6 +24,7 @@ agreement          accuracy vs gold; Cohen's kappa judge-vs-gold, judge-vs-annot
 from __future__ import annotations
 
 import hashlib
+import itertools
 import re
 from collections import defaultdict
 from collections.abc import Sequence
@@ -269,7 +270,7 @@ def make_mock_judge(
 ) -> BiasedMockJudge:
     """Factory used by the CLI: "unbiased" follows gold ~90%; "biased" injects 0.3 of each bias."""
     if kind == "biased":
-        kw = dict(position_bias=0.3, verbosity_bias=0.3, self_preference=0.3)
+        kw = {"position_bias": 0.3, "verbosity_bias": 0.3, "self_preference": 0.3}
     elif kind == "unbiased":
         kw = {}
     else:
@@ -377,7 +378,7 @@ def verbosity_bias(
     c_rate, c_lo, c_hi = bootstrap_ci(cond, seed=seed) if cond else (0.0, 0.0, 0.0)
     edges = [1.0, 1.25, 1.5, 2.0, 3.0, float("inf")]
     buckets = []
-    for e0, e1 in zip(edges[:-1], edges[1:]):
+    for e0, e1 in itertools.pairwise(edges):
         jw = gw = m = 0.0
         for i, r in enumerate(anchors):
             lg = _longer(r)
@@ -628,8 +629,8 @@ class CalibrationResult:
         lines = [
             f"# Judge calibration report: `{self.judge_name}`",
             "",
-            f"Anchors: n={self.n}. Thresholds: position {p['threshold']}, verbosity {v['threshold']}, "
-            f"self-preference {s['threshold']}, min kappa {self.thresholds['min_kappa']}.",
+            (f"Anchors: n={self.n}. Thresholds: position {p['threshold']}, verbosity {v['threshold']}, "
+            f"self-preference {s['threshold']}, min kappa {self.thresholds['min_kappa']}."),
             "",
             "## Biases",
             "",

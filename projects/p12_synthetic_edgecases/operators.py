@@ -8,16 +8,21 @@ contradiction, type confusion) the label is None and the case goes to the review
 """
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from collections.abc import Callable
+from dataclasses import asdict, dataclass
 from datetime import date, timedelta
-from typing import Any, Callable
+from typing import Any
 
 import numpy as np
 
 from evalkit.io import stable_hash
-
-from projects.p12_synthetic_edgecases.spec import (TaskSpec, find_date_span, parse_iso, replace_date,
-                                                   replace_qty)
+from projects.p12_synthetic_edgecases.spec import (
+    TaskSpec,
+    find_date_span,
+    parse_iso,
+    replace_date,
+    replace_qty,
+)
 
 
 @dataclass
@@ -107,7 +112,7 @@ def unicode_digits(case, rng, spec) -> list[Mutation]:
     return out
 
 
-ZERO_WIDTH = ["​", "‌", "‍", "﻿"]
+ZERO_WIDTH = ["\u200b", "‌", "‍", "﻿"]
 HOMOGLYPHS = {"S": "Ѕ", "K": "К", "U": "U", "a": "а", "e": "е", "o": "о"}
 
 
@@ -118,7 +123,7 @@ def unicode_encoding(case, rng, spec) -> list[Mutation]:
     pos = int(rng.integers(1, max(2, len(s) - 1)))
     out.append(Mutation(s[:pos] + zw + s[pos:], _exp(case), f"zero-width char U+{ord(zw):04X} inserted at {pos}",
                         "unicode_encoding", case["id"]))
-    out.append(Mutation("‮" + s, _exp(case), "right-to-left override mark prefixed", "unicode_encoding", case["id"]))
+    out.append(Mutation("\u202e" + s, _exp(case), "right-to-left override mark prefixed", "unicode_encoding", case["id"]))
     out.append(Mutation(s + " 📦🚚", _exp(case), "emoji appended", "unicode_encoding", case["id"]))
     if "SKU" in s:
         out.append(Mutation(s.replace("SKU", "ЅКU", 1), None, "Cyrillic homoglyphs in SKU prefix (ambiguous)",

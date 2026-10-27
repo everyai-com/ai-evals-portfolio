@@ -3,10 +3,16 @@ from pathlib import Path
 import pytest
 
 from evalkit.llm import MockLLM
-
 from projects.p11_counterfactual_replay import cli, demo
 from projects.p11_counterfactual_replay.core import (
-    Recorder, Replayer, bisect, diff, hops, load_run, node_id_of, node_output,
+    Recorder,
+    Replayer,
+    bisect,
+    diff,
+    hops,
+    load_run,
+    node_id_of,
+    node_output,
 )
 
 DATA = Path(__file__).resolve().parents[1] / "data"

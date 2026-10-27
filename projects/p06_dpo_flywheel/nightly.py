@@ -7,17 +7,25 @@ from __future__ import annotations
 
 import json
 from collections import Counter
-from dataclasses import dataclass, field, asdict
+from collections.abc import Callable
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
-from typing import Any, Callable
+from typing import Any
 
 from evalkit.io import read_jsonl
 from evalkit.llm import LLMClient
 from evalkit.report import md_table, pct
 from evalkit.stats import paired_bootstrap
-
-from projects.p06_dpo_flywheel.core import (FeedbackStore, FilterConfig, Judge, PairBuilder, append_golden,
-                                            heuristic_judge, normalise, write_pairs)
+from projects.p06_dpo_flywheel.core import (
+    FeedbackStore,
+    FilterConfig,
+    Judge,
+    PairBuilder,
+    append_golden,
+    heuristic_judge,
+    normalise,
+    write_pairs,
+)
 from projects.p06_dpo_flywheel.trainer import train_lora
 
 HERE = Path(__file__).parent
@@ -175,11 +183,11 @@ class NightlyJob:
 
 def render_report(r: NightlyReport) -> str:
     lines = [f"## Nightly DPO flywheel — {r.date}: **{r.status.upper()}**", "",
-             f"- ingest: {r.ingest['received']} received, {r.ingest['duplicates']} duplicates, "
-             f"{r.ingest['accepted']} accepted, rejected {r.ingest['rejected']}, PII scrubbed {r.ingest['pii_scrubbed']}",
+             (f"- ingest: {r.ingest['received']} received, {r.ingest['duplicates']} duplicates, "
+             f"{r.ingest['accepted']} accepted, rejected {r.ingest['rejected']}, PII scrubbed {r.ingest['pii_scrubbed']}"),
              f"- new pairs: {r.new_pairs} {dict(r.pairs_by_source)}",
-             f"- validation: {r.validation.get('checks')} (judge pass rate {r.validation.get('judge_pass_rate')}, "
-             f"top tenant share {r.validation.get('top_tenant_share')})"]
+             (f"- validation: {r.validation.get('checks')} (judge pass rate {r.validation.get('judge_pass_rate')}, "
+             f"top tenant share {r.validation.get('top_tenant_share')})")]
     if r.manifest:
         d = r.manifest["dataset"]
         lines.append(f"- train: {'dry-run' if r.manifest['dry_run'] else 'real'} on {d['n_pairs']} pairs, "

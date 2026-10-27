@@ -17,8 +17,9 @@ from __future__ import annotations
 import math
 import re
 from collections import Counter
+from collections.abc import Iterable
 from dataclasses import dataclass, field
-from typing import Any, Iterable
+from typing import Any
 
 import numpy as np
 
@@ -26,9 +27,7 @@ from evalkit.io import read_jsonl
 from evalkit.llm import LLMClient
 
 STOPWORDS = frozenset(
-    "a an and are as at be by does do did for from has have how in is it its of on or that the this to was "
-    "what when where which who whom why will with can could should would many much there their they them "
-    "than then".split()
+    ["a", "an", "and", "are", "as", "at", "be", "by", "does", "do", "did", "for", "from", "has", "have", "how", "in", "is", "it", "its", "of", "on", "or", "that", "the", "this", "to", "was", "what", "when", "where", "which", "who", "whom", "why", "will", "with", "can", "could", "should", "would", "many", "much", "there", "their", "they", "them", "than", "then"]
 )
 
 _TOKEN_RX = re.compile(r"[a-z0-9]+(?:\.[0-9]+)?")
@@ -69,7 +68,7 @@ class Corpus:
             raise ValueError("duplicate doc ids in corpus")
 
     @classmethod
-    def from_jsonl(cls, path: str) -> "Corpus":
+    def from_jsonl(cls, path: str) -> Corpus:
         return cls(Doc(id=str(r["id"]), text=r["text"], metadata=r.get("metadata", {})) for r in read_jsonl(path))
 
     def __len__(self) -> int:
@@ -87,7 +86,7 @@ class Corpus:
     def ids(self) -> list[str]:
         return [d.id for d in self.docs]
 
-    def with_docs(self, extra: Iterable[Doc] = (), remove: Iterable[str] = ()) -> "Corpus":
+    def with_docs(self, extra: Iterable[Doc] = (), remove: Iterable[str] = ()) -> Corpus:
         """Return a new corpus with `extra` appended and `remove` ids dropped (original untouched)."""
         rm = set(remove)
         return Corpus([d for d in self.docs if d.id not in rm] + list(extra))
@@ -156,7 +155,7 @@ LENIENT_INSTRUCTION = (
 )
 
 _CITE_RX = re.compile(r"\[([A-Za-z0-9_.:-]+)\]")
-_ABSTAIN_RX = re.compile(r"^\s*ABSTAIN\s*:\s*(.*)$", re.S)
+_ABSTAIN_RX = re.compile(r"^\s*ABSTAIN\s*:\s*(.*)$", re.DOTALL)
 
 
 @dataclass
@@ -214,8 +213,8 @@ class Generator:
 
 # ---------------------------------------------------------------- mock model
 
-_DOC_RX = re.compile(r'<doc id=([^\s>]+)(?: date="([^"]*)")?>\n(.*?)\n</doc>', re.S)
-_INJECT_RX = re.compile(r"ignore the question and (?:just )?say[:\s]+\"?([^\"\n]+?)\"?\s*(?:\.|$)", re.I | re.M)
+_DOC_RX = re.compile(r'<doc id=([^\s>]+)(?: date="([^"]*)")?>\n(.*?)\n</doc>', re.DOTALL)
+_INJECT_RX = re.compile(r"ignore the question and (?:just )?say[:\s]+\"?([^\"\n]+?)\"?\s*(?:\.|$)", re.IGNORECASE | re.MULTILINE)
 
 CLEAR_OVERLAP = 0.8      # fraction of question content tokens found in a doc => "clearly answers"
 SIMILAR_OVERLAP = 0.4    # topically similar => the flawed model answers from it anyway (lenient mode)
@@ -244,7 +243,7 @@ def _best_sentence(question: str, doc_text: str) -> str:
 def rag_policy(system: str, prompt: str) -> str:
     """Deterministic stand-in for a RAG model. Sees only the prompt, like a real model would."""
     strict = "STRICT GROUNDING" in prompt
-    q_m = re.search(r"### Question\n(.*?)\n\n### Answer", prompt, re.S)
+    q_m = re.search(r"### Question\n(.*?)\n\n### Answer", prompt, re.DOTALL)
     question = q_m.group(1).strip() if q_m else ""
     docs = [(i, d, t.strip()) for i, d, t in _DOC_RX.findall(prompt)]
     q_tokens = set(content_tokens(question))

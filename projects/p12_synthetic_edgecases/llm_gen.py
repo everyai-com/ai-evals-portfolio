@@ -6,7 +6,6 @@ from dataclasses import dataclass, field
 from typing import Any
 
 from evalkit.llm import LLMClient
-
 from projects.p12_synthetic_edgecases.spec import TaskSpec, validate_expected
 
 SYSTEM = ("You are an adversarial test designer. Given a task spec, examples, mutation operators and a "

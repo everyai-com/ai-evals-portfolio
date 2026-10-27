@@ -16,10 +16,17 @@ import sys
 from pathlib import Path
 
 from evalkit.report import md_table
-
 from projects.p11_counterfactual_replay import demo
 from projects.p11_counterfactual_replay.core import (
-    Recorder, Replayer, bisect, diff, hops, load_run, node_id_of, node_output, save_run,
+    Recorder,
+    Replayer,
+    bisect,
+    diff,
+    hops,
+    load_run,
+    node_id_of,
+    node_output,
+    save_run,
 )
 
 HERE = Path(__file__).parent

@@ -3,7 +3,6 @@ import importlib
 import re
 from pathlib import Path
 
-import numpy as np
 import pytest
 
 HERE = Path(__file__).resolve().parents[1]
@@ -39,7 +38,7 @@ def test_citation_resolves(doc, kind, target, symbol):
         assert path.exists(), f"{doc} cites missing path {target}"
         if symbol and path.suffix == ".py":
             assert re.search(rf"^\s*(def|class)\s+{re.escape(symbol.split('.')[0])}\b|^{re.escape(symbol)}\s*[:=]",
-                             path.read_text(), re.M), f"{doc}: {symbol} not defined in {target}"
+                             path.read_text(), re.MULTILINE), f"{doc}: {symbol} not defined in {target}"
     else:
         mod = importlib.import_module(target)
         assert hasattr(mod, symbol), f"{doc} cites {target}:{symbol} which does not exist"

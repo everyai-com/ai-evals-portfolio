@@ -8,14 +8,28 @@ import yaml
 
 from evalkit.io import read_jsonl
 from evalkit.llm import MockLLM
-
 from projects.p05_rag_adversarial import cli
 from projects.p05_rag_adversarial.core import (
-    INJECTION_SENTINEL, Case, Query, Variant, check_gate, citation_pr, faithfulness, generation_gate,
-    make_variant, retrieval_gate, run_harness, token_f1,
+    INJECTION_SENTINEL,
+    Case,
+    Query,
+    Variant,
+    check_gate,
+    citation_pr,
+    faithfulness,
+    generation_gate,
+    make_variant,
+    retrieval_gate,
+    run_harness,
+    token_f1,
 )
 from projects.p05_rag_adversarial.rag import (
-    Corpus, Doc, GenerationResult, Generator, LexicalRetriever, build_rag_mock_handlers, parse_generation,
+    Corpus,
+    Doc,
+    Generator,
+    LexicalRetriever,
+    build_rag_mock_handlers,
+    parse_generation,
 )
 
 DATA = Path(__file__).resolve().parents[1] / "data"

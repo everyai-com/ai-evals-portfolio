@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 import json
-from pathlib import Path
 
 import pytest
 import yaml
@@ -10,7 +9,11 @@ import yaml
 from projects.p04_ci_regression_gate import cli
 from projects.p04_ci_regression_gate.core import BudgetExceeded, EvalCache, EvalConfig, EvalRunner
 from projects.p04_ci_regression_gate.demo_sut import VARIANTS, make_sut
-from projects.p04_ci_regression_gate.post_comment import COMMENT_MARKER, FakeGitHub, post_or_update_comment
+from projects.p04_ci_regression_gate.post_comment import (
+    COMMENT_MARKER,
+    FakeGitHub,
+    post_or_update_comment,
+)
 from projects.p04_ci_regression_gate.tests.conftest import BASELINE, CONFIG, HERE, run_variant
 
 ROOT = HERE.parent.parent

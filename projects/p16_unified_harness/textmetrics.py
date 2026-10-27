@@ -5,8 +5,7 @@ import re
 from collections import Counter
 
 STOPWORDS = frozenset(
-    "a an and are as at be by does do did for from has have how in is it its of on or that the this to was "
-    "what when where which who whom why will with can could should would there their they them than then".split()
+    ["a", "an", "and", "are", "as", "at", "be", "by", "does", "do", "did", "for", "from", "has", "have", "how", "in", "is", "it", "its", "of", "on", "or", "that", "the", "this", "to", "was", "what", "when", "where", "which", "who", "whom", "why", "will", "with", "can", "could", "should", "would", "there", "their", "they", "them", "than", "then"]
 )
 _RX = re.compile(r"[a-z0-9]+(?:\.[0-9]+)?")
 

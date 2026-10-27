@@ -19,9 +19,11 @@ marginal cost     Between adjacent frontier points (by cost): delta cost per +1 
 """
 from __future__ import annotations
 
+import itertools
 from collections import defaultdict
-from dataclasses import asdict, dataclass, field
-from typing import Any, Iterable, Sequence
+from collections.abc import Iterable, Sequence
+from dataclasses import asdict, dataclass
+from typing import Any
 
 import numpy as np
 
@@ -144,7 +146,7 @@ def marginal_costs(stats: Sequence[PolicyStats]) -> list[dict[str, Any]]:
     """Marginal cost per +1 success point between adjacent frontier policies (cheapest first)."""
     front = sorted((s for s in stats if s.on_frontier), key=lambda s: s.mean_cost)
     out = []
-    for a, b in zip(front, front[1:]):
+    for a, b in itertools.pairwise(front):
         d_succ = (b.success_rate - a.success_rate) * 100
         out.append({"from": a.policy, "to": b.policy, "delta_cost": b.mean_cost - a.mean_cost,
                     "delta_success_pts": d_succ,

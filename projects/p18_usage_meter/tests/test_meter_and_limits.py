@@ -19,8 +19,8 @@ T0 = datetime(2026, 10, 24, 9, 0, tzinfo=UTC)
 
 
 def ev(i, kind="model_call", model="claude-sonnet-5-5", it=1000, ot=200, units=0, ts="2026-10-24T09:00:00Z", **kw):
-    base = dict(event_id=f"e{i}", ts=ts, tenant="acme", team="t", cost_centre="cc", user="u1", agent_id="a1",
-                kind=kind, model=model, input_tokens=it, output_tokens=ot, units=units)
+    base = {"event_id": f"e{i}", "ts": ts, "tenant": "acme", "team": "t", "cost_centre": "cc", "user": "u1", "agent_id": "a1",
+                "kind": kind, "model": model, "input_tokens": it, "output_tokens": ot, "units": units}
     base.update(kw)
     return UsageEvent(**base)
 

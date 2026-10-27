@@ -373,8 +373,8 @@ def audit(users: Sequence[dict[str, Any]], router: Router) -> dict[str, Any]:
         for bu, c in e["business_units"].items():
             by_bu_unknown[bu].append({"domain": e["domain"], "users": c, "rejected": e["rejected"],
                                       "suggestion": e["suggestion"]})
-    for bu in by_bu_unknown:
-        by_bu_unknown[bu].sort(key=lambda x: (-x["users"], x["domain"]))
+    for rows in by_bu_unknown.values():
+        rows.sort(key=lambda x: (-x["users"], x["domain"]))
     return {
         "n_users": n, "reachable": reachable, "reachability": reachable / n if n else 0.0,
         "by_method": dict(sorted(by_method.items())), "by_provider": dict(sorted(by_provider.items())),
@@ -389,8 +389,8 @@ def audit(users: Sequence[dict[str, Any]], router: Router) -> dict[str, Any]:
 
 def render_audit(rep: dict[str, Any]) -> str:
     out = ["# Sign-in reachability audit", "",
-           f"{rep['n_users']} users; {rep['reachable']} reachable ({pct(rep['reachability'])}); "
-           f"{rep['unknown_users']} on domains the registry does not know ({pct(rep['unknown_share'])}).", "",
+           (f"{rep['n_users']} users; {rep['reachable']} reachable ({pct(rep['reachability'])}); "
+           f"{rep['unknown_users']} on domains the registry does not know ({pct(rep['unknown_share'])})."), "",
            "## By method", md_table(["method", "users", "share"],
                                     [[m, c, pct(c / rep["n_users"])] for m, c in rep["by_method"].items()]), "",
            "## By provider", md_table(["provider", "users"], [[p, c] for p, c in rep["by_provider"].items()]), "",
