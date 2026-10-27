@@ -1,0 +1,12 @@
+# FakeProber script. Tick n is the n-th time a (probe, region) pair is probed.
+# ap-southeast flaps alone on ticks 2,4,6 -> "degraded-remote", never an incident.
+# us-east + eu-west fail together on agent-api for ticks 8-10 -> incident opens on tick 9
+# (debounce 2), closes on tick 11 when both recover.
+latency_ms: {us-east: 80, eu-west: 150, ap-southeast: 290}
+jitter_ms: 25
+seed: 7
+outages:
+  - {ticks: [2, 2], regions: [ap-southeast], probes: ["*"], error: "timeout after 5s"}
+  - {ticks: [4, 4], regions: [ap-southeast], probes: ["*"], error: "timeout after 5s"}
+  - {ticks: [6, 6], regions: [ap-southeast], probes: [gateway], error: "HTTP 502"}
+  - {ticks: [8, 10], regions: [us-east, eu-west], probes: [agent-api], error: "HTTP 503"}

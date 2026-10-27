@@ -1,0 +1,47 @@
+# Artifact policy: what may not be in a deploy, what must be, and which code patterns are flagged.
+required_files: [manifest.yaml]
+max_blob_mb: 25
+allow_own_server: false          # the platform owns the request path; apps must not bind their own
+forbidden_files:
+  - {glob: ".env", severity: high, message: "environment file shipped in the artifact"}
+  - {glob: ".env.*", severity: high, message: "environment file shipped in the artifact"}
+  - {glob: "*.pem", severity: critical, message: "certificate / key material in the artifact"}
+  - {glob: "*.key", severity: critical, message: "key material in the artifact"}
+  - {glob: "*.p12", severity: critical, message: "key material in the artifact"}
+  - {glob: "node_modules/**", severity: high, message: "vendored node_modules: install at build time"}
+  - {glob: "*.sqlite", severity: medium, message: "database file in the artifact"}
+test_path_markers: [test, tests, fixtures, fixture, __tests__, testdata, spec, __snapshots__]
+placeholder_markers: [xxxx, example, placeholder, changeme, your_, "<", ">", dummy, fake, redacted, sk_test_, pk_test_, "0000000000"]
+internal_host_suffixes: [.corp.internal, .internal, .corp, .intranet, .local]
+patterns:
+  - id: eval_call
+    regex: '(?<![\w.])eval\s*\('
+    extensions: [.py, .js, .ts, .mjs, .cjs]
+    severity: high
+    message: "eval() on dynamic input"
+    fix: "replace eval with an explicit parser / dispatch table"
+  - id: child_process_exec_concat
+    regex: '\bexec(?:Sync)?\s*\(\s*(?:[^)]*\+|`[^`]*\$\{)'
+    extensions: [.js, .ts, .mjs, .cjs]
+    severity: high
+    message: "child_process.exec with string concatenation (shell injection)"
+    fix: "use execFile with an argument array; never build a shell string from input"
+  - id: subprocess_shell_fstring
+    regex: '(?=.*\bshell\s*=\s*True)(?=.*\bf[''"])subprocess\.\w+\s*\('
+    extensions: [.py]
+    severity: high
+    message: "subprocess with shell=True and an f-string command (shell injection)"
+    fix: "pass an argument list and drop shell=True"
+  - id: bind_all_interfaces
+    regex: '(?:host\s*=\s*|listen\(|bind\(\(?\s*)[''"]0\.0\.0\.0[''"]'
+    extensions: [.py, .js, .ts, .mjs, .cjs, .go, .rb]
+    severity: medium
+    message: "app binds its own server on 0.0.0.0; the platform forbids own servers"
+    fix: "remove the listener; export a handler and let the platform own the request path"
+    requires: own_server_forbidden
+  - id: internal_hostname
+    regex: '\b[a-z0-9][a-z0-9.-]*(?:\.corp\.internal|\.internal|\.corp|\.intranet|\.local)\b'
+    extensions: [.py, .js, .ts, .mjs, .cjs, .go, .rb, .yaml, .yml, .json, .toml, .env]
+    severity: medium
+    message: "hard-coded internal hostname"
+    fix: "resolve the service through platform config / service discovery"

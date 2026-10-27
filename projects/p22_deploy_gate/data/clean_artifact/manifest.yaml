@@ -1,0 +1,7 @@
+name: team-digest
+owner: builder@example.com
+risk_tier: low
+data_classes: [internal]
+outbound_domains: [api.example.com]
+description: Daily digest of team updates.
+entrypoint: app.py

@@ -1,0 +1,6 @@
+name: lunch-picker
+runtime: node20
+entrypoint: handler.js
+owner: jane.doe@example.com
+description: picks where the team eats
+env: [OPENAI_API_KEY]

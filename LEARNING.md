@@ -42,6 +42,27 @@ that implements it and the test that proves it. Nothing is a slide; everything r
 | 11 Data flywheels | feedback→dataset loops, DPO pairs, eval-driven optimisation | thumbs-down → labeled case → golden set → nightly run → diff report | `p06_dpo_flywheel`, `p12_synthetic_edgecases` |
 | 12 Red-teaming, benchmarks, portfolio | injection/jailbreak suites, methodology, contamination-aware reporting | public teardown of agent vs naive baseline, full methodology, seeds | `p08_agent_redteam_fuzzer`, `p14_contamination_checker`, `p15_methodology_teardowns` |
 
+## Part C: TELUS "12 mistakes building an agent platform for 100,000 employees"
+
+Source: Cloudflare conference talk by two TELUS engineers (Oct 2026). Each mistake maps to a
+working system here or to a process rule; process rules are not code and are listed as such.
+
+| TELUS mistake | What they changed | System here | Proof |
+|---|---|---|---|
+| "Draw the rest of the owl": builders stuck on "upload a zip"; their AI tools produced apps the platform could not deploy | llms.txt + skill for agents, a hosted studio, watch someone try it | `projects/p24_paved_road` | validator flags an own-server app with a builder-language fix; first-run study returns `ready_to_call_easy: false` until 3 non-engineers finish |
+| Sledgehammer on the fly: no metering, limits or billing until the bill arrived | Metering, limits, billing, chargeback | `projects/p18_usage_meter` | daily cap blocks the next request; 6am scheduled burst flagged; chargeback totals equal event sum |
+| "Sign in with Google" only, 30 ways to sign in | One email box; passkey / IdP / magic link | `projects/p19_signin_router` | reachability audit finds every unknown-domain user; magic link single-use and expiring |
+| Scalability bolted on late; thousands joining at once | Plan for 1k→10k early | `projects/p25_surge_test` | knee found near configured capacity; rate limiter turns 5xx into bounded 429s |
+| The closet: analytics in the platform DB; sampled store undercounted people ~7× | "Scary line" capacity view; exact counts for people | `projects/p20_capacity_line` | days-to-cap on a known series; placement advisor flags distinct-users-from-sampled-table |
+| Marketplace: ~90% of catalog untouched | Featured, teams, stars, usage; show only what you need | `projects/p21_catalog_health` | scoped view shrinks the list >90% and keeps featured + team items; dormancy queue |
+| "It's fine": no observability; status page after the first outage; far-region false alarms | Status page day one, own worker, cron, right regions | `projects/p17_status_page` | single far region never opens an incident; home-region failure does; staleness self-check |
+| One true god of tooling: rewrote the project repeatedly | Stop rewriting | process rule (CONTRIBUTING: one core, no re-platforming) | n/a |
+| "Works on my machine": builders were in chat clients, not terminals | Ask where people work; MCP connector inside the chat tool | `evalkit/cli.py` umbrella CLI + MCP-ready adapters in `p16_unified_harness` | n/a |
+| One more platform to replace all platforms | Platform that supports the others | process rule (federate; see Pizza Hut playbook B3) | n/a |
+| Vibe-code bloat: 157 commits in 2 days, three ways to do one thing, 18k comment lines, ~100k lines deleted | Book the refactor before the bloat | `projects/p23_bloat_detector` | duplicate bodies found across identifier renames; `book_the_refactor` true on the bloated fixture, false on the clean one |
+| Lost in the vibes: only the outcome handed to the agent | Architect first; validate | process rule (G2 design walkthrough in the Pizza Hut checklist) | n/a |
+| Q&A: vibe-coded apps need secret scanning + automated review on every deploy | Scan on push, send findings back to the builder's agent | `projects/p22_deploy_gate` | planted AWS key detected and masked; placeholders not flagged; clean artifact exits 0 |
+
 ## How to tick a box yourself
 ```bash
 .venv/bin/pytest -q                                  # all claims above, in one run

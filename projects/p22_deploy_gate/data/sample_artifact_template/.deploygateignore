@@ -1,0 +1,4 @@
+# paths (glob, relative to the artifact root) that the secret scanner skips
+docs/**
+# values that look like secrets but are not (content hashes, public ids)
+allow-value: 47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=

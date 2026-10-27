@@ -1,0 +1,87 @@
+# The Gizmos-style internal app platform, as a machine-readable contract.
+name: Gizmos
+tagline: "upload a bundle, get a subdomain"
+studio_url: https://studio.gizmos.example.com
+docs_url: https://gizmos.example.com/docs
+
+deploys:
+  - static assets (HTML/CSS/JS/images) served from `public/`
+  - serverless request handlers exported from the entrypoint; the platform owns the port and the router
+  - environment variables declared in the manifest and set with the secrets command
+does_not_deploy:
+  - "apps that start their own HTTP server (express, fastify, koa, flask, fastapi, uvicorn, gunicorn): nothing may listen on a port"
+  - long-running processes, background workers, websocket servers, cron daemons
+  - Docker images or anything that needs a system package
+
+runtimes:
+  node: ["18", "20"]
+  python: ["3.11", "3.12"]
+
+limits:
+  max_file_bytes: 5242880        # 5 MiB per file
+  max_bundle_bytes: 52428800     # 50 MiB per bundle
+  max_files: 2000
+
+manifest:
+  file: gizmo.yaml
+  required_fields: [name, runtime, entrypoint, owner]
+  optional_fields: [description, env, routes]
+  example:
+    name: team-lunch-picker
+    runtime: node20
+    entrypoint: handler.js
+    owner: jane.doe@example.com
+    env: [OPENAI_API_KEY]
+
+entrypoint:
+  node:
+    file: handler.js
+    export: handler
+    signature: "export async function handler(request) -> Response"
+  python:
+    file: handler.py
+    export: handler
+    signature: "def handler(request) -> Response"
+
+forbidden_dependencies:
+  express: "the platform already routes requests; export a handler instead of app.listen()"
+  fastify: "the platform already routes requests; export a handler instead of fastify.listen()"
+  koa: "the platform already routes requests; export a handler instead of app.listen()"
+  flask: "the platform already routes requests; export def handler(request) instead of app.run()"
+  fastapi: "the platform already routes requests; export def handler(request) instead of running an ASGI server"
+  uvicorn: "nothing may listen on a port; the platform calls your handler directly"
+  gunicorn: "nothing may listen on a port; the platform calls your handler directly"
+  "socket.io": "websocket servers are not supported; use request/response handlers"
+
+server_patterns:
+  - "app.listen("
+  - "server.listen("
+  - ".listen(process.env.PORT"
+  - "http.createServer("
+  - "https.createServer("
+  - "uvicorn.run("
+  - "app.run("
+  - "serve(app"
+
+secrets:
+  forbidden_files: [".env", ".env.local", ".env.production", "*.pem", "id_rsa", "*.key"]
+  rule: "declare env names under manifest.env; set values with `gizmo secrets set NAME`; never commit .env files"
+
+outbound:
+  allowed_domains:
+    - api.openai.com
+    - api.anthropic.com
+    - api.internal.example.com
+    - gizmos.example.com
+  ignored_domains: [www.w3.org, schema.org, json-schema.org, localhost, 127.0.0.1, example.com]
+  rule: "egress is allowlisted; a request to any other domain fails at runtime with 403"
+
+deploy:
+  command: "gizmo deploy ./my-app"
+  precheck_command: "gizmo validate ./my-app"
+  url_pattern: "https://{name}.gizmos.example.com"
+  steps:
+    - write gizmo.yaml with name, runtime, entrypoint, owner
+    - put static files in public/ and export `handler` from the entrypoint
+    - run the precheck; fix every blocking finding using its `fix` text
+    - run the deploy command; the URL pattern tells you where the app lives

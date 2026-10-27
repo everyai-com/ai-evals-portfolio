@@ -1,0 +1,10 @@
+# Every artifact ships a manifest.yaml. Validation is structural: required keys, types, enums, patterns.
+required: [name, owner, risk_tier, data_classes, outbound_domains]
+fields:
+  name: {type: string, pattern: '^[a-z0-9][a-z0-9-]{2,39}$'}
+  owner: {type: string, pattern: '^[^@\s]+@[^@\s]+\.[a-z]{2,}$'}
+  risk_tier: {type: string, enum: [low, medium, high]}
+  data_classes: {type: list, item_enum: [public, internal, confidential, pii]}
+  outbound_domains: {type: list, item_pattern: '^[a-z0-9.-]+\.[a-z]{2,}$', max_items: 20}
+  description: {type: string}
+  entrypoint: {type: string}

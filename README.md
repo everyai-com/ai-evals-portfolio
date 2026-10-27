@@ -1,12 +1,12 @@
 # AI Evals Engineering Portfolio
 
-Fifteen working systems (plus a shared core and a unified harness) that measure, secure and gate
+Twenty-five working systems (plus a shared core and a unified harness) that measure, secure and gate
 LLM agents. Every project runs **offline and deterministically** against a scripted mock model,
 has a CLI, committed fixtures, a README with a real sample run, and tests that assert the exact
 claim the project makes. Set `EVALKIT_LLM=anthropic` to point the same code at a live model.
 
 See [LEARNING.md](LEARNING.md) for the checklist that maps the two source posts (15 systems,
-12 stages) to the code and tests.
+12 stages) and the TELUS "12 mistakes" talk (projects 17 to 25) to the code and tests.
 
 ## Map
 
@@ -29,10 +29,19 @@ See [LEARNING.md](LEARNING.md) for the checklist that maps the two source posts 
 | 14 | `p14_contamination_checker` | 8/13-gram, MinHash LSH and embedding tiers; decontaminated split; contamination-aware reporting |
 | 15 | `p15_methodology_teardowns` | Three published-style deep-dives: rubrics, judge prompts, statistical framework, seeds |
 | 16 | `p16_unified_harness` | promptfoo / DeepEval / RAGAS adapters (with offline fallbacks) behind one CLI; cross-framework agreement |
+| 17 | `p17_status_page` | Independent status monitor: regional quorum, debounce, uptime bars, monitor-the-monitor staleness check |
+| 18 | `p18_usage_meter` | Metering, limits, token-bucket rate limits, budget alerts, burst anomalies, chargeback statements |
+| 19 | `p19_signin_router` | Email-first sign-in: passkey → company IdP → magic link; reachability audit of a user directory |
+| 20 | `p20_capacity_line` | "Scary line" storage projection, data-placement advisor, sampled-vs-exact counting audit |
+| 21 | `p21_catalog_health` | Registry long-tail stats, duplicate clusters, dormancy retirement queue, per-user scoped views |
+| 22 | `p22_deploy_gate` | Deploy-time secret scanning, policy checks, model review, fix-loop packet for the builder's agent |
+| 23 | `p23_bloat_detector` | Vibe-code bloat: duplicate bodies, wrapper chains, diary comments, dead code, refactor plan |
+| 24 | `p24_paved_road` | llms.txt + skill generator from a platform spec, deploy-compat validator, first-run usability study |
+| 25 | `p25_surge_test` | Ramp / spike / soak / step load scenarios, knee detection, headroom statement, rate-limit interplay |
 
 ## Test inventory
 
-258 tests, all offline, full suite in about 16 s.
+372 tests, all offline, full suite in about 27 s.
 
 | Suite | Tests |
 |-------|-------|
@@ -53,6 +62,15 @@ See [LEARNING.md](LEARNING.md) for the checklist that maps the two source posts 
 | `projects/p14_contamination_checker` | 13 |
 | `projects/p15_methodology_teardowns` | 32 |
 | `projects/p16_unified_harness` | 12 |
+| `projects/p17_status_page` | 13 |
+| `projects/p18_usage_meter` | 9 |
+| `projects/p19_signin_router` | 9 |
+| `projects/p20_capacity_line` | 12 |
+| `projects/p21_catalog_health` | 12 |
+| `projects/p22_deploy_gate` | 13 |
+| `projects/p23_bloat_detector` | 19 |
+| `projects/p24_paved_road` | 15 |
+| `projects/p25_surge_test` | 12 |
 
 ## Quick start
 ```bash
